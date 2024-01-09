@@ -1,0 +1,66 @@
+@import '../variables';
+@import '../mixins';
+
+.main {
+    padding: 80px 0;
+    background-color: $primary-bg;
+    color: $white;
+    h2 {
+        margin-bottom: 30px;
+    }
+    > p {
+        color: $off-white;
+        margin-bottom: 20px;
+        @include lastChildMarginZero;
+        max-width: 350px;
+    }
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.blog-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+}
+.blog-tag-wrapper {
+    padding: 5px;
+}
+.blog-card-tag {
+    display: inline-block;
+    background-color: $primary-bg-light;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    @include transition-ease;
+    &:hover {
+        background-color: $primary-bg;
+        text-decoration: none;
+    }
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+}
+.right-column {
+    margin-left: 40px;
+}
+
+.popular-tags {
+    background-color: $primary-bg-dark;
+    padding: 32px;
+    position: sticky;
+    top: 40px;
+    right: 0;
+    left: 0;
+    // max-width: 525px;
+}
+.tags-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $off-white-lighter;
+    margin-bottom: 20px;
+}

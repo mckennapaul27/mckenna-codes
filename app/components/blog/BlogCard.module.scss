@@ -1,0 +1,69 @@
+@import '../../variables';
+@import '../../mixins';
+
+.blog-card-wrapper {
+    width: 800px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $primary-bg-light;
+    &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+}
+.blog-card {
+    background-color: $primary-bg-dark;
+}
+.text-section {
+    padding: 32px;
+}
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.blog-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+    max-width: 50%;
+}
+.blog-tag-wrapper {
+    padding: 5px;
+}
+.blog-card-tag {
+    display: inline-block;
+    background-color: $primary-bg-light;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    @include transition-ease;
+    &:hover {
+        background-color: $primary-bg;
+        text-decoration: none;
+    }
+}
+.blog-card-date {
+    color: $off-white;
+}
+.blog-card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $off-white-lighter;
+    margin-bottom: 20px;
+}
+.blog-card-description {
+    color: $off-white;
+    margin-bottom: 0;
+}
+.blog-card-image-wrapper {
+    position: relative;
+    width: 768px;
+    height: 384px;
+    margin-left: 32px;
+}
+.blog-card-img {
+    border-top-left-radius: 16px;
+}

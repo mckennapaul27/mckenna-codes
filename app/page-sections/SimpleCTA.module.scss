@@ -6,6 +6,10 @@
     background-color: $primary-bg-dark;
     color: $white;
 }
+.sections {
+    display: flex;
+    justify-content: space-between;
+}
 
 .content-section {
     margin-bottom: 40px;
@@ -17,5 +21,29 @@
         color: $off-white;
         margin-bottom: 30px;
         @include lastChildMarginZero;
+    }
+}
+
+.find-me-para {
+    display: flex;
+    align-items: center;
+    // margin-top: 30px;
+    span {
+        display: block;
+        color: $primary;
+    }
+}
+.text {
+    font-size: 18px;
+    line-height: 18px;
+}
+.icon-arrow {
+    margin-left: 20px;
+    margin-right: 16px;
+    width: 18px;
+    height: 18px;
+    svg {
+        width: 18px;
+        height: 18px;
     }
 }

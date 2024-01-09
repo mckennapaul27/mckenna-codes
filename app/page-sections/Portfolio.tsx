@@ -2,6 +2,8 @@ import classNames from 'classnames';
 import styles from './Portfolio.module.scss';
 import { montserrat } from '../utils/fonts';
 import Image from 'next/image';
+import { Testimonials } from './Testimonials';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 const projects = [
     {
@@ -68,6 +70,15 @@ export const Portfolio = () => {
                                             >
                                                 {project.name}
                                             </p>
+                                            <a
+                                                href={project.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <ArrowTopRightOnSquareIcon
+                                                    className={styles['icon']}
+                                                />
+                                            </a>
                                         </div>
                                         <div className={styles['img-wrapper']}>
                                             <Image
@@ -96,6 +107,8 @@ export const Portfolio = () => {
                     </div>
                 </div>
             </div>
+            <div className={styles['absolute-bg']}></div>
+            <Testimonials />
         </section>
     );
 };

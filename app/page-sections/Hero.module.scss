@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100% - 94px);
     z-index: 0;
 }
 .sections {
@@ -34,6 +34,7 @@
 .intro-text {
     color: $off-white;
     max-width: 350px;
+    margin-bottom: 30px;
 }
 
 .banner {
@@ -44,55 +45,29 @@
 }
 .inside-block {
     background-color: $primary-bg;
-    height: 80px;
+    // height: 80px;
     padding: 20px;
+    // display: flex;
+    // align-items: center;
+}
+.banner-items {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.find-me-para {
-    display: flex;
-    align-items: center;
-    span {
-        display: block;
-        color: $primary;
-    }
+.banner-item-title {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 600;
+    color: $primary;
 }
-.text {
-    font-size: 18px;
-    line-height: 18px;
+.banner-item-description {
+    font-size: 16px;
+    line-height: 16px;
+    color: $gray;
+    margin-top: 6px;
 }
-.icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $primary-bg-light;
-    width: 48px;
-    height: 48px;
-    margin-left: 24px;
-    border-radius: 50%;
-    position: relative;
-    cursor: pointer;
-    @include transition-ease;
-    &:hover {
-        background-color: $primary-bg-dark;
-    }
-    svg {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-.icon-arrow {
-    margin-left: 20px;
-    margin-right: 16px;
-    width: 18px;
-    height: 18px;
-    svg {
-        width: 18px;
-        height: 18px;
-    }
-}
+
 @include media-desktop-1215 {
 }
 

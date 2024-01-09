@@ -6,7 +6,7 @@ import { montserrat } from '../utils/fonts';
 const testimonials = [
     {
         name: 'S. Orme',
-        company: 'Greenscapesg',
+        company: 'Greenscapes',
         headline: '"Trusted for years"',
         description:
             "I have trusted Paul at BunkerDigital to manage all my digital presence for years now. He's helped me grow my business by developing our websites and managing our Google Ads campaigns. I would highly recommend him to anyone looking for a digital partner.",
