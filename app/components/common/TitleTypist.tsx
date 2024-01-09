@@ -22,6 +22,8 @@ const Typewriter = () => {
                 1000,
                 'Online Marketer',
                 1000,
+                'Hypnotist?',
+                1000,
             ]}
             wrapper="span"
             speed={50}

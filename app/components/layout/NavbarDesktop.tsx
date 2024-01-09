@@ -26,15 +26,15 @@ export const NavbarDesktop = () => {
                         </li>
                         <li className={styles['navbar-item']}>
                             <Link
-                                href="/work"
+                                href="/about-me"
                                 className={styles['navbar-link']}
                             >
-                                About
+                                About Me
                             </Link>
                         </li>
                         <li className={styles['navbar-item']}>
                             <Link
-                                href="/contact"
+                                href="/contact-me"
                                 className={styles['navbar-link']}
                             >
                                 Contact Me
