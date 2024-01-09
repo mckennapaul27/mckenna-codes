@@ -1,0 +1,19 @@
+@import '../../variables';
+@import '../../mixins';
+
+.title {
+    font-size: 70px;
+    font-weight: 700;
+    span {
+        display: block;
+    }
+}
+.title-span {
+    color: $primary-gray-light;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+}
+.subtitle-span {
+    height: 90px;
+}

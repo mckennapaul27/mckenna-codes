@@ -1,0 +1,115 @@
+@import '../../variables';
+@import '../../mixins';
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.icon-wrapper {
+    display: inline-block;
+    height: auto;
+    margin-left: 4px;
+}
+
+.button {
+    background-color: $primary-orange;
+    color: $black;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: 1px solid $primary-orange;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include transition-ease;
+    &:hover {
+        background-color: $primary-orange-hover;
+        border-color: $primary-orange-hover;
+    }
+    &.outlined {
+        background-color: transparent;
+        border-color: $white;
+        color: $white;
+        &:hover {
+            background-color: $primary-orange;
+            border-color: $primary-orange;
+            color: $black;
+        }
+        &.inverted {
+            &:hover {
+                background-color: $white;
+                border-color: $white;
+                color: $black;
+            }
+        }
+    }
+    &.plain {
+        background-color: transparent;
+        border-color: $primary-gray;
+        color: $primary-gray;
+        &:hover {
+            background-color: $primary-orange;
+            border-color: $primary-orange;
+            color: $white;
+        }
+    }
+    &.small {
+        padding: 4px 12px;
+        font-size: 12px;
+        .icon-wrapper {
+            height: 14px;
+        }
+    }
+    &.is-inline {
+        display: inline-block;
+    }
+    &.has-icon {
+        display: inline-flex;
+
+        // display: flex;
+        align-items: center;
+    }
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        &:hover {
+            background-color: $primary-orange;
+            border-color: $primary-orange;
+        }
+    }
+    &.is-loading {
+        @extend .disabled;
+        display: flex;
+        align-items: center;
+    }
+    &.block {
+        display: inline-block;
+        // width: 100%;
+    }
+}
+
+.spinner-svg {
+    animation: spin 1s linear infinite;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    margin-left: -4px;
+}
+.spinner-circle {
+    opacity: 25%;
+}
+.spinner-path {
+    opacity: 75%;
+}
+
+@include media-mobile-768 {
+    .button {
+        // width: 100%;
+    }
+}

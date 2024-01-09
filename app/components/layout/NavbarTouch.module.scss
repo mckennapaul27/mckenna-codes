@@ -1,0 +1,98 @@
+@import '../../variables';
+@import '../../mixins';
+
+.navbar {
+    background-color: $primary-gray;
+}
+
+.top-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    // border-bottom: 1px solid $light-gray;
+}
+
+.navbar-logo {
+    display: block;
+}
+
+.menu {
+    background-color: $white;
+    padding: 40px 15px;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    // width: calc(100% - 78px);
+    width: 100%;
+    z-index: 10000;
+    box-shadow: $light-box-shadow;
+}
+.navbar-item {
+    margin-bottom: 12px;
+}
+
+.navbar-link {
+    color: $primary-gray;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.button-wrapper {
+    margin: 24px 0;
+}
+.contact-deets-wrapper {
+    margin-bottom: 32px;
+}
+
+.contact-deets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // background-color: $primary-gray;
+    margin-bottom: 32px;
+    border-radius: 4px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    color: $primary-gray;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 16px;
+    @include lastChildMarginZero;
+}
+
+.contact-link-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    color: $primary-orange;
+    background-color: $primary-gray;
+    padding: 4px;
+    border-radius: 4px;
+}
+.hamburger-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 25000;
+}
+.service {
+    margin-bottom: 18px;
+}
+
+.service-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+.service-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: $primary-gray;
+}

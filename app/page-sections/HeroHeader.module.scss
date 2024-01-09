@@ -1,0 +1,35 @@
+@import '../../variables';
+@import '../../mixins';
+
+.main {
+    padding: 140px 0 100px;
+    // background-color: $primary-gray;
+    background: $linear-primary;
+    color: $white;
+    text-align: center;
+    h1 {
+        font-size: 56px;
+        font-weight: 700;
+    }
+}
+
+@include media-desktop-1215 {
+    .main {
+        padding: 120px 0 80px;
+        h1 {
+            font-size: 48px;
+        }
+    }
+}
+
+@include media-mobile-768 {
+    .main {
+        background-image: none;
+        background-color: $primary-gray;
+        padding: 60px 0;
+        text-align: left;
+        h1 {
+            font-size: 36px;
+        }
+    }
+}

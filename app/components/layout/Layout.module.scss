@@ -1,0 +1,18 @@
+@import '../../variables';
+@import '../../mixins';
+
+.navbar-desktop-wrapper {
+    display: block;
+}
+.navbar-touch-wrapper {
+    display: none;
+}
+
+@include media-tablet-1024 {
+    .navbar-desktop-wrapper {
+        display: none;
+    }
+    .navbar-touch-wrapper {
+        display: block;
+    }
+}

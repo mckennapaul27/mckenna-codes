@@ -1,0 +1,40 @@
+@import '../../variables';
+@import '../../mixins';
+
+.navbar {
+    background-color: $primary-bg;
+}
+
+.logo {
+    color: $off-white-lighter;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    span {
+        color: $primary;
+    }
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+}
+
+.navbar-menu {
+    display: flex;
+    margin: -20px;
+}
+.navbar-item {
+    padding: 20px;
+}
+.navbar-link {
+    color: $off-white;
+    font-weight: 300;
+    font-size: 18px;
+    @include transition-ease;
+    &:hover {
+        color: $primary;
+    }
+}

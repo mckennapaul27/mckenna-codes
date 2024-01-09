@@ -1,0 +1,44 @@
+@import '../../variables';
+@import '../../mixins';
+
+.overline {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 200%;
+    margin-bottom: 16px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    &.justify-center {
+        justify-content: center;
+    }
+}
+
+.icon-wrapper {
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    color: $primary-gray;
+    background-color: $primary-orange;
+    border-radius: 4px;
+    margin-right: 8px;
+    @include flexCenter;
+    &.wrapper_color_gray {
+        background-color: $primary-gray;
+    }
+}
+
+@include media-desktop-1215 {
+    .overline {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .icon-wrapper {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@include media-mobile-768 {
+}

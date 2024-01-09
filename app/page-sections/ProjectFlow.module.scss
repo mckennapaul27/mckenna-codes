@@ -1,0 +1,14 @@
+@import '../../variables';
+@import '../../mixins';
+
+.main {
+    padding: 120px 0;
+    color: $white;
+    background-color: $primary-gray;
+}
+
+@include media-tablet-1024 {
+    .main {
+        padding: 80px 0;
+    }
+}

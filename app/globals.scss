@@ -1,0 +1,117 @@
+@import './variables.scss';
+@import './mixins.scss';
+@import './resets.scss';
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 125%;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+}
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+}
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+}
+strong {
+    font-weight: 700;
+    color: #000;
+}
+.button {
+    font-size: 18px;
+    line-height: 125%;
+    padding: 20px 32px;
+    border: 1px solid;
+    display: inline-block;
+    border-radius: 100px;
+    cursor: pointer;
+    @include transition-ease;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    &.primary {
+        background-color: $primary;
+        border-color: $primary;
+        color: $black;
+        &:hover {
+            background-color: $primary-dark;
+            color: $white;
+            text-decoration: none;
+        }
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+            &:hover {
+                background-color: $primary;
+                color: $black;
+            }
+        }
+    }
+    &.outlined {
+        background-color: transparent;
+        // border-color: $primary-dark;
+        // color: $primary-dark;
+        font-weight: 700;
+        &:hover {
+            background-color: $primary;
+            border-color: $primary;
+            color: $white;
+        }
+        &.white {
+            background-color: transparent;
+            border-color: $white;
+            color: $white;
+            &:hover {
+                background-color: $primary;
+                border-color: $primary;
+                color: $white;
+            }
+        }
+    }
+    &.uppercase {
+        text-transform: uppercase;
+    }
+    &.small {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+.btn-icon {
+    margin-left: 8px;
+}
+
+.primary-line {
+    width: 200px;
+    height: 6px;
+    background-color: $primary;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}

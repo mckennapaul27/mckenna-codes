@@ -1,0 +1,42 @@
+@import '../../variables';
+@import '../../mixins';
+
+.label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+.textarea {
+    padding: 10px 12px;
+    border-radius: 4px;
+    min-width: 100%;
+    color: $primary-gray;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    border: 1px solid $primary-gray;
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px $primary-orange;
+    }
+    &::placeholder {
+        font-size: 14px;
+        font-weight: 300;
+        color: $primary-gray;
+        opacity: 0.5;
+        font-family: inherit;
+    }
+    &.dark {
+        background-color: $primary-gray;
+        color: $white;
+        border: 1px solid $white;
+        &::placeholder {
+            color: $white;
+        }
+    }
+}
+.error-msg {
+    color: #fb5151;
+    font-style: italic;
+    font-size: 14px;
+}

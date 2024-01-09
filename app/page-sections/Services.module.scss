@@ -1,0 +1,124 @@
+@import '../../variables';
+@import '../../mixins';
+
+.main {
+    padding: 120px 0;
+    color: $primary-gray;
+}
+
+.services-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.service-wrapper {
+    width: 33.33%;
+    padding: 15px;
+    // height: 100%;
+    > div {
+        height: 100%;
+    }
+}
+.service {
+    // border: 1px dashed black;
+    box-shadow: 2px 9px 28px 0px rgba(8, 60, 55, 0.1);
+    color: $primary-gray;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Set initial position */
+    transform: translateY(0);
+    position: relative;
+
+    /* Specify the transition duration and property to be transitioned */
+    transition: transform 0.5s;
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+.service-icon {
+    display: inline-block;
+    background-color: $primary-orange;
+    padding: 6px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+.service-icon-touch {
+    @extend .service-icon;
+    display: none;
+    margin-bottom: 12px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+.service-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.service-description {
+    margin-bottom: 20px;
+}
+.service-link {
+    display: block;
+}
+
+@media only screen and (max-width: 1407px) {
+    .text-section {
+        min-width: auto;
+    }
+}
+
+@include media-desktop-1310 {
+}
+@include media-desktop-1215 {
+    .services-section {
+        margin: -10px;
+    }
+
+    .service-wrapper {
+        width: 50%;
+        padding: 10px;
+    }
+}
+
+@include media-tablet-1024 {
+    .main {
+        padding: 80px 0;
+    }
+    /*-----------------*/
+    .services-section {
+        margin: -7.5px;
+        flex-wrap: wrap;
+    }
+
+    .service-wrapper {
+        width: 100%;
+        padding: 7.5px;
+    }
+    .service {
+        padding: 15px;
+        //border: 1px solid $primary-orange;
+        box-shadow: 2px 2px 28px 0px rgba(8, 60, 55, 0.1);
+
+        border-radius: 4px;
+    }
+    .service-icon {
+        display: none;
+    }
+    .service-icon-touch {
+        display: inline-block;
+    }
+    .service-title {
+        font-size: 16px;
+        padding-right: 15px;
+        margin-bottom: 12px;
+    }
+    .service-description {
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+}
