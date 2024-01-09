@@ -31,7 +31,7 @@ export const mobile_navbar = [
     {
         id: 3,
         title: 'About',
-        path: '/about',
+        path: '/about-me',
         hasDropdown: false,
         items: [],
     },

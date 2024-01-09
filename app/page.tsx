@@ -1,10 +1,11 @@
 import styles from './page.module.scss';
 import { Hero } from './page-sections/Hero';
 import { Projects } from './page-sections/Projects';
-import { Portfolio } from './page-sections/Portfolio';
+import { ClientPortfolio } from './page-sections/ClientPortfolio';
 import { Testimonials } from './page-sections/Testimonials';
 import { SimpleCTA } from './page-sections/SimpleCTA';
 import { LatestBlogs } from './page-sections/LatestBlogs';
+import { CounterBlock } from './page-sections/CounterBlock';
 
 const latestBlogs = [
     {
@@ -31,8 +32,10 @@ export default function Home() {
     return (
         <>
             <Hero />
+            <CounterBlock />
             <Projects />
-            <Portfolio />
+            <ClientPortfolio />
+            <Testimonials />
             <SimpleCTA />
             <LatestBlogs latestBlogs={latestBlogs} />
         </>

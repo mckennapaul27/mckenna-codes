@@ -2,28 +2,16 @@
 @import '../mixins';
 
 .main {
-    padding-top: 100px;
-    // background-color: $primary-bg;
-    background-color: $primary-bg-dark;
+    padding: 100px 0 80px;
+    background-color: $primary-bg;
     color: $white;
-    position: relative;
     z-index: 1;
 }
-.absolute-bg {
-    background-color: $primary-bg;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 94px);
-    z-index: 0;
-}
+
 .sections {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 80px;
-    position: relative;
     z-index: 1;
 }
 
@@ -36,7 +24,20 @@
     max-width: 350px;
     margin-bottom: 30px;
 }
-
+/* BANNER */
+.banner-wrapper {
+    background-color: $primary-bg;
+    position: relative;
+}
+.absolute-bg {
+    background-color: $primary-bg-dark;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% / 2);
+    z-index: 0;
+}
 .banner {
     background-color: $primary-bg-light;
     padding: 40px;
@@ -45,10 +46,7 @@
 }
 .inside-block {
     background-color: $primary-bg;
-    // height: 80px;
     padding: 20px;
-    // display: flex;
-    // align-items: center;
 }
 .banner-items {
     display: flex;

@@ -2,13 +2,18 @@
 @import '../mixins';
 
 .main {
-    padding: 80px 0 0;
-    // background-color: $primary-bg-dark;
+    background-color: $primary-bg;
     color: $off-white;
+    position: relative;
 }
-.sections {
-    // padding-bottom: 80px;
-    // border-bottom: 1px solid $primary-bg-light;
+.absolute-bg {
+    background-color: $primary-bg-dark;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% / 2);
+    z-index: 0;
 }
 
 .testimonials {
@@ -16,6 +21,7 @@
     flex-wrap: wrap;
     margin: -15px;
     position: relative;
+    z-index: 1;
 }
 
 .testimonial-wrapper {

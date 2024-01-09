@@ -3,15 +3,6 @@ import styles from './Hero.module.scss';
 import Image from 'next/image';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
 import { TitleTypist } from '../components/common/TitleTypist';
-import { classNames } from '../utils/form-helpers';
-import { montserrat } from '../utils/fonts';
-
-const bannerItems = [
-    { title: '5+', description: 'Personal Projects' },
-    { title: '10+', description: 'Client Projects' },
-    { title: '7+', description: 'Years Experience' },
-    { title: '957', description: 'Github Contributions Last Year' },
-];
 
 export const Hero = () => {
     return (
@@ -26,10 +17,11 @@ export const Hero = () => {
                         <div className="primary-line"></div>
                         <p className={styles['intro-text']}>
                             Hello and welcome to my personal website. You can
-                            find out more <Link href={'/about'}>about me</Link>,
-                            my work and my skills here. On my blog I write about
-                            a range of topics related to software development
-                            and my personal projects.
+                            find out more{' '}
+                            <Link href={'/about-me'}>about me</Link>, my work
+                            and my skills here. On my blog I write about a range
+                            of topics related to software development and my
+                            personal projects.
                         </p>
                         <p className={'social-icons'}>
                             <span className={'icon'}>
@@ -53,7 +45,7 @@ export const Hero = () => {
                         />
                     </div>
                 </div>
-                <div className={styles['banner']}>
+                {/* <div className={styles['banner']}>
                     <div className={styles['inside-block']}>
                         <div className={styles['banner-items']}>
                             {bannerItems.map((item, i) => (
@@ -80,9 +72,8 @@ export const Hero = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
-            <div className={styles['absolute-bg']}></div>
         </main>
     );
 };

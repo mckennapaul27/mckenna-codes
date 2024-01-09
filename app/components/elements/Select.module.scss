@@ -24,7 +24,7 @@
         font-family: inherit;
         &:focus-visible {
             outline: none;
-            box-shadow: 0 0 0 2px $primary-orange;
+            box-shadow: 0 0 0 2px $primary;
         }
         &::placeholder {
             font-size: 14px;

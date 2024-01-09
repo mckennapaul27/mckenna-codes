@@ -41,7 +41,7 @@
 }
 .service-icon {
     display: inline-block;
-    background-color: $primary-orange;
+    background-color: $primary;
     padding: 6px;
     margin-bottom: 16px;
     border-radius: 4px;
@@ -101,7 +101,7 @@
     }
     .service {
         padding: 15px;
-        //border: 1px solid $primary-orange;
+        //border: 1px solid $primary;
         box-shadow: 2px 2px 28px 0px rgba(8, 60, 55, 0.1);
 
         border-radius: 4px;

@@ -2,11 +2,9 @@
 @import '../mixins';
 
 .main {
-    // padding: 80px 0 0;
-    position: relative;
-    background-color: $primary-bg;
+    padding-bottom: 80px;
+    background-color: $primary-bg-dark;
     color: $off-white;
-    z-index: 1;
     h2 {
         margin-bottom: 30px;
         color: $white;
@@ -21,16 +19,6 @@
 .content-section {
     position: relative;
     z-index: 1;
-}
-
-.absolute-bg {
-    background-color: $primary-bg-dark;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 80px);
-    z-index: 0;
 }
 
 p.skills-grade {
@@ -56,37 +44,51 @@ p.skills-grade {
         background-color: #99b333;
     }
     &.red {
-        background-color: #c94343;
+        background-color: #df8b3d;
     }
+}
+
+/* BANNER */
+.banner-wrapper {
+    background-color: $primary-bg-dark;
+    position: relative;
+}
+.absolute-bg {
+    background-color: $primary-bg;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% / 2);
+    z-index: 0;
 }
 .banner {
     background-color: $primary-bg-light;
     padding: 40px;
     position: relative;
     z-index: 1;
-    margin-top: 80px;
 }
 .inside-block {
     background-color: $primary-bg;
-    // height: 80px;
     padding: 20px;
-    // display: flex;
-    // align-items: center;
 }
+
 .banner-items {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -10px;
 }
-.banner-item-title {
-    font-size: 32px;
-    line-height: 32px;
-    font-weight: 600;
-    color: $primary;
+.skill-item-wrapper {
+    padding: 10px;
 }
-.banner-item-description {
-    font-size: 16px;
-    line-height: 16px;
-    color: $gray;
-    margin-top: 6px;
+.skill-item {
+    p.skills-grade {
+        margin-bottom: 0;
+        font-size: 16px;
+        color: $off-white-lighter;
+    }
+    .color-block {
+        width: 16px;
+        height: 16px;
+    }
 }

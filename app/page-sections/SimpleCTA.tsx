@@ -4,6 +4,7 @@ import { montserrat } from '../utils/fonts';
 import Link from 'next/link';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
 import { FaArrowRight } from 'react-icons/fa';
+import { Button } from '../components/elements/Button';
 
 export const SimpleCTA = () => {
     return (
@@ -22,15 +23,21 @@ export const SimpleCTA = () => {
                             with something or just fancy connecting, then please
                             get in touch.
                         </p>
-                        <Link
+                        {/* <Link
                             className={classNames(
                                 'button primary',
                                 montserrat.className
                             )}
-                            href={`/contact`}
+                            href={`/contact-me`}
                         >
                             contact me
-                        </Link>
+                        </Link> */}
+                        <Button
+                            text="Contact me"
+                            href={'/contact-me'}
+                            display="block"
+                            size="large"
+                        />
                     </div>
                     <div>
                         <div className={styles['find-me-para']}>

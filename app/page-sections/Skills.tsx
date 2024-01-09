@@ -58,19 +58,7 @@ export const Skills = () => {
                         Mainly dogshit and use AI to cheat
                     </p>
                 </div>
-                <SkillsBlock />
             </div>
-            <div className={styles['absolute-bg']}></div>
         </section>
-    );
-};
-
-const SkillsBlock = ({}) => {
-    return (
-        <div className={styles['banner']}>
-            <div className={styles['inside-block']}>
-                <div className={styles['banner-items']}>sfdsgsdf</div>
-            </div>
-        </div>
     );
 };

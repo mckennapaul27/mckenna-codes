@@ -79,6 +79,7 @@ export const Testimonials = () => {
                     </div>
                 </div>
             </div>
+            <div className={styles['absolute-bg']}></div>
         </section>
     );
 };

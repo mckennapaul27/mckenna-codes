@@ -1,0 +1,19 @@
+@import '../../variables';
+@import '../../mixins';
+
+.input-wrapper {
+    margin-bottom: 12px;
+    width: 550px;
+}
+
+.form-wrapper {
+    padding: 80px 0;
+
+    margin: 0 auto;
+}
+
+@include media-mobile-768 {
+    .form-wrapper {
+        padding: 40px 15px;
+    }
+}

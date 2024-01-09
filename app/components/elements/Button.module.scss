@@ -17,28 +17,29 @@
 }
 
 .button {
-    background-color: $primary-orange;
+    background-color: $primary;
     color: $black;
     font-size: 14px;
     line-height: 150%;
     font-weight: 600;
     padding: 12px 20px;
-    border: 1px solid $primary-orange;
+    border: 1px solid $primary;
     border-radius: 4px;
     text-transform: uppercase;
     cursor: pointer;
     @include transition-ease;
     &:hover {
-        background-color: $primary-orange-hover;
-        border-color: $primary-orange-hover;
+        background-color: $primary-dark;
+        border-color: $primary-dark;
+        text-decoration: none;
     }
     &.outlined {
         background-color: transparent;
         border-color: $white;
         color: $white;
         &:hover {
-            background-color: $primary-orange;
-            border-color: $primary-orange;
+            background-color: $primary;
+            border-color: $primary;
             color: $black;
         }
         &.inverted {
@@ -54,8 +55,8 @@
         border-color: $primary-gray;
         color: $primary-gray;
         &:hover {
-            background-color: $primary-orange;
-            border-color: $primary-orange;
+            background-color: $primary;
+            border-color: $primary;
             color: $white;
         }
     }
@@ -64,6 +65,13 @@
         font-size: 12px;
         .icon-wrapper {
             height: 14px;
+        }
+    }
+    &.large {
+        padding: 16px 24px;
+        font-size: 18px;
+        .icon-wrapper {
+            height: 20px;
         }
     }
     &.is-inline {
@@ -79,8 +87,8 @@
         cursor: not-allowed;
         opacity: 0.5;
         &:hover {
-            background-color: $primary-orange;
-            border-color: $primary-orange;
+            background-color: $primary;
+            border-color: $primary;
         }
     }
     &.is-loading {

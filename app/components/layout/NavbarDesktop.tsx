@@ -34,6 +34,14 @@ export const NavbarDesktop = () => {
                         </li>
                         <li className={styles['navbar-item']}>
                             <Link
+                                href="/blog"
+                                className={styles['navbar-link']}
+                            >
+                                Blog{' '}
+                            </Link>
+                        </li>
+                        <li className={styles['navbar-item']}>
+                            <Link
                                 href="/contact-me"
                                 className={styles['navbar-link']}
                             >

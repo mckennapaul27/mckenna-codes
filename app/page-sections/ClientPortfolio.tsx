@@ -1,8 +1,7 @@
 import classNames from 'classnames';
-import styles from './Portfolio.module.scss';
+import styles from './ClientPortfolio.module.scss';
 import { montserrat } from '../utils/fonts';
 import Image from 'next/image';
-import { Testimonials } from './Testimonials';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 const projects = [
@@ -32,7 +31,7 @@ const projects = [
     },
 ];
 
-export const Portfolio = () => {
+export const ClientPortfolio = () => {
     return (
         <section className={styles['main']}>
             <div className="container">
@@ -80,17 +79,24 @@ export const Portfolio = () => {
                                                 />
                                             </a>
                                         </div>
-                                        <div className={styles['img-wrapper']}>
-                                            <Image
-                                                src={`/${project.src}`}
-                                                alt={project.name}
-                                                fill
-                                                className={styles['img']}
-                                                style={{
-                                                    objectFit: 'cover',
-                                                    objectPosition: 'center',
-                                                }}
-                                            />
+                                        <div className={styles['img-holder']}>
+                                            <div
+                                                className={
+                                                    styles['img-wrapper']
+                                                }
+                                            >
+                                                <Image
+                                                    src={`/${project.src}`}
+                                                    alt={project.name}
+                                                    fill
+                                                    className={styles['img']}
+                                                    style={{
+                                                        objectFit: 'cover',
+                                                        objectPosition:
+                                                            'center',
+                                                    }}
+                                                />
+                                            </div>
                                         </div>
                                         {/* <Image
                                             src={`/${project.src}`}
@@ -107,8 +113,6 @@ export const Portfolio = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles['absolute-bg']}></div>
-            <Testimonials />
         </section>
     );
 };
