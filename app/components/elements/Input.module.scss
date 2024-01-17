@@ -3,17 +3,17 @@
 
 .label {
     display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 12px;
+    font-size: 16px;
 }
 
 .input {
-    padding: 10px 12px;
+    padding: 16px 20px;
     border-radius: 4px;
     min-width: 100%;
     border: 1px solid $primary-gray;
     color: $primary-gray;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     font-family: inherit;
     &:focus-visible {
@@ -21,7 +21,7 @@
         box-shadow: 0 0 0 2px $primary;
     }
     &::placeholder {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 300;
         color: $primary-gray;
         opacity: 0.5;
@@ -45,9 +45,11 @@
     display: block;
 }
 .error-msg {
+    display: block;
     color: #fb5151;
     font-style: italic;
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 6px;
 }
 
 @include media-mobile-768 {

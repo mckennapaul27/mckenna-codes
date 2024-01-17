@@ -35,6 +35,7 @@
     font-size: 18px;
     @include transition-ease;
     &:hover {
+        text-decoration: none;
         color: $primary;
     }
 }

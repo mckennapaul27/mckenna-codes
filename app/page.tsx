@@ -6,29 +6,48 @@ import { Testimonials } from './page-sections/Testimonials';
 import { SimpleCTA } from './page-sections/SimpleCTA';
 import { LatestBlogs } from './page-sections/LatestBlogs';
 import { CounterBlock } from './page-sections/CounterBlock';
+import qs from 'qs';
+import { url } from '@/config';
 
-const latestBlogs = [
-    {
-        title: 'Build Dynamic Forms with React Hook Form',
-        description:
-            'It is easier to entrust the work to the experts because they are able to provide the best results with reliable quality',
-        date: 'January 8th 2024',
-        slug: 'build-dynamic-forms-with-react-hook-form',
-        tags: ['react', 'javascript', 'forms', 'nextjs'],
-        src: 'blog-card-placeholder-768-384.png',
-    },
-    {
-        title: 'Build Dynamic Forms with React Hook Form',
-        description:
-            'It is easier to entrust the work to the experts because they are able to provide the best results with reliable quality',
-        date: 'January 8th 2024',
-        slug: 'build-dynamic-forms-with-react-hook-form',
-        tags: ['react', 'javascript', 'forms', 'nextjs'],
-        src: 'blog-card-placeholder-768-384.png',
-    },
-];
+export default async function Home() {
+    const blog_query = qs.stringify(
+        {
+            select: 'slug description title tags image updatedAt',
+            pageIndex: 0,
+            pageSize: 1,
+            sort: {
+                createdAt: -1,
+            },
+        },
+        {
+            encodeValuesOnly: true, // prettify URL
+        }
+    );
+    const blog_res = await fetch(url + '/api/api-blogs?' + blog_query, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
+        },
+    });
+    const { data: blogs } = await blog_res.json();
 
-export default function Home() {
+    const tag_query = qs.stringify(
+        {
+            select: 'name slug',
+        },
+        {
+            encodeValuesOnly: true, // prettify URL
+        }
+    );
+    const tag_res = await fetch(url + '/api/api-tags?' + tag_query, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
+        },
+    });
+    const { data: tags } = await tag_res.json();
     return (
         <>
             <Hero />
@@ -37,7 +56,7 @@ export default function Home() {
             <ClientPortfolio />
             <Testimonials />
             <SimpleCTA />
-            <LatestBlogs latestBlogs={latestBlogs} />
+            <LatestBlogs latestBlogs={blogs} extra={'button'} tags={tags} />
         </>
     );
 }

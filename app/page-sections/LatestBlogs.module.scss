@@ -30,13 +30,14 @@
 }
 .blog-card-tag {
     display: inline-block;
-    background-color: $primary-bg-light;
-    padding: 4px 12px;
+    background-color: $primary-bg-dark;
     border-radius: 6px;
     font-weight: 500;
+    padding: 8px 16px;
+    font-size: 15px;
     @include transition-ease;
     &:hover {
-        background-color: $primary-bg;
+        background-color: $primary-bg-light;
         text-decoration: none;
     }
 }
@@ -45,13 +46,15 @@
     display: flex;
     justify-content: space-between;
 }
+.left-column {
+}
 .right-column {
     margin-left: 40px;
 }
 
 .popular-tags {
-    background-color: $primary-bg-dark;
-    padding: 32px;
+    // background-color: $primary-bg-dark;
+    // padding: 32px;
     position: sticky;
     top: 40px;
     right: 0;
@@ -62,4 +65,14 @@
     font-weight: 600;
     color: $off-white-lighter;
     margin-bottom: 20px;
+}
+
+.pagination-wrapper {
+    // margin-top: 30px;
+}
+.button-wrapper {
+    max-width: 800px;
+    // margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }

@@ -1,0 +1,33 @@
+@import '../../variables';
+@import '../../mixins';
+
+.pagination-wrapper {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-bg-dark;
+    padding: 16px;
+    // margin-top: 40px;
+}
+.pagination-buttons {
+    display: flex;
+}
+
+.pagination-button {
+    display: inline-block;
+    background-color: $primary-bg-light;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    // margin: 16px;
+    @include transition-ease;
+    &:hover {
+        background-color: $primary-bg;
+        text-decoration: none;
+    }
+    &:last-child {
+        margin-left: 12px;
+    }
+}

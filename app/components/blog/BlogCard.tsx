@@ -3,21 +3,29 @@ import styles from './BlogCard.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { montserrat } from '@/app/utils/fonts';
+import { type Tag } from '@/types';
+import dayjs from 'dayjs';
 
 export const BlogCard = ({
     title,
     description,
-    date,
+    updatedAt,
     slug,
     tags,
-    src,
+    image,
 }: {
     title: string;
     description: string;
-    date: string;
+    updatedAt: string;
     slug: string;
-    tags: string[];
-    src: string;
+    tags: Tag[];
+    image: {
+        url: string;
+        alt: string;
+        width: number;
+        height: number;
+        public_id: string;
+    };
 }) => {
     return (
         <div className={styles['blog-card-wrapper']}>
@@ -33,26 +41,28 @@ export const BlogCard = ({
                                             montserrat.className
                                         )}
                                         key={`blog-card-tag-${i}`}
-                                        href={`/blog/tag/${tag}`}
+                                        href={`/blog/tag/${tag.name}`}
                                     >
-                                        {tag}
+                                        {tag.name}
                                     </Link>
                                 </div>
                             ))}
                         </div>
                         <p className={styles['blog-card-date']}>
-                            Last updated: {date}
+                            Last updated:{' '}
+                            {dayjs(updatedAt).format('MMMM D, YYYY')}
                         </p>
                     </div>
                     <div className={styles['blog-card-content']}>
-                        <div
+                        <Link
                             className={classNames(
                                 styles['blog-card-title'],
                                 montserrat.className
                             )}
+                            href={`/blog/${slug}`}
                         >
                             {title}
-                        </div>
+                        </Link>
                         <p className={styles['blog-card-description']}>
                             {description}
                         </p>
@@ -60,7 +70,7 @@ export const BlogCard = ({
                 </div>
                 <div className={styles['blog-card-image-wrapper']}>
                     <Image
-                        src={`/${src}`}
+                        src={image.url}
                         alt={title}
                         style={{
                             width: '100%',

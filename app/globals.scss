@@ -29,7 +29,7 @@ h3 {
 }
 strong {
     font-weight: 700;
-    color: #000;
+    // color: #000;
 }
 .button {
     font-size: 18px;
@@ -60,6 +60,13 @@ strong {
                 background-color: $primary;
                 color: $black;
             }
+        }
+    }
+    &.secondary {
+        background-color: $primary-bg-dark;
+        &:hover {
+            background-color: $primary-bg;
+            text-decoration: none;
         }
     }
     &.outlined {

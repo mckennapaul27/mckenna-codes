@@ -17,3 +17,25 @@ export type FormValues = {
 export type WindowWithDataLayer = Window & {
     dataLayer: Record<string, any>[];
 };
+
+export type Tag = {
+    _id: string;
+    name: string;
+    slug?: string;
+};
+
+export type BlogType = {
+    title: string;
+    description?: string;
+    updatedAt: string;
+    slug: string;
+    tags: Tag[];
+    image: {
+        url: string;
+        alt: string;
+        width: number;
+        height: number;
+        public_id: string;
+    };
+    body?: string;
+};
