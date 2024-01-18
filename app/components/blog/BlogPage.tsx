@@ -65,6 +65,7 @@ export const BlogPage = ({
                 if (
                     domNode.attribs.href &&
                     domNode.attribs.href.startsWith('http')
+                    // it's an external link
                 ) {
                     if (domNode.children[0] && domNode.children[0].data) {
                         return (
