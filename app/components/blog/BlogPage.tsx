@@ -52,6 +52,7 @@ export const BlogPage = ({
                 if (
                     domNode.attribs.href &&
                     domNode.attribs.href.startsWith('/')
+                    // it's an internal link
                 ) {
                     if (domNode.children[0] && domNode.children[0].data) {
                         return (
