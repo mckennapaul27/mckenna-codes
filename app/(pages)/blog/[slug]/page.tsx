@@ -33,6 +33,7 @@ export async function generateStaticParams() {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
+        cache: 'no-store',
     });
     const data = await res.json();
     return data.data.map((blog: { _id: string; slug: string }) => {
@@ -69,7 +70,8 @@ export default async function Page({
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
-        next: { revalidate: 120 }, // refresh every 60 seconds
+        cache: 'no-store',
+        next: { revalidate: 3600 }, // refresh every hour
     });
     const data = await res.json();
 

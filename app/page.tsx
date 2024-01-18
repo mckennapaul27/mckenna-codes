@@ -42,6 +42,7 @@ export default async function Home() {
     );
     const tag_res = await fetch(url + '/api/api-tags?' + tag_query, {
         method: 'GET',
+        cache: 'no-store',
         headers: {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
