@@ -48,36 +48,36 @@ export const BlogPage = ({
                     return <code>{domNode.children[0].data}</code>;
                 }
             }
-            //    if (domNode.attribs && domNode.name === 'a') {
-            //        if (
-            //            domNode.attribs.href &&
-            //            domNode.attribs.href.startsWith('/')
-            //        ) {
-            //            if (domNode.children[0] && domNode.children[0].data) {
-            //                return (
-            //                    <Link href={domNode.attribs.href}>
-            //                        <a>{domNode.children[0].data}</a>
-            //                    </Link>
-            //                );
-            //            }
-            //        }
-            //        if (
-            //            domNode.attribs.href &&
-            //            domNode.attribs.href.startsWith('http')
-            //        ) {
-            //            if (domNode.children[0] && domNode.children[0].data) {
-            //                return (
-            //                    <a
-            //                        href={domNode.attribs.href}
-            //                        target="_blank"
-            //                        rel="noreferrer"
-            //                    >
-            //                        {domNode.children[0].data}
-            //                    </a>
-            //                );
-            //            }
-            //        }
-            //    }
+            if (domNode.attribs && domNode.name === 'a') {
+                if (
+                    domNode.attribs.href &&
+                    domNode.attribs.href.startsWith('/')
+                ) {
+                    if (domNode.children[0] && domNode.children[0].data) {
+                        return (
+                            <Link href={domNode.attribs.href}>
+                                {domNode.children[0].data}
+                            </Link>
+                        );
+                    }
+                }
+                if (
+                    domNode.attribs.href &&
+                    domNode.attribs.href.startsWith('http')
+                ) {
+                    if (domNode.children[0] && domNode.children[0].data) {
+                        return (
+                            <a
+                                href={domNode.attribs.href}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {domNode.children[0].data}
+                            </a>
+                        );
+                    }
+                }
+            }
             if (domNode.attribs && domNode.name === 'img') {
                 return <NextImage {...domNode.attribs} />;
             }
