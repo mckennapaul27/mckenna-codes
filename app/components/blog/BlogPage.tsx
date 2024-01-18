@@ -14,6 +14,8 @@ import parse from 'html-react-parser';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark as highlightStyle } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { SimpleCTA } from '@/app/page-sections/SimpleCTA';
+import { NextImage } from './NextImage';
+import { TOC } from './TOC';
 
 export const BlogPage = ({
     title,
@@ -23,25 +25,28 @@ export const BlogPage = ({
     image,
     body,
 }: BlogType) => {
-    console.log(body);
     const parsedBody = JSON.parse(body as string);
-    // console.log(parsedBody);
     const toc = createTableOfContents(parsedBody);
     const content = convertBlocksToHtml(parsedBody);
-    console.log(toc);
+    // console.log(JSON.stringify(toc, null, 2));
     const options = {
-        replace: (domNode) => {
+        replace: (domNode: any) => {
             if (domNode.name === 'code') {
-                console.log(domNode);
-                return (
-                    <SyntaxHighlighter
-                        language="javascript"
-                        style={highlightStyle}
-                    >
-                        {domNode.children[0].data}
-                    </SyntaxHighlighter>
-                );
-                // return <NextImage {...domNode.attribs} />;
+                const parentNode = domNode.parent;
+                if (parentNode && parentNode.name === 'pre') {
+                    // It's a code block
+                    return (
+                        <SyntaxHighlighter
+                            language="javascript"
+                            style={highlightStyle}
+                        >
+                            {domNode.children[0].data}
+                        </SyntaxHighlighter>
+                    );
+                } else {
+                    // It's inline code
+                    return <code>{domNode.children[0].data}</code>;
+                }
             }
             //    if (domNode.attribs && domNode.name === 'a') {
             //        if (
@@ -73,35 +78,47 @@ export const BlogPage = ({
             //            }
             //        }
             //    }
-            //    if (domNode.attribs && domNode.name === 'img') {
-            //        return <NextImage {...domNode.attribs} />;
-            //    }
-            //    if (domNode.data && domNode.data === '--skrill vip promo--') {
-            //        // const SkrillVIPOne = dynamic(() =>
-            //        //     import('@/components/call-to-actions/SkrillVIPOne')
-            //        // );
-            //        return <SkrillVIPOne />;
-            //    }
+            if (domNode.attribs && domNode.name === 'img') {
+                return <NextImage {...domNode.attribs} />;
+            }
         },
     };
     return (
         <div className={styles['blog-page']}>
             <div className="container">
-                <div className={styles['sections']}>
-                    <main className={styles['article']}>
-                        <h1
-                            className={classNames(
-                                montserrat.className,
-                                styles['title']
-                            )}
-                        >
-                            {title}
-                        </h1>
-                        <div className={styles['tags-dates']}>
-                            <p className={styles['update-date']}>
-                                Updated on:{' '}
-                                {dayjs(updatedAt).format('MMMM D, YYYY')}
-                            </p>
+                <div className={styles['title-section']}>
+                    <h1
+                        className={classNames(
+                            montserrat.className,
+                            styles['title']
+                        )}
+                    >
+                        {title}
+                    </h1>
+                    <p className={styles['update-date']}>
+                        Updated on {dayjs(updatedAt).format('MMMM D, YYYY')}
+                    </p>
+                </div>
+                <div className={styles['main-wrapper']}>
+                    <div className={styles['main-content']}>
+                        <div className={styles['blog-card-image-wrapper']}>
+                            <Image
+                                src={image.url}
+                                alt={title}
+                                fill
+                                className={styles['blog-image']}
+                                priority
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                }}
+                            />
+                        </div>
+                        <div className={styles['main-content-wrapper']}>
+                            <div className={styles['markdown']}>
+                                {parse(content, options)}
+                            </div>
                             <div className={styles['blog-card-tags']}>
                                 {tags.map((tag, i) => (
                                     <div
@@ -121,29 +138,21 @@ export const BlogPage = ({
                                     </div>
                                 ))}
                             </div>
-                            <div className={styles['blog-card-image-wrapper']}>
-                                <Image
-                                    src={image.url}
-                                    alt={title}
-                                    width={image.width}
-                                    height={image.height}
-                                    className={styles['blog-image']}
-                                    priority
-                                    // style={{
-                                    //     width: '100%',
-                                    //     height: '100%',
-                                    //     objectFit: 'cover',
-                                    // }}
-                                    // className={styles['blog-card-img']}
-                                    // fill
-                                />
-                            </div>
-                            <div className={styles['markdown']}>
-                                {parse(content, options)}
-                            </div>
                         </div>
-                    </main>
-                    <aside>dsfds</aside>
+                    </div>
+                    <div className={styles['right-column']}>
+                        <div className={styles['toc-wrapper']}>
+                            <p
+                                className={classNames(
+                                    styles['right-column-title'],
+                                    montserrat.className
+                                )}
+                            >
+                                Table of Contents
+                            </p>
+                            <TOC toc={toc} />
+                        </div>
+                    </div>
                 </div>
             </div>
             <SimpleCTA />

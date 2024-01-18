@@ -6,188 +6,70 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "I have wanted to localise one of my Next JS affiliate websites for a while but previously I could not work out how to do so with "
+                    "text": "Neteller is a truly helpful e-money transfer service. With millions of annual users and some of the most secure encryption in the industry, Neteller has quite a bit going for them. And, once you add in the fact that transactions to merchants and friends alike are near-instant, things are looking pretty dang good! But getting started with Neteller is a process; you’ll need to register an account, then verify it, and "
                 },
                 {
                     "type": "text",
                     "marks": [{ "type": "italic" }],
-                    "text": "localised route names"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "For example, for a website localised for English and Spanish "
+                    "text": "only then"
                 },
                 {
                     "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "with"
+                    "text": " will you have the full scope of Neteller’s services."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "We’re going to help you get started with a super-fast how-to guide to registration. Show you how to get every last drop out of your shiny new account, and more! "
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "attrs": { "level": 2 },
+            "content": [
+                { "type": "text", "text": "Neteller Registration Basics" }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "While this whole process is far simpler than it seems on the surface, there’s a lot to learn before you can call yourself a true Neteller veteran. "
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "As usual, we want to remind you that verifying your account is absolutely crucial to unlocking the best perks of your Neteller account. "
                 },
-                {
-                    "type": "text",
-                    "text": " localised routes, we would aim to have the following pages:"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "English: ‘/second-page'"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Spanish: ‘/es/segunda-pagina’"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "For me personally, I don’t feel that websites are fully localized without localized routes."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "This is especially important when you are targeting international SEO."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "It’s " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "not really"
-                },
-                {
-                    "type": "text",
-                    "text": " feasible in my opinion to accept the following as a viable solution:"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "English: ‘/second-page’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Spanish: ‘/es/second-page’"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "I suppose it depends on use case and whilst I am sure some individuals and companies are perfectly happy with non-translated routes, for an affiliate site that requires organic traffic to thrive, it would feel like a waste of time and investment to localize the site without translating the routes."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Therefore, in this tutorial, I will explain how I managed to solve the riddle of Next localized routes using Strapi as the CMS and using the Strapi GraphQL API."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We will create a Next website that has localized routes for English, Spanish and German."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "I will be using google translate for this website so please do not be offended by my poor linguistic skills :-)"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Prerequisites"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "To follow along with this tutorial, you should be familiar with NextJS and Strapi."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "This is what the finished website will look like:"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Demo"
-                },
-                { "type": "text", "text": " " },
                 {
                     "type": "text",
                     "marks": [
                         {
                             "type": "link",
                             "attrs": {
-                                "href": "https://fe-next-js-localized-routes.vercel.app/",
+                                "href": "https://www.ewalletbooster.com/neteller/neteller-verification-guide",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer nofollow",
                                 "class": "extensions_link__hVTAj"
                             }
                         },
-                        { "type": "bold" },
-                        { "type": "underline" }
+                        { "type": "bold" }
                     ],
-                    "text": "https://fe-next-js-localized-routes.vercel.app"
+                    "text": "Click here for a guide"
+                },
+                {
+                    "type": "text",
+                    "text": " to account verification once you’ve made an account - you’ll thank us later."
                 }
             ]
         },
@@ -197,8 +79,7 @@
             "content": [
                 {
                     "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Set up"
+                    "text": "Neteller Step-by-Step Registration Guide"
                 }
             ]
         },
@@ -207,43 +88,7 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "Firstly, create both the Next frontend and the Strapi backend inside a new folder."
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "mkdir next-localsied-routes-with-strapi\nnpx create-strapi-app backend –quickstart\nnpx create-next-app frontend \n"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 2 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Strapi backend"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We will set up Strapi CMS first." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Once you have installed and registered a Strapi app, firstly go to settings > internationalization and add two extra locales: ‘es’ and ‘de’."
+                    "text": "Okay, account creation - this is surprisingly simple, so let’s just dive in. "
                 }
             ]
         },
@@ -252,1160 +97,37 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "Also, since we will be using the graphQL API from Strapi you will need to go to Marketplace and download the graphQL plugin."
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Collection Types"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Firstly, we are going to set up two collection types: Blog and Page."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We will use the Page collection type to create "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "four different pages"
-                },
-                {
-                    "type": "text",
-                    "text": " which will be available in all our locales."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "In a real-world app, the Page collection could be used for all standard pages such as /home, /contact, /pricing, /about etc"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We will also create one Blog article in the Blog collection to show that along with standard pages, we can also localize content which lives in different folders (this will make more sense once we start on the Next frontend)."
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Collection Type - Page"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Create a new collection type in Strapi called ‘page’ and give it three fields: ‘title’ (Text), ‘slug’ (Text) and ‘body’(Text) and make sure to "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "enable localisation"
-                },
-                { "type": "text", "text": " on this type." }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Collection Type – Blog"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Do the same as above and create a collection type called ‘blog’ and give it the same fields as above ‘title’ (Text), ‘slug’ (Text) and ‘body’(Text)."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "Please note that Page and Blog do not have to have the same field types and there is no relevance for this tutorial in them having the same field types! I am simply including Blog so that I can demonstrate that it is possible to have more than one type of dynamic page in NextJS."
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Adding content to the page and blog models."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Now we need to add some content for the pages and blogs."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We are going to create 4 pages in each locale and 1 blog in each locale."
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Pages"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Title: Home, slug: ‘/’, locale: ‘en’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Casa, slug: ‘’/, locale: ‘es’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Heimat, slug: ‘/’, locale: ‘de’"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Title: First Page, slug: first-page, locale: ‘en’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Primera pagina, slug: primera-pagina, locale: ‘es’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Erste Seite, slug: erste-seite, locale: ‘de’"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Title: Second Page, slug: second-page, locale: ‘en’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Segunda pagina, slug: segunda-pagina, locale: ‘es’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Zweite Seite, slug: zweite-seite, locale: ‘de'"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Title: Third Page, slug: third-page, locale: ‘en’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Tercera pagina, slug: tercera-pagina, locale: ‘es’"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Dritte Seite, slug: dritte-seite, locale: ‘de’"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Blogs"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Title: How to localise your website, slug: how-to-localise-your-website, locale: 'en'."
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: Como localizar su sitio web, slug: como-localizar-su-sitio-web, locale: ‘es’."
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Title: So lokalisieren Sie Ihre Website, slug: so-lokalisieren-sie-Ihre-website, locale: ‘de’."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "I am going to use some real content from English, German and Spanish online newspapers for the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "body"
-                },
-                {
-                    "type": "text",
-                    "text": " element of the pages and the blogs to save time creating dummy content."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Once you have entered the content for our 4 pages in all locales, your pages collection should look like this below:"
-                }
-            ]
-        },
-        { "type": "paragraph" },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Once you have entered the content for our blog post, the blog collection should look like this below:"
-                }
-            ]
-        },
-        { "type": "paragraph" },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Single Type - Global"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Create a ‘Single Type’ which we will call ‘Global’ to manage the navbar for this tutorial (and any other global data you wish to manage)."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "N.B make sure to go to advanced settings and select "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "Enable localization for this Content-Type"
-                },
-                { "type": "text", "text": " and then follow the steps below." }
-            ]
-        },
-        {
-            "type": "orderedList",
-            "attrs": { "tight": true, "start": 1 },
-            "content": [
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "Create a new ‘Single Type’ in the ‘Content-Types Builder’ and name it ‘Global’."
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                { "type": "text", "text": "Add a " },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "italic" }],
-                                    "text": "single"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " component called ‘navbar’ as a field for Global."
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                { "type": "text", "text": "Add a " },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "italic" }],
-                                    "text": "repeatable"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " component called ‘link’ as a field for ‘navbar’."
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "Add the following fields to the link component: ‘name’ (Text), ‘url’ (Text), newTab (Boolean)"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Your Global type should now look like this below."
-                }
-            ]
-        },
-        { "type": "paragraph" },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We will now add some data." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Add in 4 link components to your navbar component in the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "default locale (English en)."
-                }
-            ]
-        },
-        { "type": "paragraph" },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Now we can complete the navbar data by adding in the links for our two extra locales (de and es). Here is the 'es' version:"
-                }
-            ]
-        },
-        { "type": "paragraph" },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Once this is done, we will have the following links set up in our navbar component inside the Global single-type."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [{ "type": "text", "text": "English-en" }]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Name: Home, URL: ‘/’" },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: First Page, URL: /first-page"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Second Page, URL: /second-page"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Third Page, URL: /third-page"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: How to localise your website, URL: /blog/how-to-localise-your-website"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [{ "type": "text", "text": "Spanish-es" }]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Name: Casa, URL: ‘/’" },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Primera pagina, URL: /primera-pagina"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Segunda pagina, URL: /segunda-pagina"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Tercera pagina, URL: /tercera-pagina"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Como localizar su sitio web, URL: /blog/como-localizar-su-sitio-web"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [{ "type": "text", "text": "German-de" }]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Name: Heimat, URL: ‘/’" },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Erste Seite, URL: /erste-seite"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Zweite Seite, URL: /zweite-seite"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: Dritte Seite, URL: /dritte-seite"
-                },
-                { "type": "hardBreak" },
-                {
-                    "type": "text",
-                    "text": "Name: So lokalisieren Sie Ihre Website, URL: /blog/so-lokalisieren-sie-Ihre-website"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Note that for the home page for each locale, we have provided '/' as the value for the URL."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "The final thing we need to do to complete the set up of Strapi is to go to settings > Users & Permissions > Roles > Public and then make sure all our content types enable find, findone and count enabled."
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 2 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "NextJS Frontend"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Firstly, install the dependencies we’ll need to build our front end."
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "npm i @apollo/client graphql bulma sass js-cookie react-markdown\n"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Project set up"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Let’s start by building out the structure of the Next app."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Create the following components:" }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "mkdir components\ntouch components/layout.jsx\ntouch components/locale-switch.jsx\ntouch components/navbar.jsx\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Create a " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/lib"
-                },
-                { "type": "text", "text": " folder and an " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "apollo-client.js"
-                },
-                { "type": "text", "text": " helper file." }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "mkdir lib\ntouch lib/apollo-client.js\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "In " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/lib/apollo-client.js"
-                },
-                {
-                    "type": "text",
-                    "text": " paste the following to make the connection to our GraphQL api:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "import { ApolloClient, InMemoryCache } from '@apollo/client';\n\nconst client = new ApolloClient({\n    uri: 'http://localhost:1337/graphql',\n    cache: new InMemoryCache(),\n});\n\nexport default client;\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We will also need a " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/utils"
-                },
-                {
-                    "type": "text",
-                    "text": " folder to include api helpers and localization helpers:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "mkdir utils\ntouch utils/api-helpers.js\ntouch utils/localize-helpers.js\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Finally we need to create a " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "next.config.js"
-                },
-                {
-                    "type": "text",
-                    "text": " in the root of our project so we can set up i18n for our selected locales:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "module.exports = {\n    i18n: {\n        locales: ['en', 'de', 'es'],\n        defaultLocale: 'en',\n    },\n};\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "As we will be fetching our content for our home page from Strapi, we do not need an "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "index.js"
-                },
-                { "type": "text", "text": " page." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "If we left the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "index.jsx"
-                },
-                { "type": "text", "text": " page inside the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pages"
-                },
-                {
-                    "type": "text",
-                    "text": " folder, we would get the following error message:"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "Error: You cannot define a route with the same specificity as a optional catch-all route (\"/\" and \"/[[...slug]]\")"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Therefore, In the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pages"
-                },
-                { "type": "text", "text": " folder, please delete " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "index.js"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We will need the following pages set up in Next to implement our localization solution:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "mkdir pages/blog\ntouch pages/blog/[slug].jsx\ntouch pages/[[...slug]].jsx\n"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 2 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "[[...slug]].jsx"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Let's start with the elephant in the room.."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "The " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "[[...slug]].jsx"
-                },
-                {
-                    "type": "text",
-                    "text": " page is the official Next.js way of creating an "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "optional catch-all route"
-                },
-                { "type": "text", "text": ", which is " },
-                {
-                    "type": "text",
-                    "marks": [
-                        {
-                            "type": "link",
-                            "attrs": {
-                                "href": "https://nextjs.org/docs/routing/dynamic-routes",
-                                "target": "_blank",
-                                "rel": "noopener noreferrer nofollow",
-                                "class": "extensions_link__hVTAj"
-                            }
-                        },
-                        { "type": "bold" },
-                        { "type": "underline" }
-                    ],
-                    "text": "documented on their website here"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We will use this catch-all route to fetch all of the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "pages"
-                },
-                { "type": "text", "text": " that we created for " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "each locale"
-                },
-                { "type": "text", "text": " in Strapi." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We will use the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pages/[blog].jsx"
-                },
-                { "type": "text", "text": " page to fetch " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "blog"
-                },
-                { "type": "text", "text": " posts separately." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
+                    "marks": [{ "type": "bold" }, { "type": "italic" }],
                     "text": "Note"
                 },
                 {
                     "type": "text",
-                    "text": ": whilst it is possible to fetch every single page from Strapi via the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "[[...slug]].jsx"
-                },
-                {
-                    "type": "text",
-                    "text": " dynamic page I personally think it is better from an organisational perspective to split the content via each folder that requires dynamic content."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Therefore I prefer to use the catch-all route to fetch all the root pages that fall outside of any other subdirectory (usually pages such as "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/about"
-                },
-                { "type": "text", "text": " and " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/contact"
-                },
-                {
-                    "type": "text",
-                    "text": " will not need to be within another folder)."
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Setting up [[...slug]].jsx"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Import the required dependencies:" }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "import { gql } from '@apollo/client';\nimport client from '../lib/apollo-client';\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "The first step inside of " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "[[...slug]].jsx"
-                },
-                { "type": "text", "text": " is to fetch all of the " },
-                {
-                    "type": "text",
                     "marks": [{ "type": "italic" }],
-                    "text": "pages per locale"
-                },
-                { "type": "text", "text": " from Strapi." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "To do this, we will utilise the built-in Next function "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticPaths"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "In the first section of " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticPaths"
-                },
-                {
-                    "type": "text",
-                    "text": " we map through the locales to fetch the pages per locale:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "export async function getStaticPaths({ locales }) {\n    // array of locales provided in context object in getStaticPaths\n    const paths = (await Promise.all(\n        locales.map(async (locale) => {\n            // map through locales\n            const { data } = await client.query({\n                query: gql`\n                    query GetAllPages($locale: String) {\n                        pages(locale: $locale) {\n                            slug\n                            locale\n                        }\n                    }\n                `, // fetch list of pages per locale\n                variables: { locale },\n            });\n            return {\n                pages: data.pages,\n                locale,\n            };\n        })\n    ))\n"
+                    "text": ": Do not use an IP masking service, VPN, or similar proxy while registering; Neteller will automatically ban any accounts that use this during the registration process."
                 }
             ]
         },
         {
             "type": "paragraph",
             "content": [
+                { "type": "text", "text": "You’ll want to begin at the " },
                 {
                     "type": "text",
-                    "text": "On it's own, this will return an array of pages for each locale and the locale itself, like below:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "[\n  { pages: [ [Object], [Object], [Object], [Object] ], locale: 'en' },\n  { pages: [ [Object], [Object], [Object], [Object] ], locale: 'de' },\n  { pages: [ [Object], [Object], [Object], [Object] ], locale: 'es' }\n]\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "However, Next expects a certain value to be returned from "
+                    "marks": [
+                        {
+                            "type": "link",
+                            "attrs": {
+                                "href": "https://wlneteller.adsrv.eacdn.com/C.ashx?btag=a_75417b_3619c_&affid=53&siteid=75417&adid=3619&c=",
+                                "target": "_blank",
+                                "rel": "noreferrer",
+                                "class": "extensions_link__hVTAj"
+                            }
+                        },
+                        { "type": "bold" }
+                    ],
+                    "text": "Neteller sign-up page"
                 },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticPaths"
-                },
-                { "type": "text", "text": " which is " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "{ paths: [], fallback: boolean }"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Therefore, we then need to " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "reduce"
-                },
-                {
-                    "type": "text",
-                    "text": " through the array above to extract the values we need."
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "export async function getStaticPaths({ locales }) {\n    // array of locales provided in context object in getStaticPaths\n    const paths = (\n        await Promise.all(\n            locales.map(async (locale) => {\n                // map through locales\n                const { data } = await client.query({\n                    query: gql`\n                        query GetAllPages($locale: String) {\n                            pages(locale: $locale) {\n                                slug\n                                locale\n                            }\n                        }\n                    `, // fetch list of pages per locale\n                    variables: { locale },\n                });\n                return {\n                    pages: data.pages,\n                    locale,\n                };\n            })\n        )\n    ).reduce((acc, item) => {\n        item.pages.map((p) => {\n            // reduce through the array of returned objects\n            acc.push({\n                params: {\n                    slug: p.slug === '/' ? false : p.slug.split('/'),\n                },\n                locale: p.locale,\n            });\n            return p;\n        });\n        return acc;\n    }, []);\n\n    return {\n        paths,\n        fallback: false,\n    };\n}\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Notice that in the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "params"
-                },
-                { "type": "text", "text": " object that we return to the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "reduce"
-                },
-                { "type": "text", "text": " function, we are formatting the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "slug"
-                },
-                { "type": "text", "text": " as either " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "false"
-                },
-                { "type": "text", "text": " or an array using " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "split('/')"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "This is due to the fact that:" }
+                { "type": "text", "text": ":" }
             ]
         },
         {
@@ -1420,24 +142,1075 @@
                             "content": [
                                 {
                                     "type": "text",
-                                    "text": "when using option catch-all routes such as [[...slug]] or [...slug], "
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Enter the prompted information"
                                 },
+                                {
+                                    "type": "text",
+                                    "text": ". This includes your:"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "bulletList",
+                            "attrs": { "tight": true },
+                            "content": [
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "First and last name"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Email"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Country of residence"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Preferred currency (GBP, EUR, etc.)"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Secure password"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                { "type": "text", "text": "After clicking “" },
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Register"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": ",” you’ll be asked to confirm your country of residence and preferred currency."
+                                }
+                            ]
+                        },
+                        {
+                            "type": "bulletList",
+                            "attrs": { "tight": true },
+                            "content": [
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "marks": [
+                                                        { "type": "italic" }
+                                                    ],
+                                                    "text": "Select these items carefully; this will set your account preference to the chosen language, country, and currency."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "After this, you’ll be sent a confirmation email to the address you previously entered. After confirming the email, you’ll be redirected to the “Your Details” screen. Here, you will:"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "bulletList",
+                            "attrs": { "tight": true },
+                            "content": [
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "marks": [
+                                                        { "type": "italic" }
+                                                    ],
+                                                    "text": "Accurately enter your birthdate, home address, gender, and mobile phone number."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "marks": [
+                                                        { "type": "italic" }
+                                                    ],
+                                                    "text": "Be sure to double-check each - you’ll be asked to verify shortly."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Follow the prompts"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " to verify your phone number with a Two-Factor Authentication (2FA) PIN."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Create your Neteller Secure ID"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " (more on that below). This is a secondary security measure that’s used during transactions. It must be:"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "bulletList",
+                            "attrs": { "tight": true },
+                            "content": [
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Exactly six digits"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Have at least two different digits"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Contain no consecutive numbers (i.e., 234567, 789, etc.)"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "You’re registered!"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " Now - locate your Neteller Personal ID and write it down for use shortly (or copy it to your clipboard)."
+                                }
+                            ]
+                        },
+                        {
+                            "type": "bulletList",
+                            "attrs": { "tight": true },
+                            "content": [
+                                {
+                                    "type": "listItem",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "marks": [
+                                                        { "type": "italic" }
+                                                    ],
+                                                    "text": "This 12-digit number is located in the “"
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "marks": [
+                                                        { "type": "bold" },
+                                                        { "type": "italic" }
+                                                    ],
+                                                    "text": "Account Overview"
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "marks": [
+                                                        { "type": "italic" }
+                                                    ],
+                                                    "text": "” section of your settings, beneath your name."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "attrs": { "level": 4 },
+            "content": [
+                {
+                    "type": "text",
+                    "marks": [{ "type": "bold" }],
+                    "text": "Neteller Secure ID"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Neteller Secure ID, as mentioned above, it acts as a secondary security measure for your account. It’s a self-determined six-digit code which functions as, essentially, another PIN on your account. "
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "While you can absolutely think of one manually, we highly recommend that you randomize and store it using a password wallet service."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "As discussed previously, try to avoid number sequences like a birth date (i.e., 01/01/87), and don’t use consecutive or duplicated sequences of numbers. At the end of the day, you can reset this - so don’t think too hard about it."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "attrs": { "level": 2 },
+            "content": [{ "type": "text", "text": "Neteller Joining Bonus" }]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Many e-money transfer services offer a joining bonus of some form; free transactions, reduced fees, cashback - you get the idea. "
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Unfortunately, Neteller doesn’t offer a joining bonus in any form at the time of this article’s publication."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "However, that’s not to say that you can’t be rewarded for signing up - you just can’t do it with Neteller. Keep reading to see how to gain instant VIP perks, lowered fees, and more, all thanks to eWalletBooster."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "attrs": { "level": 4 },
+            "content": [
+                {
+                    "type": "text",
+                    "marks": [{ "type": "bold" }],
+                    "text": "EWalletBooster + Neteller Sign-Up Bonus"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Now, we’ve been in business with Neteller for quite some time. While we love the service, it felt… wrong that you don’t get any type of sign-up or joining bonus from Neteller - so we fixed it."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "By linking your eWalletBooster and Neteller accounts (for free), you instantly gain the following perks:"
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "content": [
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [{ "type": "paragraph" }]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Without eWalletBooster"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "With eWalletBooster"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Verification Fee"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "$5" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "Free" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Verification Time"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "text": "2-5 business days"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "≤ 12 hours" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Silver VIP Threshold"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "$15,000" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "$6,000" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "FX Fee"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "3.99%" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "3.19%" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Peer-to-Peer (P2P) Fee"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "text": "From 1.45% - 4.49%"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "Free" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Refer-a-Friend Rewards"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "No" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "Yes" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Cashback on Select Purchases"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "No" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "Yes" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Beginning VIP Tier"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "Non-VIP" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "text": "Fast Silver VIP"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "tableRow",
+                    "content": [
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "marks": [{ "type": "bold" }],
+                                            "text": "Rewards Dashboard"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "No" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null
+                            },
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        { "type": "text", "text": "Yes" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "So - how do you complete this awesome-sounding process? Simple! Like this:"
+                }
+            ]
+        },
+        {
+            "type": "orderedList",
+            "attrs": { "tight": true, "start": 1 },
+            "content": [
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                { "type": "text", "text": "Click " },
                                 {
                                     "type": "text",
                                     "marks": [
                                         {
                                             "type": "link",
                                             "attrs": {
-                                                "href": "https://nextjs.org/docs/basic-features/data-fetching#the-paths-key-required",
+                                                "href": "https://www.ewalletbooster.com/register/neteller",
                                                 "target": "_blank",
                                                 "rel": "noopener noreferrer nofollow",
                                                 "class": "extensions_link__hVTAj"
                                             }
                                         },
-                                        { "type": "bold" },
-                                        { "type": "underline" }
+                                        { "type": "bold" }
                                     ],
-                                    "text": "an array is required."
+                                    "text": "here"
+                                },
+                                { "type": "text", "text": " and select “" },
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Create A New Neteller Account"
+                                },
+                                { "type": "text", "text": "” and click “" },
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Next"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "” (for those of you who haven't yet registered. Or select \""
+                                },
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Upgrade An Existing Neteller Account"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "\" for if you have just registered."
                                 }
                             ]
                         }
@@ -1451,7 +1224,61 @@
                             "content": [
                                 {
                                     "type": "text",
-                                    "text": "We need to fetch the data for the home page for each locale which all have '/' as the slug."
+                                    "text": "Register at Neteller (if you selected that option, then move onto step 3), if you selected upgrade an existing Neteller account, move onto step 3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "Enter Neteller ID (found in your Neteller account) and the same email address you used when signing up to Neteller. Now click '"
+                                },
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Next"
+                                },
+                                { "type": "text", "text": "'" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "Enter your Name, email address, chosen password, language and country. Then click '"
+                                },
+                                {
+                                    "type": "text",
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "Submit"
+                                },
+                                { "type": "text", "text": "'" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                {
+                                    "type": "text",
+                                    "text": "Voila! You have signed up. You should now receive an email confirming your account and have access to all the perks"
                                 }
                             ]
                         }
@@ -1460,74 +1287,46 @@
             ]
         },
         {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticPaths"
-                },
-                {
-                    "type": "text",
-                    "text": " is now returning the desired array:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "[\n  { params: { slug: [Array] }, locale: 'en' },\n  { params: { slug: [Array] }, locale: 'en' },\n  { params: { slug: [Array] }, locale: 'en' },\n  { params: { slug: false }, locale: 'en' },\n  { params: { slug: [Array] }, locale: 'de' },\n  { params: { slug: [Array] }, locale: 'de' },\n  { params: { slug: [Array] }, locale: 'de' },\n  { params: { slug: false }, locale: 'de' },\n  { params: { slug: [Array] }, locale: 'es' },\n  { params: { slug: [Array] }, locale: 'es' },\n  { params: { slug: [Array] }, locale: 'es' },\n  { params: { slug: false }, locale: 'es' }\n]\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We have successfully generated all the paths for all the locale pages and Nextjs will now call "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticProps"
-                },
-                { "type": "text", "text": " for each generated path." }
-            ]
-        },
-        {
             "type": "heading",
-            "attrs": { "level": 3 },
+            "attrs": { "level": 4 },
             "content": [
                 {
                     "type": "text",
                     "marks": [{ "type": "bold" }],
-                    "text": "Setting up getStaticProps for [[...slug]].jsx"
+                    "text": "Neteller Account ID Number"
                 }
             ]
         },
         {
             "type": "paragraph",
             "content": [
-                { "type": "text", "text": "Once Next.js has finished the " },
                 {
                     "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticPaths"
+                    "text": "If you are struggling to find your Neteller account ID number, follow this process:"
                 },
+                { "type": "hardBreak" },
                 {
                     "type": "text",
-                    "text": " call, it will then iterate over all the paths provided and call "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticProps"
-                },
-                { "type": "text", "text": " for each one." }
+                    "text": "log into your Neteller account and click 'settings' then click personal details. It is the number shown below your name:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "attrs": {
+                "src": "https://res.cloudinary.com/dohhxsjei/image/upload/v1705508560/bunker-cms-personal/screenshot-2024-01-16-at-165407.png",
+                "alt": "",
+                "title": "",
+                "width": 1130,
+                "height": 498,
+                "public_id": "bunker-cms-personal/screenshot-2024-01-16-at-165407"
+            }
+        },
+        {
+            "type": "heading",
+            "attrs": { "level": 2 },
+            "content": [
+                { "type": "text", "text": "Neteller Registration Needs" }
             ]
         },
         {
@@ -1535,12 +1334,16 @@
             "content": [
                 {
                     "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticProps"
-                },
+                    "text": "This is a nice and quick little section. We get quite a few questions very regularly pertaining to Neteller's registration process, so it feels only right to answer them. Continue below for answers to the most commonly asked registration-related questions."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
                 {
                     "type": "text",
-                    "text": " receives a context object which contains the following properties:"
+                    "text": "Generally, the registration process is super simple and only takes a few small things:"
                 }
             ]
         },
@@ -1554,14 +1357,31 @@
                         {
                             "type": "paragraph",
                             "content": [
+                                { "type": "text", "text": "An email address" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
+                                { "type": "text", "text": "Phone number" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "listItem",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "content": [
                                 {
                                     "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "locale"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " which is the locale for the path that it is fetching."
+                                    "text": "Home address (with a letter or bill with your address & name listed, for verification)"
                                 }
                             ]
                         }
@@ -1575,354 +1395,16 @@
                             "content": [
                                 {
                                     "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "locales"
+                                    "text": "$5-10 in your local currency for a starting deposit "
                                 },
                                 {
                                     "type": "text",
-                                    "text": " which is an array of all locales enabled in "
-                                },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "next.config.js"
-                                },
-                                { "type": "text", "text": "." }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "defaultLocale"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " which is the defaultLocale set in "
-                                },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "next.config.js"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " which in our case is 'en'."
+                                    "marks": [{ "type": "bold" }],
+                                    "text": "(remember this is free if you sign up through us)"
                                 }
                             ]
                         }
                     ]
-                },
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "params"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " is the params passed from "
-                                },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "getStaticPaths"
-                                },
-                                { "type": "text", "text": " i.e " },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "{.params: { slug }, locale }"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We now need to fetch the props (title, slug, body) for each individually generated page from Strapi."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Strapi also provides a " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localizations"
-                },
-                {
-                    "type": "text",
-                    "text": " array for each page will includes the "
-                },
-                { "type": "text", "marks": [{ "type": "code" }], "text": "id" },
-                {
-                    "type": "text",
-                    "text": " of the different locale versions of each page."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Here is the finished " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getStaticProps"
-                },
-                { "type": "text", "text": " function:" }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "export async function getStaticProps({\n    locale,\n    locales,\n    defaultLocale,\n    params,\n}) {\n    const { data } = await client.query({\n        query: gql`\n            query GetPageBySlug($slug: String, $locale: String) {\n                pages(locale: $locale, where: { slug: $slug }) {\n                    title\n                    body\n                    slug\n                    locale\n                    localizations {\n                        id\n                        slug\n                        locale\n                    }\n                }\n            }\n        `,\n        variables: {\n            slug: params.slug ? params.slug[0] : '/',\n            locale,\n        },\n    });\n\n    const page = data.pages[0];\n    const { title, body } = page;\n\n    const pageContext = {\n        locale: page.locale,\n        localizations: page.localizations,\n        locales,\n        defaultLocale,\n        slug: params.slug ? params.slug[0] : '',\n    };\n\n    const localizedPaths = getLocalizedPaths(pageContext);\n    const globalData = await getGlobalData(locale);\n\n    return {\n        props: {\n            global: globalData,\n            title,\n            body,\n            pageContext: {\n                ...pageContext,\n                localizedPaths,\n            },\n        },\n    };\n}\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [{ "type": "text", "text": "In the code above we are:" }]
-        },
-        {
-            "type": "orderedList",
-            "attrs": { "tight": true, "start": 1 },
-            "content": [
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "Sending a graphQL request to Strapi to search by "
-                                },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "slug"
-                                },
-                                { "type": "text", "text": " and " },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "locale"
-                                },
-                                { "type": "text", "text": ":" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "    const { data } = await client.query({\n        query: gql`\n            query GetPageBySlug($slug: String, $locale: String) {\n                pages(locale: $locale, where: { slug: $slug }) {\n                    title\n                    body\n                    slug\n                    locale\n                    localizations {\n                        id\n                        slug\n                        locale\n                    }\n                }\n            }\n        `,\n        variables: {\n            slug: params.slug ? params.slug[0] : '/',\n            locale,\n        },\n    });\n"
-                }
-            ]
-        },
-        {
-            "type": "orderedList",
-            "attrs": { "tight": true, "start": 2 },
-            "content": [
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "We then extract the "
-                                },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "title"
-                                },
-                                { "type": "text", "text": " and " },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "body"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " from the API request:"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "    const page = data.pages[0];\n    const { title, body } = page;\n"
-                }
-            ]
-        },
-        {
-            "type": "orderedList",
-            "attrs": { "tight": true, "start": 3 },
-            "content": [
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                { "type": "text", "text": "Then we create a " },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "pageContext"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " object. This object is very important for managing localization on the site so pay special attention to this section. The "
-                                },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "pageContext"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " object includes the props for the actual page along with an array of "
-                                },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "localizations"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " provided by our Strapi API."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "    const pageContext = {\n        locale: page.locale,\n        localizations: page.localizations,\n        locales,\n        defaultLocale,\n        slug: params.slug ? params.slug[0] : '',\n    };\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "The localizations array provided by Strapi API for each page will look like this:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "\"localizations\": [\n          {\n            \"id\": \"1\",\n            \"slug\": \"first-page\",\n            \"locale\": \"en\"\n          },\n          {\n            \"id\": \"7\",\n            \"slug\": \"erste-seite\",\n            \"locale\": \"de\"\n          }\n        ]\n"
-                }
-            ]
-        },
-        {
-            "type": "orderedList",
-            "attrs": { "tight": true, "start": 4 },
-            "content": [
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "You may have then noticed that we then call 2 more functions "
-                                },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "getLocalizedPaths(pageContext)"
-                                },
-                                { "type": "text", "text": " and " },
-                                {
-                                    "type": "text",
-                                    "marks": [{ "type": "code" }],
-                                    "text": "getGlobalData(locale)"
-                                },
-                                {
-                                    "type": "text",
-                                    "text": ". Don't worry about these 2 for now - we won't ignore these functions as they are super important and we will explore them in detail below."
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "listItem",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "We then return the full page props to the page component (we haven't set up the page component yet)."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "return {\n        props: {\n            global: globalData,\n            title,\n            body,\n            pageContext: {\n                ...pageContext,\n                localizedPaths,\n            },\n        },\n    };\n"
                 }
             ]
         },
@@ -1930,17 +1412,7 @@
             "type": "heading",
             "attrs": { "level": 4 },
             "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "What is "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getLocalizedPaths"
-                },
-                { "type": "text", "text": "?" }
+                { "type": "text", "marks": [{ "type": "bold" }], "text": "Age" }
             ]
         },
         {
@@ -1948,44 +1420,7 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "When we first set the project up, we created a file called "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localize-helpers.js"
-                },
-                { "type": "text", "text": " inside our " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/utils"
-                },
-                { "type": "text", "text": " folder." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Inside " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localize-helpers.js"
-                },
-                {
-                    "type": "text",
-                    "text": " we need to create the following functions:"
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "export const formatSlug = (slug, locale, defaultLocale) =>\n    locale === defaultLocale ? `/${slug}` : `/${locale}/${slug}`; // if locale DOES NOT equal defaultLocale - en - it prepends the locale i.e /es/ or /de/\n\nexport const getLocalizedPaths = (pageContext) => {\n    const { locales, defaultLocale, localizations, slug } = pageContext;\n    // let's say that the pageContext for this call is 'es' locale version of 'first-page' so the slug will be 'primera-pagina'\n    // Therefore the pageContext will look like this:\n    // {\n    //     locale: 'es',\n    //     localizations: [\n    //         {\n    //           'id': '1',\n    //           'slug': 'first-page',\n    //           'locale': 'en'\n    //         },\n    //         {\n    //           'id': '7',\n    //           'slug': 'erste-seite',\n    //           'locale': 'de'\n    //         }\n    //     ],\n    //     locales: ['en', 'es', 'de'],\n    //     defaultLocale: 'en',\n    //     slug: 'primera-pagina'\n    // };\n\n    const paths = locales.map((locale) => {\n        // map through all locales enabled in next.config.js ['en', 'es', 'de']\n        if (localizations.length === 0)\n            return {\n                // if there is no localizations array provided by Strapi, we just return the defaultLocale page for all locales\n                locale,\n                href: formatSlug(slug, locale, defaultLocale), // format href so that it does not prepend /es or /de to the page\n            };\n        return {\n            // if localizations array provided by Strapi return an object with locale and formatted href\n            locale,\n            href: localizePath({ ...pageContext, locale }), // object assign using spread which overrides locale in pageContext to mapped locale from next.config.js, which in our case will be either of 'es', 'en' or 'de'\n        };\n    });\n    return paths;\n};\n\nexport const localizePath = (pageContext) => {\n    // This will be called 3 times for 'es', 'en' and 'de'.\n    // Let's say for this function call, it is called with pageContext.locale = 'de'\n    const { locale, defaultLocale, localizations, slug } = pageContext;\n    let localeFound = localizations.find((a) => a.locale === locale); // it will look in the localizations array of the 'primera-pagina' page\n    if (localeFound) return formatSlug(localeFound.slug, locale, defaultLocale);\n    // if a 'de' version of the page is found, it will call formatSlug with the 'de' slug which is 'erste-seite'\n    else return formatSlug(slug, locale, defaultLocale); // otherwise just return the default 'en' page\n};\n"
+                    "text": "How old do you have to be to use Neteller? Easy - you need to be an adult."
                 }
             ]
         },
@@ -1994,29 +1429,7 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "The end goal of the functions above is to return an array like the one below and add the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localizedPaths"
-                },
-                { "type": "text", "text": " to " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext"
-                },
-                { "type": "text", "text": " of every generated page:" }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "[\n  { locale: 'en', href: '/first-page' },\n  { locale: 'de', href: '/de/erste-seite' },\n  { locale: 'es', href: '/es/primera-pagina' }\n]\n"
+                    "text": "Neteller requires all users to be at least eighteen (18) years of age to use any of its services. This will be verified during account verification, so nefarious teens, be warned."
                 }
             ]
         },
@@ -2024,17 +1437,7 @@
             "type": "heading",
             "attrs": { "level": 4 },
             "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "What is "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getGlobalData"
-                },
-                { "type": "text", "text": "?" }
+                { "type": "text", "marks": [{ "type": "bold" }], "text": "ID" }
             ]
         },
         {
@@ -2042,7 +1445,7 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "Global data is the function used to fetch the global data (in our case our navbar) for each locale."
+                    "text": "While you won’t need an ID to register a Neteller account, you will need one for verification. Keep in mind that registering an account allows you to upload (deposit) and send money - but you can’t withdraw until you’ve verified your identity - you know, with an ID."
                 }
             ]
         },
@@ -2051,84 +1454,7 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "We fetch this on every page so that when the pages are statically generated, each page will have the navbar in the correct language."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Since we will need to use this function in a number of different places, we will put it inside our "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/utils/api-helpers.js"
-                },
-                { "type": "text", "text": " file." }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "import gql from 'graphql-tag';\nimport client from '../lib/apollo-client';\n\nexport const getGlobalData = async (locale) => {\n    const { data } = await client.query({\n        query: gql`\n            query GetGlobal($locale: String) {\n                global(locale: $locale) {\n                    locale\n                    navbar {\n                        links {\n                            text\n                            url\n                            newTab\n                        }\n                    }\n                }\n            }\n        `,\n        variables: {\n            locale,\n        },\n    });\n\n    return data.global;\n};\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Firstly, we call " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getGlobalData"
-                },
-                {
-                    "type": "text",
-                    "text": " with the locale as a parameter and then we fetch the navbar and links according to the locale "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "global(locale: $locale)"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We then return the full page props (including "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "global"
-                },
-                { "type": "text", "text": " and " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localizedPaths"
-                },
-                { "type": "text", "text": ") to the Page component." }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "return {\n        props: {\n            global: globalData,\n            title,\n            body,\n            pageContext: {\n                ...pageContext,\n                localizedPaths\n            },\n        },\n    };\n"
+                    "text": "In short, yes - you need an ID for Neteller, though you won’t need it until after registration."
                 }
             ]
         },
@@ -2136,10 +1462,15 @@
             "type": "heading",
             "attrs": { "level": 3 },
             "content": [
+                { "type": "text", "text": "Bank Account & Credit/Debit Cards" }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
                 {
                     "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Page components"
+                    "text": "One of Neteller’s most beloved features is that it doesn’t require a bank account or credit/debit card to use. While you will need to have the means to upload funds to your account, Neteller offers plenty of options. "
                 }
             ]
         },
@@ -2148,148 +1479,7 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "Now that we have successfully statically generated all the content and props for each page, we need to create the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "Page"
-                },
-                {
-                    "type": "text",
-                    "text": " component and pass it what it needs."
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "DynamicPage component"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Create a " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "DynamicPage"
-                },
-                { "type": "text", "text": " component with the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "title"
-                },
-                { "type": "text", "text": " and " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "body"
-                },
-                { "type": "text", "text": " wrapped inside a " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "Layout"
-                },
-                { "type": "text", "text": " component and pass the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "global"
-                },
-                { "type": "text", "text": " data and " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext"
-                },
-                { "type": "text", "text": " to the Layout." }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "const DynamicPage = ({ global, pageContext, title, body }) => {\n    return (\n        <Layout global={global} pageContext={pageContext}>\n            <div>\n                <h1>{title}</h1>\n                <p>{body}</p>\n            </div>\n        </Layout>\n    );\n};\n"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Layout component"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Create a " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "Layout"
-                },
-                {
-                    "type": "text",
-                    "text": " component and import the Next built in "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "useRouter"
-                },
-                {
-                    "type": "text",
-                    "text": " function and the Navbar (we are yet to create the Navbar)."
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "import { useRouter } from 'next/router';\nimport { formatSlug } from '../utils/localize';\nimport Navbar from './navbar';\n\nconst Layout = ({ children, pageContext, global }) => {\n    const router = useRouter();\n    const { locale, locales, defaultLocale, asPath } = router;\n    const page = pageContext // if there is no pageContext because it is SSR page or non-CMS page\n        ? pageContext\n        : {\n              // the following is from useRouter and is used for non-translated, non-localized routes\n              locale, // current locale\n              locales, // locales provided by next.config.js\n              defaultLocale, // en = defaultLocale\n              slug: formatSlug(asPath.slice(1), locale, defaultLocale), // slice(1) because asPath includes /\n              localizedPaths: locales.map((loc) => ({\n                  // creates an array of non-translated routes such as /normal-page /es/normal-page /de/normal-page. Will make more sense when we implement the LocaleSwitcher Component\n                  locale: loc,\n                  href: formatSlug(asPath.slice(1), loc, defaultLocale),\n              })),\n          };\n\n    return (\n        <div>\n            <Navbar pageContext={page} navbar={global.navbar} />\n            {children}\n        </div>\n    );\n};\n\nexport default Layout;\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "The " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "Layout"
-                },
-                {
-                    "type": "text",
-                    "text": " component is used to provide the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "Navbar"
-                },
-                {
-                    "type": "text",
-                    "text": " and any other global components with the necessary content."
+                    "text": "This is what makes Neteller so popular in many countries without access to banks - it allows users to still use their money as usual, without the need for a bank account or credit card."
                 }
             ]
         },
@@ -2298,974 +1488,22 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "Note that due to the fact we want our "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "Layout"
-                },
-                {
-                    "type": "text",
-                    "text": " to be persistent throughout the site, we are using a check to see if "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext"
-                },
-                { "type": "text", "text": " exists." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "This is simply the design I have implemented for this site."
+                    "text": "In other words, no - you don’t need a bank account or credit/debit card for Neteller - though it won’t hurt to have one."
                 }
             ]
         },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "For a site that is 100% static, there is no need to have the if/else ternary operator."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "If " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext"
-                },
-                {
-                    "type": "text",
-                    "text": " does not exist we provide the properties from the router."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "An alternative to this way of doing things is to create separate Layout and Navbar components for statically generated pages and non-statically generated pages."
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Navbar component"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Create the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "Navbar"
-                },
-                {
-                    "type": "text",
-                    "text": " component and use the global data to map through and render the links."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We also need to pass the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext"
-                },
-                { "type": "text", "text": " " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "italic" }],
-                    "text": "through to the"
-                },
-                { "type": "text", "text": " " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "LocaleSwitch"
-                },
-                { "type": "text", "text": " component." }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "import LocaleSwitch from './locale-switch';\nimport Link from 'next/link';\n\nexport default function Navbar({ pageContext, navbar }) {\n    return (\n        <div>\n            <nav>\n                {navbar.link.map((link) => (\n                    <Link\n                        key={link.url}\n                        href={link.url}\n                        locale={pageContext.locale}>\n                        <a>\n                            {' '}\n                            <span>{link.name}</span>{' '}\n                        </a>\n                    </Link>\n                ))}\n            </nav>\n            <LocaleSwitch pageContext={pageContext} />\n        </div>\n    );\n}\n"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "LocaleSwitch component"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "One of the final parts of the jigsaw is to create a "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "LocaleSwitch"
-                },
-                {
-                    "type": "text",
-                    "text": " component which we will use to manage locales."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "The full code of the component is below. I will explain each section underneath."
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "import Cookies from 'js-cookie';\nimport { useRouter } from 'next/router';\nimport { useEffect, useState, useRef } from 'react';\nimport Link from 'next/link';\nimport { getLocalizedPage, localizePath } from '../utils/localize-helpers';\n\nexport default function LocaleSwitch({ pageContext }) {\n    const isMounted = useRef(false); // We utilise useRef here so that we avoid re-render once it is mounted\n    const router = useRouter();\n    const [locale, setLocale] = useState();\n\n    const handleLocaleChange = async (selectedLocale) => {\n        Cookies.set('NEXT_LOCALE', selectedLocale); // set the out-of-the-box Next cookie 'NEXT_LOCALE'\n        setLocale(selectedLocale);\n    };\n\n    const handleLocaleChangeRef = useRef(handleLocaleChange); // use a ref so that it does not re-render unless necessary. Note we are using handleLocaleChange(locale) without the ref in our Link components below\n\n    useEffect(() => {\n        const localeCookie = Cookies.get('NEXT_LOCALE');\n        if (!localeCookie) {\n            // if there is no NEXT_LOCALE cookie set it to the router.locale\n            handleLocaleChangeRef.current(router.locale);\n        }\n\n        const checkLocaleMismatch = async () => {\n            if (\n                // if localeCookie IS SET and does not match pageContextlocale\n                !isMounted.current &&\n                localeCookie &&\n                localeCookie !== pageContext.locale\n            ) {\n                // For example if localeCookie = 'es' and user lands on /de/erste-seite, it will call getLocalizedPage with 'es' and pageContext\n                const localePage = await getLocalizedPage(\n                    localeCookie,\n                    pageContext\n                ); // we then fetch the correct localized page\n\n                // object assign overrides locale, localizations, slug\n                router.push(\n                    // router.push the correct page which is /es/primera-pagina\n                    `${localizePath({ ...pageContext, ...localePage })}`, //url\n                    `${localizePath({ ...pageContext, ...localePage })}`, // as\n                    { locale: localePage.locale } // options\n                );\n            }\n        };\n\n        setLocale(localeCookie || router.locale);\n        checkLocaleMismatch();\n\n        return () => {\n            // sets the ref isMounted to true which will persist state throughout.\n            isMounted.current = true;\n        };\n    }, [locale, router, pageContext]); // called again if locale, router or pageContext change\n\n    return (\n        <>\n            <div>\n                {pageContext.localizedPaths && // only render the language switcher if current page is localized\n                    pageContext.localizedPaths.map(({ href, locale }) => {\n                        return (\n                            <Link\n                                href={href}\n                                locale={locale}\n                                key={locale}\n                                role={'option'}\n                                passHref>\n                                <a onClick={() => handleLocaleChange(locale)}>\n                                    <span> {locale} </span>\n                                </a>\n                            </Link>\n                        );\n                    })}\n            </div>\n        </>\n    );\n}\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We begin by declaring " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "isMounted = useRef(false)"
-                },
-                { "type": "text", "text": ". The reason we use " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "useRef"
-                },
-                {
-                    "type": "text",
-                    "text": " is so that we are not triggering unnecessary re-renders."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We do the same again for the function that we will use to change the locale "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "handleLocaleChange"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "In " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "useEffect"
-                },
-                {
-                    "type": "text",
-                    "text": ", we are firstly checking if the provided "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "NEXT_LOCALE"
-                },
-                {
-                    "type": "text",
-                    "text": " cookie is active. If it is not active, we set the cookie to the value of "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "router.locale"
-                },
-                { "type": "text", "text": " using the ref function " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "handleLocaleChangeRef"
-                },
-                {
-                    "type": "text",
-                    "text": ". The reason we use a ref here is again so that we do not trigger re-render. At this stage there is no need to re-render."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "We then set the locale in our state using "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "setLocale(localeCookie || router.locale)"
-                },
-                { "type": "text", "text": " and then we call the function " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "checkLocaleMismatch"
-                },
-                { "type": "text", "text": " before setting " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "isMounted.current = true"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 4 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "What is checkLocaleMismatch()?"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "This function is used to check whether the current page is the correct page for a given "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localeCookie"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "For example, let's say that your localeCookie is set to 'en' and you land on the page "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/de/erste-seite"
-                },
-                { "type": "text", "text": " which is a German version." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "The " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "checkLocaleMismatch"
-                },
-                { "type": "text", "text": " function checks if " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "isMounted.current"
-                },
-                {
-                    "type": "text",
-                    "text": " = false and whether localeCookie is different to "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext.locale"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Note:" },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "isMounted"
-                },
-                {
-                    "type": "text",
-                    "text": " would be false if the page had been reloaded or clicked onto from elsewhere."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "If the conditions are met, we then call a new function called "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getLocalizedPage"
-                },
-                { "type": "text", "text": " and pass the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localeCookie"
-                },
-                { "type": "text", "text": " and " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We need to create the function " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "getLocalizedPage"
-                },
-                { "type": "text", "text": " in " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/utils/localize-helpers"
-                },
-                { "type": "text", "text": ":" }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "export const getLocalizedPage = async (targetLocale, pageContext) => {\n    const localization = pageContext.localizations.find(\n        (localization) => localization.locale === targetLocale\n    );\n    const { data } = await client.query({\n        query: gql`\n            query getPage($id: ID!) {\n                page(id: $id) {\n                    title\n                    body\n                    slug\n                    locale\n                    localizations {\n                        id\n                        slug\n                        locale\n                    }\n                }\n            }\n        `,\n        variables: {\n            id: localization.id,\n        },\n    });\n    return data.page;\n};\n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We pass the parameters " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "targetLocale"
-                },
-                { "type": "text", "text": " which in this case is " },
-                { "type": "text", "marks": [{ "type": "code" }], "text": "en" },
-                { "type": "text", "text": " as " },
-                { "type": "text", "marks": [{ "type": "code" }], "text": "en" },
-                {
-                    "type": "text",
-                    "text": " is the localeCookie and we pass the pageContext of the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/de/erste-seite"
-                },
-                { "type": "text", "text": " page." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "This function firstly finds the target locale within the localizations array of the original page ("
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/de/erste-seite"
-                },
-                { "type": "text", "text": ") page." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "We then query the API for the " },
-                { "type": "text", "marks": [{ "type": "code" }], "text": "id" },
-                {
-                    "type": "text",
-                    "text": " of the found localization (en) and return the correct localized page and send this back to "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "checkLocaleMismatch"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "The function then uses " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "router.push"
-                },
-                {
-                    "type": "text",
-                    "text": " and localizePath (to override locale, localizations and slug) to redirect us to the correct page for "
-                },
-                { "type": "text", "marks": [{ "type": "code" }], "text": "en" },
-                { "type": "text", "text": " which in this case would be " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/first-page"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "You can see this in action once the website is completed by checking what the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "NEXT_LOCALE"
-                },
-                {
-                    "type": "text",
-                    "text": " value is in your browser and then directly typing a different locale page into the browser."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Our website will redirect us to the correct locale page as determined by the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localeCookie"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "For example if " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "NEXT_LOCALE"
-                },
-                { "type": "text", "text": " is set to 'en' and we type " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/de/erste-seite"
-                },
-                {
-                    "type": "text",
-                    "text": " into the browser, it will redirect us to "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/first-page"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Finally, in our LocaleSwitcher component, we render all the "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localizedPaths"
-                },
-                { "type": "text", "text": " from " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext"
-                },
-                {
-                    "type": "text",
-                    "text": " which will allow us to skip between locale pages."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "That's it!"
-                },
-                { "type": "text", "text": " Now if you run " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "npm run build"
-                },
-                { "type": "text", "text": " and then " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "npm run start"
-                },
-                {
-                    "type": "text",
-                    "text": " and fire up the website, you can test out your fully localized website with localized routes and locale switcher!"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Hopefully, you've found this tutorial useful!"
-                }
-            ]
-        },
-        { "type": "paragraph" },
         {
             "type": "heading",
             "attrs": { "level": 2 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Additional steps"
-                }
-            ]
+            "content": [{ "type": "text", "text": "Further Reading" }]
         },
         {
             "type": "paragraph",
             "content": [
                 {
                     "type": "text",
-                    "text": "The tutorial above is more than enough to build a fully localized website with Next.js and Strapi."
+                    "text": "If you have further questions related to Neteller, we suggest reading the following articles:"
                 }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "However there is a few things that I will do to complete the tutorial"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Blog pages"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Remember the Blog Content-Type in Strapi? Feels ages ago now! One last thing I wanted to demonstrate with this is that Next.js generates routes by specificity."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Therefore, generating static pages from "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "blog/[slug].jsx"
-                },
-                { "type": "text", "text": " will not be overridden by " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "[[...slug]].jsx"
-                },
-                { "type": "text", "text": "." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "The full code for " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "blog/[slug].jsx"
-                },
-                { "type": "text", "text": " is below:" }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "import { gql } from '@apollo/client';\nimport Layout from '../../components/layout';\nimport client from '../../lib/apollo-client';\nimport { getGlobalData } from '../../utils/api-helpers';\nimport { getLocalizedPaths } from '../../utils/localize-helpers';\nimport ReactMarkdown from 'react-markdown';\nimport Head from 'next/head';\n\nexport default function DynamicBlog({ pageContext, global, title, body }) {\n    return (\n        <>\n            <Head>\n                {pageContext.localizedPaths.map((p) => (\n                    <link\n                        key={p.locale}\n                        rel='alternate'\n                        href={p.href}\n                        hrefLang={p.locale}\n                    />\n                ))}\n            </Head>\n            <Layout global={global} pageContext={pageContext}>\n                <div>\n                    <h1>{title}</h1>\n                    <ReactMarkdown>{body}</ReactMarkdown>\n                </div>\n                {pageContext.localizedPaths.map((p) => {\n                    return (\n                        <div key={p.locale}>\n                            {p.href} {p.locale}\n                        </div>\n                    );\n                })}\n            </Layout>\n        </>\n    );\n}\n\nexport async function getStaticPaths({ locales }) {\n    const paths = (\n        await Promise.all(\n            locales.map(async (locale) => {\n                const { data } = await client.query({\n                    query: gql`\n                        query GetBlogs($locale: String) {\n                            blogs(locale: $locale) {\n                                slug\n                                locale\n                            }\n                        }\n                    `,\n                    variables: { locale },\n                });\n                return {\n                    pages: data.blogs,\n                    locale,\n                };\n            })\n        )\n    ).reduce((acc, item) => {\n        item.pages.map((p) => {\n            acc.push({\n                params: {\n                    slug: p.slug,\n                },\n                locale: p.locale,\n            });\n            return p;\n        });\n        return acc;\n    }, []);\n\n    return {\n        paths,\n        fallback: false,\n    };\n}\n\nexport async function getStaticProps({\n    locales,\n    locale,\n    defaultLocale,\n    params,\n}) {\n    const globalData = await getGlobalData(locale);\n    const { data } = await client.query({\n        query: gql`\n            query GetBlog($slug: String, $locale: String) {\n                blogs(locale: $locale, where: { slug: $slug }) {\n                    title\n                    slug\n                    body\n                    locale\n                    localizations {\n                        id\n                        slug\n                        locale\n                    }\n                }\n            }\n        `,\n        variables: {\n            slug: params.slug,\n            locale,\n        },\n    });\n\n    const page = data.blogs[0];\n    const { title, body } = page;\n\n    const pageContext = {\n        locale: page.locale,\n        locales,\n        defaultLocale,\n        slug: params.slug,\n        localizations: page.localizations,\n    };\n\n    const localizedPaths = getLocalizedPaths({ ...pageContext }).map((path) => {\n        let arr = path.href.split('');\n        const index = arr.lastIndexOf('/') + 1;\n        arr.splice(index, 0, 'blog/').join('');\n        path.href = arr.join('');\n        return path;\n    });\n\n    return {\n        props: {\n            global: globalData,\n            title,\n            body,\n            pageContext: {\n                ...pageContext,\n                localizedPaths,\n            },\n        },\n    };\n} \n"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "The main difference between " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/blog/[slug].jsx"
-                },
-                { "type": "text", "text": " and " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "[[...slug]]].jsx"
-                },
-                { "type": "text", "text": " is that in " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "/blog/[slug].jsx"
-                },
-                { "type": "text", "text": " we just add an extra " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": ".map"
-                },
-                { "type": "text", "text": " function on our " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "localizedPaths"
-                },
-                { "type": "text", "text": " function so that we can add the " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "blog/"
-                },
-                {
-                    "type": "text",
-                    "text": " segment into the href for each path."
-                }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "    const localizedPaths = getLocalizedPaths({ ...pageContext }).map((path) => {\n        let arr = path.href.split('');\n        const index = arr.lastIndexOf('/') + 1;\n        arr.splice(index, 0, 'blog/').join('');\n        path.href = arr.join('');\n        return path;\n    });\n"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "React Markdown"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "At the moment, our body text from both Pages and Blogs is not formatted as HTML."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "To fix this simply pass the body and title as children of "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "ReactMarkdown"
-                },
-                { "type": "text", "text": " component:" }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "const DynamicPage = ({ global, pageContext, title, body }) => {\n    return (\n        <Layout global={global} pageContext={pageContext}>\n            <div>\n                <h1>{title}</h1>\n                <ReactMarkdown>{body}</ReactMarkdown>\n            </div>\n        </Layout>\n    );\n};\n"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Use hreflang Tags"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Due to the fact that one of the main reasons for using localized slugs/routes is for SEO benefits, we need to create href lang tags in our pages."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Fortunately we can access all the information we need for this in our "
-                },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "pageContext.localizedPaths"
-                },
-                { "type": "text", "text": " array." }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Simply use " },
-                {
-                    "type": "text",
-                    "marks": [{ "type": "code" }],
-                    "text": "next/head"
-                },
-                { "type": "text", "text": " to create your hreflang tags:" }
-            ]
-        },
-        {
-            "type": "codeBlock",
-            "attrs": { "language": null },
-            "content": [
-                {
-                    "type": "text",
-                    "text": "<Head>\n    {pageContext.localizedPaths.map((p) => (\n        <link\n            key={p.locale}\n            rel='alternate'\n            href={p.href}\n            hrefLang={p.locale}\n        />\n    ))}\n</Head>\n"
-                }
-            ]
-        },
-        {
-            "type": "heading",
-            "attrs": { "level": 3 },
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "Styling with Bulma CSS"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "The styling is outside the scope of this tutorial but I have added it for the demo."
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "See the full code at Github"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [
-                        {
-                            "type": "link",
-                            "attrs": {
-                                "href": "https://fe-next-js-localized-routes.vercel.app/",
-                                "target": "_blank",
-                                "rel": "noopener noreferrer nofollow",
-                                "class": "extensions_link__hVTAj"
-                            }
-                        },
-                        { "type": "bold" },
-                        { "type": "underline" }
-                    ],
-                    "text": "https://github.com/mckennapaul27/FE-next-js-localized-routes"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [
-                        {
-                            "type": "link",
-                            "attrs": {
-                                "href": "https://fe-next-js-localized-routes.vercel.app/",
-                                "target": "_blank",
-                                "rel": "noopener noreferrer nofollow",
-                                "class": "extensions_link__hVTAj"
-                            }
-                        },
-                        { "type": "bold" },
-                        { "type": "underline" }
-                    ],
-                    "text": "https://github.com/mckennapaul27/BE-next-js-localized-routes"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [{ "type": "bold" }],
-                    "text": "View the live demo"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                {
-                    "type": "text",
-                    "marks": [
-                        {
-                            "type": "link",
-                            "attrs": {
-                                "href": "https://fe-next-js-localized-routes.vercel.app/",
-                                "target": "_blank",
-                                "rel": "noopener noreferrer nofollow",
-                                "class": "extensions_link__hVTAj"
-                            }
-                        },
-                        { "type": "bold" },
-                        { "type": "underline" }
-                    ],
-                    "text": "https://fe-next-js-localized-routes.vercel.app"
-                }
-            ]
-        },
-        {
-            "type": "paragraph",
-            "content": [
-                { "type": "text", "text": "Have a great day ahead :-)" }
             ]
         }
     ]

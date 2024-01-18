@@ -1,0 +1,26 @@
+@import '../../variables';
+@import '../../mixins';
+
+.list-items {
+    padding-left: 20px;
+    > ul {
+        // margin-bottom: 6px;
+    }
+}
+
+.list-item {
+    list-style: square;
+    font-size: 17px;
+    // margin-bottom: 6px;
+}
+
+.list-link {
+    color: $off-white;
+    // padding-bottom: 6px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.highlight {
+    color: $primary;
+    font-weight: 600;
+}
