@@ -11,7 +11,7 @@ import {
     PhoneArrowUpRightIcon,
 } from '@heroicons/react/24/outline';
 import { animated, useTransition } from 'react-spring';
-import { ContactDeets } from '../common/ContactDeets';
+//import { ContactDeets } from '../common/ContactDeets';
 
 export const mobile_navbar = [
     {
@@ -154,7 +154,7 @@ export const NavbarTouch = () => {
                             />
                         </div>
                         <div className={styles['contact-deets-wrapper']}>
-                            <ContactDeets isDark={true} isColumn={true} />
+                            {/* <ContactDeets isDark={true} isColumn={true} /> */}
                         </div>
                         <div className="services">
                             {services.map((item) => {

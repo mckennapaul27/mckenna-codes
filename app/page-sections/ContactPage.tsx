@@ -16,12 +16,12 @@ export const ContactPage = () => {
                         <Title title={"Let's talk"} subtitle={'Contact Me'} />
                         <div className={styles['intro-text']}>
                             <p>
-                                I'm always interested in any opportunity whether
-                                that's freelance work, consulting work or
-                                employment opportunities. If you have a project
-                                that you want to get started, think you need my
-                                help with something or just fancy connecting,
-                                then please get in touch.
+                                I&apos;m always interested in any opportunity
+                                whether that&apos;s freelance work, consulting
+                                work or employment opportunities. If you have a
+                                project that you want to get started, think you
+                                need my help with something or just fancy
+                                connecting, then please get in touch.
                             </p>
                         </div>
                         <p className={'social-icons alt'}>

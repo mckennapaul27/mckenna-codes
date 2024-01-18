@@ -7,8 +7,8 @@ export const ContentBlock = ({}) => {
                 <div className={styles['content-section']}>
                     <h2>My life in a nutshell - from CMS </h2>
                     <p>
-                        For the last 8 years (can't believe it's been that
-                        long!) I have been running affiliate businesses in
+                        For the last 8 years (can&apos;t believe it&apos;s been
+                        that long!) I have been running affiliate businesses in
                         numerous sectors but primarily focussed on gaming and
                         finance.
                     </p>
@@ -19,8 +19,8 @@ export const ContentBlock = ({}) => {
                     </p>
                     <h3>Work history - give it large ones about earnings </h3>
                     <p>
-                        For the last 8 years (can't believe it's been that
-                        long!) I have been running affiliate businesses in
+                        For the last 8 years (can&apos;t believe it&apos;s been
+                        that long!) I have been running affiliate businesses in
                         numerous sectors but primarily focussed on gaming and
                         finance.
                     </p>
@@ -31,8 +31,8 @@ export const ContentBlock = ({}) => {
                     </p>
                     <h3>Philosophy/values</h3>
                     <p>
-                        For the last 8 years (can't believe it's been that
-                        long!) I have been running affiliate businesses in
+                        For the last 8 years (can&apos;t believe it&apos;s been
+                        that long!) I have been running affiliate businesses in
                         numerous sectors but primarily focussed on gaming and
                         finance.
                     </p>
@@ -46,8 +46,8 @@ export const ContentBlock = ({}) => {
                         personal development, toastmasters, reading books
                     </h3>
                     <p>
-                        For the last 8 years (can't believe it's been that
-                        long!) I have been running affiliate businesses in
+                        For the last 8 years (can&apos;t believe it&apos;s been
+                        that long!) I have been running affiliate businesses in
                         numerous sectors but primarily focussed on gaming and
                         finance. During the early period of working for myself I
                         was using outsourced developers from many different

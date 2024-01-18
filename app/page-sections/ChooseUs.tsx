@@ -1,6 +1,6 @@
 import styles from './ChooseUs.module.scss';
-import { Container } from '../containers/Container';
-import { IntroWrapper } from '../common/IntroWrapper';
+// import { Container } from '../containers/Container';
+// import { IntroWrapper } from '../common/IntroWrapper';
 
 export const ChooseUs = ({
     data,
@@ -19,7 +19,7 @@ export const ChooseUs = ({
     const { title, overline_text, overline_icon_code, intro, bullets } = data;
     return (
         <section className={styles['main']}>
-            <Container>
+            {/* <Container>
                 <div className={styles['sections']}>
                     <IntroWrapper
                         overline_text={overline_text}
@@ -49,7 +49,7 @@ export const ChooseUs = ({
                         ))}
                     </div>
                 </div>
-            </Container>
+            </Container> */}
         </section>
     );
 };

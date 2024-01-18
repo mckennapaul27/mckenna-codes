@@ -34,7 +34,10 @@ export const BlogCard = ({
                     <div className={styles['top-section']}>
                         <div className={styles['blog-card-tags']}>
                             {tags.map((tag, i) => (
-                                <div className={styles['blog-tag-wrapper']}>
+                                <div
+                                    className={styles['blog-tag-wrapper']}
+                                    key={tag._id}
+                                >
                                     <Link
                                         className={classNames(
                                             styles['blog-card-tag'],

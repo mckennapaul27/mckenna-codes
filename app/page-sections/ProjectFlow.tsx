@@ -1,6 +1,6 @@
-import { ProjectBlocks } from '../animations/ProjectBlocks';
-import { IntroWrapper } from '../common/IntroWrapper';
-import { Container } from '../containers/Container';
+// import { ProjectBlocks } from '../animations/ProjectBlocks';
+// import { IntroWrapper } from '../common/IntroWrapper';
+// import { Container } from '../containers/Container';
 import styles from './ProjectFlow.module.scss';
 
 export const ProjectFlow = ({
@@ -17,7 +17,7 @@ export const ProjectFlow = ({
     const { title, overline_text, overline_icon_code, intro, steps } = data;
     return (
         <section className={styles['main']} id="process">
-            <Container>
+            {/* <Container>
                 <div className={styles['sections']}>
                     <IntroWrapper
                         overline_text={overline_text}
@@ -31,7 +31,7 @@ export const ProjectFlow = ({
                     />
                 </div>
                 <ProjectBlocks steps={steps} />
-            </Container>
+            </Container> */}
         </section>
     );
 };

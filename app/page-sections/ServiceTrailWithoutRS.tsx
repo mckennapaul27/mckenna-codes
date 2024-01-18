@@ -2,8 +2,8 @@
 
 import styles from './Services.module.scss';
 import { iconLookUp } from '@/app/utils/icon-lookup';
-import { Button } from '../elements/Button';
-import { AnimatedText } from '../animations/AnimatedText';
+// import { Button } from '../elements/Button';
+// import { AnimatedText } from '../animations/AnimatedText';
 
 const services = [
     {
@@ -74,7 +74,7 @@ const Service = ({
 }) => {
     return (
         <div className={styles['service-wrapper']}>
-            <AnimatedText>
+            {/* <AnimatedText>
                 <div className={styles['service']}>
                     <div>
                         <span className={styles['service-icon']}>
@@ -112,7 +112,7 @@ const Service = ({
                         />
                     </div>
                 </div>
-            </AnimatedText>
+            </AnimatedText> */}
         </div>
     );
 };

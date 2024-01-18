@@ -3,7 +3,7 @@
 // import { useInView } from 'react-intersection-observer';
 import styles from './Hero.module.scss';
 import Link from 'next/link';
-import { AnimatedText } from '../animations/AnimatedText';
+// import { AnimatedText } from '../animations/AnimatedText';
 
 const services = [
     { a: 'Web Design', link: '/web-development' },

@@ -1,12 +1,12 @@
 import styles from './Services.module.scss';
-import { Container } from '../containers/Container';
-import { IntroWrapper } from '../common/IntroWrapper';
+// import { Container } from '../containers/Container';
+// import { IntroWrapper } from '../common/IntroWrapper';
 import { ServiceTrail } from './ServiceTrailWithoutRS';
 
 export const Services = () => {
     return (
         <section className={styles['main']} id="services">
-            <Container>
+            {/* <Container>
                 <div className={styles['sections']}>
                     <IntroWrapper
                         overline_text={'Our Services'}
@@ -20,7 +20,7 @@ export const Services = () => {
                     />
                     <ServiceTrail />
                 </div>
-            </Container>
+            </Container> */}
         </section>
     );
 };

@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { Title } from '../common/Title';
-import { Container } from '../containers/Container';
-import { Button } from '../elements/Button';
+// import { Title } from '../common/Title';
+// import { Container } from '../containers/Container';
+// import { Button } from '../elements/Button';
 import styles from './HeroTwo.module.scss';
 import { CheckCircleIcon } from '@heroicons/react/24/outline';
 
@@ -37,7 +37,7 @@ export const HeroTwo = ({
 
     return (
         <main className={styles.main}>
-            <Container>
+            {/* <Container>
                 <div className={styles['sections']}>
                     <div className={styles['text-section']}>
                         <h1 className={styles['text-section-title']}>
@@ -100,7 +100,7 @@ export const HeroTwo = ({
                         </div>
                     </div>
                 </div>
-            </Container>
+            </Container> */}
         </main>
     );
 };

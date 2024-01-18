@@ -2,7 +2,7 @@
 
 import styles from './Services.module.scss';
 import { iconLookUp } from '@/app/utils/icon-lookup';
-import { Button } from '../elements/Button';
+// import { Button } from '../elements/Button';
 import { a, useTrail } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
 
@@ -111,13 +111,13 @@ const Service = ({
                     </p>
                 </div>
                 <div className={styles['service-link']}>
-                    <Button
+                    {/* <Button
                         text="Learn More"
                         href={service.href}
                         plain={true}
                         size="small"
                         display="is-inline"
-                    />
+                    /> */}
                 </div>
             </div>
         </a.div>
