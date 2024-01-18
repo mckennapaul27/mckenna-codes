@@ -22,8 +22,9 @@ export const NextImage = ({ ...props }) => {
         transformations: {
             effect: {
                 name: 'blur',
-                value: 5,
+                value: 1000,
             },
+            quality: 5,
         },
     });
 
