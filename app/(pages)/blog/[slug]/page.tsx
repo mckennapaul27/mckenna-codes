@@ -27,17 +27,6 @@ interface PageProps {
 interface Blog {}
 
 export async function generateStaticParams() {
-    const query = qs.stringify(
-        {
-            select: 'slug',
-            filters: {
-                status: 'published',
-            },
-        },
-        {
-            encodeValuesOnly: true, // prettify URL
-        }
-    );
     const res = await fetch(url + '/api/api-blogs?select=slug', {
         method: 'GET',
         headers: {
@@ -80,6 +69,7 @@ export default async function Page({
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
+        next: { revalidate: 120 }, // refresh every 60 seconds
     });
     const data = await res.json();
 
@@ -92,13 +82,5 @@ export default async function Page({
         body: data.data[0].body,
     };
 
-    //console.log('blog', blog);
-
-    // ...
-    // return (
-    //     <div className={}>
-    //         <h1>title: {data.data[0].title}</h1>
-    //     </div>
-    // );
     return <BlogPage {...blog} />;
 }
