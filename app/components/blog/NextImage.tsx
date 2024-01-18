@@ -4,7 +4,7 @@ import { buildUrl } from 'cloudinary-build-url';
 export const NextImage = ({ ...props }) => {
     const { alt, width, height, src } = props;
     const imgId =
-        `${process.env.NEXT_PUBLIC_CLOUDINARY_FOLDER}/` +
+        `${'bunker-cms-personal'}/` +
         src
             .split('')
             .slice(src.lastIndexOf('/') + 1, src.lastIndexOf('.'))
