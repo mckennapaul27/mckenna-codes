@@ -25,6 +25,7 @@ export default async function Home() {
     );
     const blog_res = await fetch(url + '/api/api-blogs?' + blog_query, {
         method: 'GET',
+        next: { revalidate: 3600 }, // refresh every 60 minutes
         headers: {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
