@@ -16,11 +16,14 @@ import { coldarkDark as highlightStyle } from 'react-syntax-highlighter/dist/cjs
 import { SimpleCTA } from '@/app/page-sections/SimpleCTA';
 import { NextImage } from './NextImage';
 import { TOC } from './TOC';
+import { ArticleJsonLd } from 'next-seo';
 
 export const BlogPage = ({
     title,
     updatedAt,
+    createdAt,
     slug,
+    description = '',
     tags,
     image,
     body,
@@ -28,7 +31,6 @@ export const BlogPage = ({
     const parsedBody = JSON.parse(body as string);
     const toc = createTableOfContents(parsedBody);
     const content = convertBlocksToHtml(parsedBody);
-    // console.log(JSON.stringify(toc, null, 2));
     const options = {
         replace: (domNode: any) => {
             if (domNode.name === 'code') {
@@ -87,6 +89,24 @@ export const BlogPage = ({
     };
     return (
         <div className={styles['blog-page']}>
+            <ArticleJsonLd
+                useAppDir={true}
+                url={process.env.NEXT_PUBLIC_SITE_URL + '/blog/' + slug}
+                title={title}
+                images={[image.url]}
+                datePublished={dayjs(createdAt).format()}
+                dateModified={dayjs(updatedAt).format()}
+                authorName={[
+                    {
+                        name: 'Paul McKenna',
+                        url: process.env.NEXT_PUBLIC_SITE_URL + '/about-me',
+                    },
+                ]}
+                publisherName="Paul McKenna"
+                // publisherLogo="https://www.example.com/photos/logo.jpg"
+                description={description}
+                isAccessibleForFree={true}
+            />
             <div className="container">
                 <div className={styles['title-section']}>
                     <h1

@@ -10,6 +10,7 @@ export const LatestBlogs = ({
     latestBlogs,
     extra,
     tags,
+    theme,
 }: {
     latestBlogs: {
         title: string;
@@ -27,9 +28,12 @@ export const LatestBlogs = ({
     }[];
     tags: Tag[];
     extra?: string;
+    theme?: string;
 }) => {
     return (
-        <section className={styles['main']}>
+        <section
+            className={classNames(styles['main'], theme ? styles[theme] : '')}
+        >
             <div className="container">
                 <h2 className={classNames(montserrat.className)}>
                     My Latest Posts
@@ -38,7 +42,12 @@ export const LatestBlogs = ({
                     <div className={styles['left-column']}>
                         <div>
                             {latestBlogs.map((blog, i) => (
-                                <BlogCard {...blog} key={`blog-card-${i}`} />
+                                <div
+                                    className={styles['blog-card-wrapper']}
+                                    key={`blog-card-${i}`}
+                                >
+                                    <BlogCard {...blog} />
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -74,11 +83,11 @@ export const LatestBlogs = ({
                         </div>
                     </div>
                 </div>
-                {extra === 'pagination' && (
+                {/* {extra === 'pagination' && (
                     <div className={styles['pagination-wrapper']}>
                         <Pagination />
                     </div>
-                )}
+                )} */}
                 {extra === 'button' && (
                     <div className={styles['button-wrapper']}>
                         <Link

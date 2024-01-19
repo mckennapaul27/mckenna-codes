@@ -28,62 +28,59 @@ export const BlogCard = ({
     };
 }) => {
     return (
-        <div className={styles['blog-card-wrapper']}>
-            <div className={styles['blog-card']}>
-                <div className={styles['text-section']}>
-                    <div className={styles['top-section']}>
-                        <div className={styles['blog-card-tags']}>
-                            {tags.map((tag, i) => (
-                                <div
-                                    className={styles['blog-tag-wrapper']}
-                                    key={tag._id}
+        <div className={styles['blog-card']}>
+            <div className={styles['text-section']}>
+                <div className={styles['top-section']}>
+                    <div className={styles['blog-card-tags']}>
+                        {tags.map((tag, i) => (
+                            <div
+                                className={styles['blog-tag-wrapper']}
+                                key={tag._id}
+                            >
+                                <Link
+                                    className={classNames(
+                                        styles['blog-card-tag'],
+                                        montserrat.className
+                                    )}
+                                    key={`blog-card-tag-${i}`}
+                                    href={`/blog/tag/${tag.name}`}
                                 >
-                                    <Link
-                                        className={classNames(
-                                            styles['blog-card-tag'],
-                                            montserrat.className
-                                        )}
-                                        key={`blog-card-tag-${i}`}
-                                        href={`/blog/tag/${tag.name}`}
-                                    >
-                                        {tag.name}
-                                    </Link>
-                                </div>
-                            ))}
-                        </div>
-                        <p className={styles['blog-card-date']}>
-                            Last updated:{' '}
-                            {dayjs(updatedAt).format('MMMM D, YYYY')}
-                        </p>
+                                    {tag.name}
+                                </Link>
+                            </div>
+                        ))}
                     </div>
-                    <div className={styles['blog-card-content']}>
-                        <Link
-                            className={classNames(
-                                styles['blog-card-title'],
-                                montserrat.className
-                            )}
-                            href={`/blog/${slug}`}
-                        >
-                            {title}
-                        </Link>
-                        <p className={styles['blog-card-description']}>
-                            {description}
-                        </p>
-                    </div>
+                    <p className={styles['blog-card-date']}>
+                        Last updated: {dayjs(updatedAt).format('MMMM D, YYYY')}
+                    </p>
                 </div>
-                <div className={styles['blog-card-image-wrapper']}>
-                    <Image
-                        src={image.url}
-                        alt={title}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                        }}
-                        className={styles['blog-card-img']}
-                        fill
-                    />
+                <div className={styles['blog-card-content']}>
+                    <Link
+                        className={classNames(
+                            styles['blog-card-title'],
+                            montserrat.className
+                        )}
+                        href={`/blog/${slug}`}
+                    >
+                        {title}
+                    </Link>
+                    <p className={styles['blog-card-description']}>
+                        {description}
+                    </p>
                 </div>
+            </div>
+            <div className={styles['blog-card-image-wrapper']}>
+                <Image
+                    src={image.url}
+                    alt={title}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                    }}
+                    className={styles['blog-card-img']}
+                    fill
+                />
             </div>
         </div>
     );

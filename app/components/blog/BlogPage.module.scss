@@ -2,7 +2,7 @@
 @import '../../mixins';
 
 .blog-page {
-    background-color: $primary-bg;
+    background-color: $primary-bg-dark;
     padding-top: 100px;
     color: $off-white;
 }
@@ -34,23 +34,23 @@
 
 .blog-card-tag {
     display: inline-block;
-    background-color: $primary-bg-light;
+    background-color: $primary-bg-middle;
     padding: 8px 16px;
     font-size: 15px;
     border-radius: 6px;
     font-weight: 500;
     @include transition-ease;
     &:hover {
-        background-color: $primary-bg;
+        background-color: $primary-bg-dark;
         text-decoration: none;
     }
-    &.dark {
-        background-color: $primary-bg-dark;
-        &:hover {
-            background-color: $primary-bg-light;
-            text-decoration: none;
-        }
-    }
+    // &.dark {
+    //     background-color: $primary-bg-dark;
+    //     &:hover {
+    //         background-color: $primary-bg-light;
+    //         text-decoration: none;
+    //     }
+    // }
 }
 .blog-card-image-wrapper {
     width: 800px;
@@ -63,7 +63,7 @@
 }
 
 .main-content-wrapper {
-    background-color: $primary-bg-middle;
+    background-color: $primary-bg;
     padding: 40px 20px;
     border-radius: 0 0 8px 8px;
 }
@@ -75,7 +75,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
 }
 .main-content {
     width: 800px;
@@ -127,6 +127,7 @@
     a {
         color: $primary;
         text-decoration: none;
+        font-weight: 600;
         &:hover {
             text-decoration: underline;
         }

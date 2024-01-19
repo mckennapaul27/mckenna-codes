@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Footer.module.scss';
 
 export const Footer = () => {
@@ -5,7 +6,9 @@ export const Footer = () => {
         <footer className={styles['footer']}>
             <div className="container">
                 {' '}
-                <div>Footer</div>
+                <div>
+                    <Link href={'/contact-me'}> Contact me</Link>
+                </div>
             </div>
         </footer>
     );

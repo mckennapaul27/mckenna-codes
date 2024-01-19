@@ -1,19 +1,12 @@
 @import '../../variables';
 @import '../../mixins';
 
-.blog-card-wrapper {
-    width: 800px;
-    padding-bottom: 30px;
-    // margin-bottom: 40px;
-    // border-bottom: 1px solid $primary-bg-light;
-    // &:last-child {
-    //     padding-bottom: 0;
-    //     margin-bottom: 0;
-    //     border-bottom: none;
-    // }
-}
 .blog-card {
     background-color: $primary-bg-dark;
+    // border: 1px solid $primary-bg-light;
+    &.dark {
+        background-color: $primary-bg;
+    }
 }
 .text-section {
     padding: 32px;
@@ -69,7 +62,7 @@ a.blog-card-title {
 }
 .blog-card-image-wrapper {
     position: relative;
-    width: 768px;
+    width: calc(100% - 32px);
     height: 384px;
     margin-left: 32px;
 }

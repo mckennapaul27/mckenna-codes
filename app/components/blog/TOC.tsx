@@ -98,5 +98,5 @@ export const TOC = ({ toc }: { toc: TOC[] }) => {
         );
     };
 
-    return <nav>{renderTOC(toc)}</nav>;
+    return <nav className={styles['table-of-contents']}>{renderTOC(toc)}</nav>;
 };

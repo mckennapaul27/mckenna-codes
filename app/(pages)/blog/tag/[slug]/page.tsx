@@ -1,7 +1,7 @@
 import { type Metadata } from 'next';
 import qs from 'qs';
 import { url } from '@/config';
-import { BlogPage } from '@/app/components/blog/BlogPage';
+import { BlogTagsPage } from '@/app/components/blog/BlogTagsPage';
 
 interface PageProps {
     params: {
@@ -24,7 +24,7 @@ export async function generateMetadata({
             encodeValuesOnly: true, // prettify URL
         }
     );
-    const { data } = await fetch(url + '/api/api-blogs?' + query, {
+    const { data } = await fetch(url + '/api/api-tags?' + query, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-    const res = await fetch(url + '/api/api-blogs?select=slug', {
+    const res = await fetch(url + '/api/api-tags?select=slug', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -65,35 +65,47 @@ export default async function Page({
     };
 }) {
     const { slug } = params;
-    const query = qs.stringify(
+    const tag_query = qs.stringify(
         {
             filters: {
                 slug: slug,
             },
-            select: 'slug title description tags body image updatedAt createdAt',
+            select: 'slug name',
         },
         {
             encodeValuesOnly: true, // prettify URL
         }
     );
-    const res = await fetch(url + '/api/api-blogs?' + query, {
+    const { data: tag_data } = await fetch(url + '/api/api-tags?' + tag_query, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
         cache: 'no-store',
-    });
-    const data = await res.json();
-
-    const blog = {
-        title: data.data[0].title,
-        updatedAt: data.data[0].updatedAt,
-        slug: data.data[0].slug,
-        tags: data.data[0].tags,
-        image: data.data[0].image,
-        body: data.data[0].body,
-    };
-
-    return <BlogPage {...blog} />;
+    }).then((res) => res.json());
+    const blog_query = qs.stringify(
+        {
+            filters: {
+                tags: [tag_data[0]._id],
+            },
+            select: 'slug title tags body image updatedAt',
+        },
+        {
+            encodeValuesOnly: true, // prettify URL
+        }
+    );
+    const { data: blog_data } = await fetch(
+        url + '/api/api-blogs/tags?' + blog_query,
+        {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
+            },
+            cache: 'no-store',
+            // next: { revalidate: 5 }, // refresh every hour
+        }
+    ).then((res) => res.json());
+    return <BlogTagsPage blogs={blog_data} tagName={tag_data[0].name} />;
 }

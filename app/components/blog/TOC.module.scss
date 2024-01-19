@@ -1,7 +1,13 @@
 @import '../../variables';
 @import '../../mixins';
 
+.table-of-contents {
+    background-color: $primary-bg;
+    padding: 20px;
+    border-radius: 8px;
+}
 .list-items {
+    // padding: ;
     padding-left: 20px;
     > ul {
         // margin-bottom: 6px;

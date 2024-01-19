@@ -47,3 +47,14 @@
         height: 18px;
     }
 }
+
+.img-and-find-me-arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-section-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}

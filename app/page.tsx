@@ -43,6 +43,7 @@ export default async function Home() {
     const tag_res = await fetch(url + '/api/api-tags?' + tag_query, {
         method: 'GET',
         cache: 'no-store',
+        // next: { revalidate: 10 }, // refresh every 120 seconds
         headers: {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
@@ -57,7 +58,12 @@ export default async function Home() {
             <ClientPortfolio />
             <Testimonials />
             <SimpleCTA />
-            <LatestBlogs latestBlogs={blogs} extra={'button'} tags={tags} />
+            <LatestBlogs
+                latestBlogs={blogs}
+                extra={'button'}
+                tags={tags}
+                theme="light"
+            />
         </>
     );
 }

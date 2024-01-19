@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Button } from '../components/elements/Button';
+import Image from 'next/image';
 
 export const SimpleCTA = () => {
     return (
@@ -39,7 +40,17 @@ export const SimpleCTA = () => {
                             size="large"
                         />
                     </div>
-                    <div>
+                    <div className={styles['img-and-find-me-arrows']}>
+                        <div className={styles['img-section-wrapper']}>
+                            <Image
+                                src={
+                                    '/paul-mckenna-web-develop-profile-pic-square.png'
+                                }
+                                width={300}
+                                height={300}
+                                alt={'Paul McKenna Web Developer Profile Pic'}
+                            />
+                        </div>
                         <div className={styles['find-me-para']}>
                             <span className={styles['text']}>Find me on</span>{' '}
                             <span className={styles['icon-arrow']}>

@@ -20,7 +20,6 @@ export const useMedia = (
     //      // Return default value if `window` is not defined
     //      return defaultValue;
     //  };
-    // console.log(match());
     const [value, set] = useState(5);
     useEffect(() => {
         set(match);

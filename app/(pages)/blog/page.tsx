@@ -17,6 +17,7 @@ export default async function Page() {
         }
     );
     const blog_res = await fetch(url + '/api/api-blogs?' + blog_query, {
+        cache: 'no-store',
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
