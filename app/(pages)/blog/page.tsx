@@ -5,7 +5,7 @@ import qs from 'qs';
 export default async function Page() {
     const blog_query = qs.stringify(
         {
-            select: 'slug description title tags image updatedAt',
+            select: 'slug description title tags image createdAt updatedAt',
             pageIndex: 0,
             pageSize: 1,
             sort: {
@@ -17,12 +17,13 @@ export default async function Page() {
         }
     );
     const blog_res = await fetch(url + '/api/api-blogs?' + blog_query, {
-        cache: 'no-store',
+        // cache: 'no-store',
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
+        next: { revalidate: 3600 }, // revaildate every 60 minutes
     });
     const { data: blogs } = await blog_res.json();
 
@@ -40,6 +41,7 @@ export default async function Page() {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
+        next: { revalidate: 3600 }, // revaildate every 60 minutes
     });
     const { data: tags } = await tag_res.json();
     return <LatestBlogs latestBlogs={blogs} tags={tags} extra={'pagination'} />;

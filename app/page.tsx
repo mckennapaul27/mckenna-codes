@@ -42,8 +42,8 @@ export default async function Home() {
     );
     const tag_res = await fetch(url + '/api/api-tags?' + tag_query, {
         method: 'GET',
-        cache: 'no-store',
-        // next: { revalidate: 10 }, // refresh every 120 seconds
+        // cache: 'no-store',
+        next: { revalidate: 3600 }, // refresh every 60 minutes
         headers: {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
