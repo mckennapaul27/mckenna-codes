@@ -57,11 +57,49 @@
     font-weight: 600;
     color: $off-white;
 }
-
+@include media-desktop-1280 {
+    .img-section-wrapper {
+        min-width: 400px;
+        img {
+            width: 400px;
+            height: 400px;
+            // margin-right: 40px;
+        }
+    }
+}
 @include media-desktop-1215 {
+}
+@media screen and (max-width: 1075px) {
+    .img-section-wrapper {
+        min-width: 355px;
+        img {
+            width: 355px;
+            height: 355px;
+        }
+    }
 }
 
 @include media-tablet-1024 {
+    .about-details-block {
+        font-size: 18px;
+    }
+    .about-details-block-name {
+        font-size: 18px;
+    }
+    .about-details-blocks {
+        margin: -10px;
+    }
+    .about-details-block-wrapper {
+        padding: 10px;
+        width: 33.33%;
+    }
+    .img-section-wrapper {
+        min-width: 325px;
+        img {
+            width: 325px;
+            height: 325px;
+        }
+    }
 }
 
 @include media-mobile-768 {

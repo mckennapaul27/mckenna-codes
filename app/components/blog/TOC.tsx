@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './TOC.module.scss';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
+import { montserrat } from '@/app/utils/fonts';
 
 type TOC = {
     id: string;
@@ -15,7 +16,7 @@ type TOC = {
         title: string;
     }[];
 };
-export const TOC = ({ toc }: { toc: TOC[] }) => {
+export const TOC = ({ toc, position }: { toc: TOC[]; position?: string }) => {
     const [currentId, setCurrentId] = useState('');
 
     useEffect(() => {
@@ -98,5 +99,25 @@ export const TOC = ({ toc }: { toc: TOC[] }) => {
         );
     };
 
-    return <nav className={styles['table-of-contents']}>{renderTOC(toc)}</nav>;
+    return (
+        <div>
+            <p
+                className={classNames(
+                    styles['right-column-title'],
+                    montserrat.className,
+                    position ? styles[position] : ''
+                )}
+            >
+                Table of Contents
+            </p>
+            <nav
+                className={classNames(
+                    styles['table-of-contents'],
+                    position ? styles[position] : ''
+                )}
+            >
+                {renderTOC(toc)}
+            </nav>
+        </div>
+    );
 };

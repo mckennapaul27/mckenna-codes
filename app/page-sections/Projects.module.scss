@@ -13,7 +13,8 @@
 }
 
 .content-section {
-    width: 50%;
+    width: 60%;
+    padding-right: 80px;
     h2 {
         margin-bottom: 30px;
     }
@@ -23,6 +24,9 @@
         @include lastChildMarginZero;
     }
 }
+.projects-section {
+    padding-top: 90px;
+}
 
 .project-card {
     display: flex;
@@ -31,6 +35,13 @@
     border-bottom: 1px solid $primary-bg-light;
     width: 100%;
     position: relative;
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
 }
 .text-wrapper {
     margin-left: 24px;
@@ -54,4 +65,56 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.img-wrapper {
+    position: relative;
+    width: 180px;
+    height: 90px;
+}
+
+@include media-desktop-1215 {
+    .text-wrapper {
+        margin-left: 20px;
+        // .title {
+        //     font-size: 18px;
+        // }
+        // p {
+        //     font-size: 18px;
+        // }
+    }
+    .img-wrapper {
+        width: 150px;
+        height: 75px;
+    }
+    .content-section {
+        width: 60%;
+        padding-right: 60px;
+    }
+}
+@include media-tablet-1024 {
+    .text-wrapper {
+        .title {
+            font-size: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+@include media-tablet-1024 {
+    .sections {
+        flex-wrap: wrap;
+    }
+    .content-section {
+        width: 100%;
+        padding-right: 0;
+    }
+    .projects-section-wrapper {
+        width: 100%;
+    }
+    .projects-section {
+        width: 100%;
+        padding-top: 60px;
+    }
 }

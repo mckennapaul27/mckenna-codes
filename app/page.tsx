@@ -1,4 +1,3 @@
-import styles from './page.module.scss';
 import { Hero } from './page-sections/Hero';
 import { Projects } from './page-sections/Projects';
 import { ClientPortfolio } from './page-sections/ClientPortfolio';
@@ -8,6 +7,14 @@ import { LatestBlogs } from './page-sections/LatestBlogs';
 import { CounterBlock } from './page-sections/CounterBlock';
 import qs from 'qs';
 import { url } from '@/config';
+import { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Home',
+        description: 'Home page of the website',
+    };
+}
 
 export default async function Home() {
     const blog_query = qs.stringify(

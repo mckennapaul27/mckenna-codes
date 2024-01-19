@@ -11,18 +11,16 @@ const Typewriter = () => {
             sequence={[
                 // Same substring at the start will only be typed out once, initially
                 'Web Developer',
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                2000, // wait 1s before replacing "Mice" with "Hamsters"
                 'UX/UI Designer',
-                1000,
+                2000,
                 'Web Designer',
-                1000,
+                2000,
                 'Solopreneur',
-                1000,
+                2000,
                 'Software Engineer',
-                1000,
+                2000,
                 'Online Marketer',
-                1000,
-                'Hypnotist?',
                 1000,
             ]}
             wrapper="span"

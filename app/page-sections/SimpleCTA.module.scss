@@ -13,7 +13,7 @@
 
 .content-section {
     // margin-bottom: 40px;
-    max-width: 450px;
+    max-width: 500px;
     h2 {
         margin-bottom: 30px;
     }
@@ -27,7 +27,7 @@
 .find-me-para {
     display: flex;
     align-items: center;
-    // margin-top: 30px;
+    margin-top: 30px;
     span {
         display: block;
         color: $primary;
@@ -57,4 +57,28 @@
 .img-section-wrapper {
     display: flex;
     justify-content: flex-end;
+}
+
+@include media-tablet-1024 {
+    .content-section {
+        padding-right: 40px;
+    }
+    .sections {
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .content-section {
+        padding-right: 0;
+    }
+    .img-and-find-me-arrows {
+        width: 100%;
+    }
+    .img-section-wrapper {
+        margin-top: 40px;
+        justify-content: flex-start;
+    }
+}
+
+@include media-mobile-800 {
 }

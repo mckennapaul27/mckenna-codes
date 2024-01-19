@@ -55,25 +55,109 @@
 }
 .banner-item-title {
     font-size: 32px;
-    line-height: 32px;
+    line-height: 100%;
     font-weight: 600;
     color: $primary;
 }
 .banner-item-description {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 100%;
     color: $gray;
     margin-top: 6px;
 }
+.profile-pic-800px-wrapper {
+    position: relative;
+    width: 325px;
+    height: 325px;
+    display: none;
+}
 
 @include media-desktop-1215 {
+    .img-section-wrapper {
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
+@media screen and (max-width: 1075px) {
+    .img-section-wrapper {
+        img {
+            width: 355px;
+            height: 355px;
+        }
+    }
+}
+
+@include media-desktop-1215 {
+    .banner {
+        padding: 30px;
+    }
+    .inside-block {
+        padding: 20px;
+    }
 }
 
 @include media-tablet-1024 {
+    .banner {
+        padding: 20px;
+    }
+    .inside-block {
+        padding: 20px;
+    }
+    .banner-item-title {
+        font-size: 28px;
+    }
+    .banner-item-description {
+        font-size: 16px;
+    }
+}
+
+@include media-mobile-800 {
+    .sections {
+        flex-wrap: wrap;
+    }
+    .text-section {
+        max-width: 100%;
+    }
+    .intro-text {
+        max-width: 100%;
+    }
+    .img-section-wrapper {
+        display: none;
+        margin-top: 80px;
+        width: 100%;
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .profile-pic-800px-wrapper {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .profile-pic-800px {
+    }
+    .banner-items {
+        flex-wrap: wrap;
+    }
+    .inside-block {
+        padding: 10px;
+    }
+    .banner-item {
+        width: 50%;
+        padding: 10px;
+    }
 }
 
 @include media-mobile-768 {
 }
 
 @include media-mobile-xs-500 {
+    .profile-pic-800px-wrapper {
+        position: relative;
+        width: 100%;
+        height: 325px;
+        object-fit: contain;
+    }
 }

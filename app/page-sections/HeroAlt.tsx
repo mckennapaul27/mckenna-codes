@@ -17,7 +17,7 @@ const details = [
     },
     {
         name: 'location',
-        value: 'Manchester, United Kingdom',
+        value: 'Manchester, UK',
     },
     {
         name: 'phone',

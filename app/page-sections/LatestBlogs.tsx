@@ -41,7 +41,7 @@ export const LatestBlogs = ({
                 </h2>
                 <div className={styles['sections']}>
                     <div className={styles['left-column']}>
-                        <div>
+                        <div className={styles['blogs-wrapper']}>
                             {latestBlogs.map((blog, i) => (
                                 <div
                                     className={styles['blog-card-wrapper']}

@@ -115,7 +115,7 @@ export const ContactForm = ({ is_dark = false }) => {
                         placeholder="Enter your email"
                     />
                 </div>
-                <div className={styles['input-wrapper']}>
+                {/* <div className={styles['input-wrapper']}>
                     <Input
                         id="phone"
                         label="Phone (Optional)"
@@ -133,7 +133,7 @@ export const ContactForm = ({ is_dark = false }) => {
                         is_dark={is_dark}
                         placeholder="Enter your phone number"
                     />
-                </div>
+                </div> */}
                 <div className={styles['input-wrapper']}>
                     <TextArea
                         id="message"

@@ -66,23 +66,27 @@ export const BlogCard = ({
                     >
                         {title}
                     </Link>
-                    <p className={styles['blog-card-description']}>
-                        {description}
-                    </p>
+                    {description && (
+                        <p className={styles['blog-card-description']}>
+                            {description}
+                        </p>
+                    )}
                 </div>
             </div>
-            <div className={styles['blog-card-image-wrapper']}>
-                <Image
-                    src={image.url}
-                    alt={title}
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                    }}
-                    className={styles['blog-card-img']}
-                    fill
-                />
+            <div className={styles['img-holder']}>
+                <div className={styles['blog-card-image-wrapper']}>
+                    <Image
+                        src={image.url}
+                        alt={title}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                        }}
+                        className={styles['blog-card-img']}
+                        fill
+                    />
+                </div>
             </div>
         </div>
     );

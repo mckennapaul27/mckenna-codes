@@ -6,7 +6,7 @@ const bannerItems = [
     { title: '5+', description: 'Personal Projects' },
     { title: '10+', description: 'Client Projects' },
     { title: '7+', description: 'Years Experience' },
-    { title: '957', description: 'Github Contributions Last Year' },
+    { title: '957', description: 'Github Last Year' },
 ];
 
 export const CounterBlock = ({}) => {

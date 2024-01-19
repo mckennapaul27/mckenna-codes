@@ -10,6 +10,11 @@
     padding: 80px 0;
     margin: 0 auto;
 }
+@include media-desktop-1215 {
+    .input-wrapper {
+        width: 450px;
+    }
+}
 
 @include media-mobile-768 {
     .form-wrapper {

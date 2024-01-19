@@ -5,6 +5,20 @@
     background-color: $primary-bg;
     padding: 20px;
     border-radius: 8px;
+    // border: 1px dashed $off-white;
+    &.inside {
+        // padding: 20px 15px;
+        display: none;
+        padding: 0;
+        margin-bottom: 30px;
+        ul.list-items {
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        li.list-item {
+            margin-bottom: 0;
+        }
+    }
 }
 .list-items {
     // padding: ;
@@ -20,13 +34,56 @@
     // margin-bottom: 6px;
 }
 
-.list-link {
+a.list-link {
     color: $off-white;
     // padding-bottom: 6px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
-.highlight {
+a.highlight {
     color: $primary;
     font-weight: 600;
 }
+.right-column-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: $off-white-lighter;
+    margin-bottom: 20px;
+    &.inside {
+        display: none;
+    }
+}
+
+@include media-desktop-1215 {
+    .right-column-title {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .table-of-contents {
+        // background-color: $primary-bg-dark;
+        padding: 10px 5px;
+    }
+    .right-column-title {
+        &.inside {
+            display: block;
+        }
+    }
+
+    .list-item {
+        font-size: 16px;
+    }
+    .table-of-contents {
+        &.inside {
+            display: block;
+        }
+    }
+}
+
+// @media only screen and (max-width: 1150px) {
+//     .table-of-contents {
+//         display: none;
+//     }
+// }

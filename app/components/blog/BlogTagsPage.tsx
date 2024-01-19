@@ -28,7 +28,9 @@ export const BlogTagsPage = ({
     return (
         <section className={styles['main']}>
             <div className="container">
-                <h1 className={classNames(montserrat.className)}>#{tagName}</h1>
+                <h1 className={classNames(montserrat.className, 'is-like-h2')}>
+                    #{tagName}
+                </h1>
                 <div className={styles['blogs-wrapper']}>
                     {blogs.map((blog, i) => (
                         <div

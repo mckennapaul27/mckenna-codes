@@ -37,6 +37,12 @@ $fullhd: 1480px;
         @content;
     }
 }
+@mixin media-mobile-800 {
+    @media only screen and (max-width: 800px) {
+        @content;
+    }
+}
+
 @mixin media-mobile-845 {
     @media only screen and (max-width: 845px) {
         @content;

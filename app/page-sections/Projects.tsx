@@ -56,13 +56,10 @@ export const Projects = () => {
                             phasellus egestas tellus. Orci a scelerisque purus
                             semper eget duis. Amet nisl purus in mollis nunc sed
                             id semper risus. In fermentum et sollicitudin ac
-                            orci phasellus egestas tellus. Orci a scelerisque
-                            purus semper eget duis at tellus at urna.
-                            Condimentum vitae sapien pellentesque habitant morbi
-                            tristique senectus et netus.
+                            orci phasellus egestas tellus.
                         </p>
                     </div>
-                    <div>
+                    <div className={styles['projects-section-wrapper']}>
                         <div className={styles['projects-section']}>
                             {projects.map((project, index) => {
                                 return (
@@ -73,10 +70,13 @@ export const Projects = () => {
                                         <div className={styles['img-wrapper']}>
                                             <Image
                                                 src={`/${project.src}`}
-                                                width={160}
-                                                height={120}
+                                                // width={180}
+                                                // height={90}
                                                 alt={project.name}
-                                                priority
+                                                fill
+                                                style={{
+                                                    objectFit: 'cover',
+                                                }}
                                             />
                                         </div>
                                         <div className={styles['text-wrapper']}>

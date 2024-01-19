@@ -17,3 +17,37 @@
 .subtitle-span {
     height: 90px;
 }
+
+@include media-desktop-1215 {
+    .title {
+        font-size: 60px;
+    }
+    .title-span {
+        font-size: 40px;
+    }
+    .subtitle-span {
+        height: 70px;
+    }
+}
+@include media-tablet-1024 {
+    .title {
+        font-size: 48px;
+    }
+    .title-span {
+        font-size: 34px;
+    }
+    .subtitle-span {
+        height: 60px;
+    }
+}
+@include media-mobile-800 {
+    .title {
+        font-size: 40px;
+    }
+    .title-span {
+        font-size: 28px;
+    }
+    .subtitle-span {
+        height: 50px;
+    }
+}

@@ -3,6 +3,7 @@ import styles from './Hero.module.scss';
 import Image from 'next/image';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
 import { TitleTypist } from '../components/common/TitleTypist';
+import { Title } from '../components/common/Title';
 
 export const Hero = () => {
     return (
@@ -10,7 +11,11 @@ export const Hero = () => {
             <div className="container">
                 <div className={styles['sections']}>
                     <div className={styles['text-section']}>
-                        <TitleTypist
+                        {/* <TitleTypist
+                            title={'Paul McKenna'}
+                            subtitle={'Software Engineer'}
+                        /> */}
+                        <Title
                             title={'Paul McKenna'}
                             subtitle={'Software Engineer'}
                         />
@@ -23,6 +28,24 @@ export const Hero = () => {
                             of topics related to software development and my
                             personal projects.
                         </p>
+                        <div className={styles['profile-pic-800px-wrapper']}>
+                            <Image
+                                src={
+                                    '/paul-mckenna-web-develop-profile-pic-square.png'
+                                }
+                                // width={350}
+                                // height={350}
+                                fill
+                                alt={'Paul McKenna Web Developer Profile Pic'}
+                                priority
+                                className={styles['profile-pic-800px']}
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                }}
+                            />
+                        </div>
                         <p className={'social-icons'}>
                             <span className={'icon'}>
                                 <GithubIcon />
@@ -45,34 +68,6 @@ export const Hero = () => {
                         />
                     </div>
                 </div>
-                {/* <div className={styles['banner']}>
-                    <div className={styles['inside-block']}>
-                        <div className={styles['banner-items']}>
-                            {bannerItems.map((item, i) => (
-                                <div
-                                    className={styles['banner-item']}
-                                    key={`banner-item-${i}`}
-                                >
-                                    <div
-                                        className={classNames(
-                                            styles['banner-item-title'],
-                                            montserrat.className
-                                        )}
-                                    >
-                                        {item.title}
-                                    </div>
-                                    <div
-                                        className={
-                                            styles['banner-item-description']
-                                        }
-                                    >
-                                        {item.description}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </main>
     );

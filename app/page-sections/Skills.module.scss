@@ -92,3 +92,26 @@ p.skills-grade {
         height: 16px;
     }
 }
+
+@include media-desktop-1215 {
+    .banner {
+        padding: 30px;
+    }
+    .inside-block {
+        padding: 20px;
+    }
+    .banner-items {
+        margin: -5px;
+    }
+    .skill-item-wrapper {
+        padding: 5px;
+    }
+}
+@include media-tablet-1024 {
+    .banner {
+        padding: 20px;
+    }
+    .inside-block {
+        padding: 20px;
+    }
+}
