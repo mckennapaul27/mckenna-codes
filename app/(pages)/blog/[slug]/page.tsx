@@ -30,6 +30,7 @@ export async function generateMetadata({
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
+        next: { revalidate: 3600 }, // revaildate every 60 minutes
         // cache: 'no-store',
     }).then((res) => res.json());
     return {
@@ -45,10 +46,11 @@ export async function generateStaticParams() {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
+        next: { revalidate: 3600 }, // revaildate every 60 minutes
         // cache: 'no-store',
     });
     const data = await res.json();
-    console.log('paths: ', data);
+    // console.log('paths: ', data);
     return data.data.map((blog: { _id: string; slug: string }) => {
         return {
             params: {
@@ -66,7 +68,6 @@ export default async function Page({
     };
 }) {
     const { slug } = params;
-    // console.log(`The slug on this page is ${slug}`);
     const query = qs.stringify(
         {
             filters: {
@@ -78,7 +79,6 @@ export default async function Page({
             encodeValuesOnly: true, // prettify URL
         }
     );
-    console.log('query: ', query);
     try {
         const res = await fetch(url + '/api/api-blogs?' + query, {
             method: 'GET',
@@ -87,9 +87,9 @@ export default async function Page({
                 authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
             },
             // cache: 'no-store',
+            next: { revalidate: 3600 }, // revaildate every 60 minutes
         });
         const data = await res.json();
-        console.log('data: ', data);
 
         const blog = {
             title: data.data[0].title,
@@ -100,10 +100,7 @@ export default async function Page({
             image: data.data[0].image,
             body: data.data[0].body,
         };
-        console.log('blog >> ', blog);
-
         return <BlogPage {...blog} />;
-        return <h1>This is a blog</h1>;
     } catch (error) {
         console.log('error: ', error);
     }

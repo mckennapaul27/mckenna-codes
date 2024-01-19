@@ -30,7 +30,8 @@ export async function generateMetadata({
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
-        cache: 'no-store',
+        next: { revalidate: 3600 }, // revaildate every 60 minutes
+        // cache: 'no-store',
     }).then((res) => res.json());
     return {
         title: data[0].metaTitle,
@@ -45,7 +46,8 @@ export async function generateStaticParams() {
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
-        cache: 'no-store',
+        // cache: 'no-store',
+        next: { revalidate: 3600 }, // revaildate every 60 minutes
     });
     const data = await res.json();
     return data.data.map((blog: { _id: string; slug: string }) => {
@@ -82,7 +84,7 @@ export default async function Page({
             'Content-Type': 'application/json',
             authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
         },
-        cache: 'no-store',
+        next: { revalidate: 3600 }, // revaildate every 60 minutes
     }).then((res) => res.json());
     const blog_query = qs.stringify(
         {
@@ -103,8 +105,7 @@ export default async function Page({
                 'Content-Type': 'application/json',
                 authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
             },
-            cache: 'no-store',
-            // next: { revalidate: 5 }, // refresh every hour
+            next: { revalidate: 3600 }, // revaildate every 60 minutes
         }
     ).then((res) => res.json());
     return <BlogTagsPage blogs={blog_data} tagName={tag_data[0].name} />;
