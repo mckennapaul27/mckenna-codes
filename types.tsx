@@ -28,7 +28,7 @@ export type BlogType = {
     title: string;
     description?: string;
     updatedAt: string;
-    createdAt?: string;
+    createdAt: string;
     slug: string;
     tags: Tag[];
     image: {

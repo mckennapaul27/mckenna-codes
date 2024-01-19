@@ -9,6 +9,7 @@ import dayjs from 'dayjs';
 export const BlogCard = ({
     title,
     description,
+    createdAt,
     updatedAt,
     slug,
     tags,
@@ -17,6 +18,7 @@ export const BlogCard = ({
     title: string;
     description: string;
     updatedAt: string;
+    createdAt: string;
     slug: string;
     tags: Tag[];
     image: {

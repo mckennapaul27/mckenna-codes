@@ -15,6 +15,7 @@ export const LatestBlogs = ({
     latestBlogs: {
         title: string;
         description: string;
+        createdAt: string;
         updatedAt: string;
         slug: string;
         tags: Tag[];

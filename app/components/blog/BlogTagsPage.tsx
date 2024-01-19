@@ -11,6 +11,7 @@ export const BlogTagsPage = ({
     blogs: {
         title: string;
         description: string;
+        createdAt: string;
         updatedAt: string;
         slug: string;
         tags: Tag[];

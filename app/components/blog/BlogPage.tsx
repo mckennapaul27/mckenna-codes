@@ -16,7 +16,7 @@ import { coldarkDark as highlightStyle } from 'react-syntax-highlighter/dist/cjs
 import { SimpleCTA } from '@/app/page-sections/SimpleCTA';
 import { NextImage } from './NextImage';
 import { TOC } from './TOC';
-import { ArticleJsonLd } from 'next-seo';
+// import { ArticleJsonLd } from 'next-seo';
 
 export const BlogPage = ({
     title,
@@ -89,7 +89,7 @@ export const BlogPage = ({
     };
     return (
         <div className={styles['blog-page']}>
-            <ArticleJsonLd
+            {/* <ArticleJsonLd
                 useAppDir={true}
                 url={process.env.NEXT_PUBLIC_SITE_URL + '/blog/' + slug}
                 title={title}
@@ -106,7 +106,7 @@ export const BlogPage = ({
                 // publisherLogo="https://www.example.com/photos/logo.jpg"
                 description={description}
                 isAccessibleForFree={true}
-            />
+            /> */}
             <div className="container">
                 <div className={styles['title-section']}>
                     <h1

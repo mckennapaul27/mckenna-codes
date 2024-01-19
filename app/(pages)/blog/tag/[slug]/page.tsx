@@ -89,7 +89,7 @@ export default async function Page({
             filters: {
                 tags: [tag_data[0]._id],
             },
-            select: 'slug title tags body image updatedAt',
+            select: 'slug title tags body image updatedAt createdAt',
         },
         {
             encodeValuesOnly: true, // prettify URL

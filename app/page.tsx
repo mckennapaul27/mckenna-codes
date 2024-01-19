@@ -12,7 +12,7 @@ import { url } from '@/config';
 export default async function Home() {
     const blog_query = qs.stringify(
         {
-            select: 'slug description title tags image updatedAt',
+            select: 'slug description title tags image updatedAt createdAt',
             pageIndex: 0,
             pageSize: 1,
             sort: {
