@@ -11,6 +11,8 @@ import {
     PhoneArrowUpRightIcon,
 } from '@heroicons/react/24/outline';
 import { animated, useTransition } from 'react-spring';
+import classNames from 'classnames';
+import { montserrat } from '@/app/utils/fonts';
 //import { ContactDeets } from '../common/ContactDeets';
 
 export const mobile_navbar = [
@@ -23,15 +25,15 @@ export const mobile_navbar = [
     },
     {
         id: 2,
-        title: 'Work',
-        path: '/work',
+        title: 'About',
+        path: '/about-me',
         hasDropdown: false,
         items: [],
     },
     {
         id: 3,
-        title: 'About',
-        path: '/about-me',
+        title: 'Blog',
+        path: '/blog',
         hasDropdown: false,
         items: [],
     },
@@ -106,10 +108,10 @@ export const NavbarTouch = () => {
                     >
                         <Image
                             // src="/bunker-digital-logo-lg.svg"
-                            src="/logos/bunker-digital-logo-new.svg"
-                            alt="bunker digital logo"
-                            width={95 / 1.2}
-                            height={51 / 1.2}
+                            src="/mckenna-codes-logo-48-48-dark.svg"
+                            alt="mckenna codes logo"
+                            width={48}
+                            height={48}
                             priority
                             className={styles['navbar-logo']}
                         />
@@ -119,7 +121,7 @@ export const NavbarTouch = () => {
                     <Hamburger
                         toggled={isOpen}
                         toggle={setOpen}
-                        color={isOpen ? '#000' : '#fff'}
+                        color={isOpen ? '#fff' : '#fff'}
                     />
                 </div>
             </div>
@@ -134,7 +136,10 @@ export const NavbarTouch = () => {
                                 >
                                     <Link
                                         href={item.path}
-                                        className={styles['navbar-link']}
+                                        className={classNames(
+                                            styles['navbar-link'],
+                                            montserrat.className
+                                        )}
                                         onClick={() => setOpen(false)}
                                     >
                                         {item.title}
@@ -144,8 +149,8 @@ export const NavbarTouch = () => {
                         })}
                         <div className={styles['button-wrapper']}>
                             <Button
-                                text={'Discuss project'}
-                                href="/discuss-project"
+                                text={'Contact Me'}
+                                href="/contact-me"
                                 display="block"
                                 plain={true}
                                 // size="small"
@@ -156,7 +161,7 @@ export const NavbarTouch = () => {
                         <div className={styles['contact-deets-wrapper']}>
                             {/* <ContactDeets isDark={true} isColumn={true} /> */}
                         </div>
-                        <div className="services">
+                        {/* <div className="services">
                             {services.map((item) => {
                                 return (
                                     <div
@@ -186,7 +191,7 @@ export const NavbarTouch = () => {
                                     </div>
                                 );
                             })}
-                        </div>
+                        </div> */}
                     </animated.div>
                 ) : null
             )}

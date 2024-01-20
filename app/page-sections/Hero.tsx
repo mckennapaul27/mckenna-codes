@@ -12,22 +12,23 @@ export const Hero = () => {
             <div className="container">
                 <div className={styles['sections']}>
                     <div className={styles['text-section']}>
-                        {/* <TitleTypist
-                            title={'Paul McKenna'}
-                            subtitle={'Software Engineer'}
-                        /> */}
-                        <Title
+                        <TitleTypist
                             title={'Paul McKenna'}
                             subtitle={'Software Engineer'}
                         />
+                        {/* <Title
+                            title={'Paul McKenna'}
+                            subtitle={'Software Engineer'}
+                        /> */}
                         <div className="primary-line"></div>
                         <p className={styles['intro-text']}>
                             Hello and welcome to my personal website. You can
                             find out more{' '}
                             <Link href={'/about-me'}>about me</Link>, my work
-                            and my skills here. On my blog I write about a range
-                            of topics related to software development and my
-                            personal projects.
+                            and my skills here. On my{' '}
+                            <Link href={'/blog'}>blog</Link> I write about a
+                            range of topics related to software development and
+                            my personal projects.
                         </p>
                         <div className={styles['profile-pic-800px-wrapper']}>
                             <Image

@@ -2,7 +2,8 @@
 @import '../../mixins';
 
 .navbar {
-    background-color: $primary-gray;
+    background-color: $primary-bg-dark;
+    border-bottom: 1px solid $primary-bg-light;
 }
 
 .top-section {
@@ -19,7 +20,7 @@
 }
 
 .menu {
-    background-color: $white;
+    background-color: $primary-bg;
     padding: 40px 15px;
     position: fixed;
     overflow-y: scroll;

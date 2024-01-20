@@ -2,7 +2,7 @@ import React from 'react';
 import { NavbarDesktop } from './NavbarDesktop';
 import { Footer } from './Footer';
 import styles from './Layout.module.scss';
-// import { NavbarTouch } from './NavbarTouch';
+import { NavbarTouch } from './NavbarTouch';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -11,7 +11,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 <NavbarDesktop />
             </div>
             <div className={styles['navbar-touch-wrapper']}>
-                {/* <NavbarTouch /> */}
+                <NavbarTouch />
             </div>
 
             {children}
