@@ -177,6 +177,12 @@
 }
 
 @include media-mobile-xs-500 {
+    .banner {
+        padding: 10px;
+    }
+    .banner-item {
+        padding: 5px;
+    }
     .text-section {
         max-width: 100%;
     }

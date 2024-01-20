@@ -176,7 +176,8 @@ export const convertBlocksToHtml = (blocks: {
                         }" height="${block.attrs.height}" />`;
                         break;
                     case 'table':
-                        html += '<table><tbody>';
+                        html +=
+                            '<div class="table-container"><table class="table"><tbody>';
                         block.content.forEach(
                             (row: { type: string; content: any[] }) => {
                                 html += '<tr>';
@@ -200,7 +201,7 @@ export const convertBlocksToHtml = (blocks: {
                                 html += '</tr>';
                             }
                         );
-                        html += '</tbody></table>';
+                        html += '</tbody></table></div>';
                         break;
                     default:
                         console.error(`Unknown block type: ${block.type}`);

@@ -108,7 +108,7 @@ a.blog-card-title {
         font-size: 22px;
     }
     .blog-card-image-wrapper {
-        height: 325px;
+        height: 290px;
     }
 }
 
@@ -121,6 +121,10 @@ a.blog-card-title {
     }
     .blog-card-date {
         font-size: 14px;
+    }
+    .blog-card-tag {
+        // padding: 8px 16px;
+        font-size: 13px;
     }
 }
 @include media-mobile-xs-390 {

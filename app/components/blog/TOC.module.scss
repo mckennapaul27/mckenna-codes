@@ -82,8 +82,8 @@ a.highlight {
     }
 }
 
-// @media only screen and (max-width: 1150px) {
-//     .table-of-contents {
-//         display: none;
-//     }
-// }
+@include media-mobile-xs-390 {
+    .table-of-contents {
+        background-color: $primary-bg-dark;
+    }
+}

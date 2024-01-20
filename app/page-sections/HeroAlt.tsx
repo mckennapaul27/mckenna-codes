@@ -60,6 +60,17 @@ export const HeroAlt = () => {
                             In addition to my work, I am also a proud father of
                             two beautiful daughters.
                         </p>
+                        <div className={styles['img-section-wrapper-800px']}>
+                            <Image
+                                src={
+                                    '/paul-mckenna-web-develop-profile-pic-square.png'
+                                }
+                                width={450}
+                                height={450}
+                                alt={'Paul McKenna Web Developer Profile Pic'}
+                                priority
+                            />
+                        </div>
                         <p className={'social-icons alt'}>
                             <span className={'icon'}>
                                 <GithubIcon />

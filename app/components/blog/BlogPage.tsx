@@ -87,93 +87,109 @@ export const BlogPage = ({
             }
         },
     };
+    //console.log('toc', toc);
     return (
         <div className={styles['blog-page']}>
-            <ArticleJsonLd
-                useAppDir={true}
-                url={process.env.NEXT_PUBLIC_SITE_URL + '/blog/' + slug}
-                title={title}
-                images={[image.url]}
-                datePublished={dayjs(createdAt).format()}
-                dateModified={dayjs(updatedAt).format()}
-                authorName={[
-                    {
-                        name: 'Paul McKenna',
-                        url: process.env.NEXT_PUBLIC_SITE_URL + '/about-me',
-                    },
-                ]}
-                publisherName="Paul McKenna"
-                // publisherLogo="https://www.example.com/photos/logo.jpg"
-                description={description}
-                isAccessibleForFree={true}
-            />
-            <div className="container">
-                <div className={styles['title-section']}>
-                    <h1
-                        className={classNames(
-                            montserrat.className,
-                            styles['title']
-                        )}
-                    >
-                        {title}
-                    </h1>
-                    <p className={styles['update-date']}>
-                        Updated on {dayjs(updatedAt).format('MMMM D, YYYY')}
-                    </p>
-                </div>
-                <div className={styles['main-wrapper']}>
-                    <div className={styles['main-content']}>
-                        <div className={styles['blog-card-image-wrapper']}>
-                            <Image
-                                src={image.url}
-                                alt={title}
-                                fill
-                                className={styles['blog-image']}
-                                priority
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                }}
-                            />
-                        </div>
-                        <div className={styles['main-content-wrapper']}>
-                            <div className={styles['markdown']}>
-                                <div className={styles['inblog-toc-wrapper']}>
-                                    <TOC toc={toc} position={'inside'} />
-                                </div>
-
-                                {parse(content, options)}
+            <div className={styles['blog-page-container']}>
+                <ArticleJsonLd
+                    useAppDir={true}
+                    url={process.env.NEXT_PUBLIC_SITE_URL + '/blog/' + slug}
+                    title={title}
+                    images={[image.url]}
+                    datePublished={dayjs(createdAt).format()}
+                    dateModified={dayjs(updatedAt).format()}
+                    authorName={[
+                        {
+                            name: 'Paul McKenna',
+                            url: process.env.NEXT_PUBLIC_SITE_URL + '/about-me',
+                        },
+                    ]}
+                    publisherName="Paul McKenna"
+                    // publisherLogo="https://www.example.com/photos/logo.jpg"
+                    description={description}
+                    isAccessibleForFree={true}
+                />
+                <div className="container">
+                    <div className={styles['title-section']}>
+                        <h1
+                            className={classNames(
+                                montserrat.className,
+                                styles['title']
+                            )}
+                        >
+                            {title}
+                        </h1>
+                        <p className={styles['update-date']}>
+                            Updated on {dayjs(updatedAt).format('MMMM D, YYYY')}
+                        </p>
+                    </div>
+                    <div className={styles['main-wrapper']}>
+                        <div className={styles['main-content']}>
+                            <div className={styles['blog-card-image-wrapper']}>
+                                <Image
+                                    src={image.url}
+                                    alt={title}
+                                    fill
+                                    className={styles['blog-image']}
+                                    priority
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                    }}
+                                />
                             </div>
-                            <div className={styles['blog-card-tags']}>
-                                {tags.map((tag, i) => (
-                                    <div
-                                        className={styles['blog-tag-wrapper']}
-                                        key={tag._id}
-                                    >
-                                        <Link
-                                            className={classNames(
-                                                styles['blog-card-tag'],
-                                                montserrat.className
-                                            )}
-                                            key={`tag-${i}`}
-                                            href={`/blog/tag/${tag.name}`}
+                            <div className={styles['main-content-wrapper']}>
+                                <div className={styles['markdown']}>
+                                    {toc.length > 1000 && (
+                                        <div
+                                            className={
+                                                styles['inblog-toc-wrapper']
+                                            }
                                         >
-                                            {tag.name}
-                                        </Link>
-                                    </div>
-                                ))}
+                                            <TOC
+                                                toc={toc}
+                                                position={'inside'}
+                                            />
+                                        </div>
+                                    )}
+
+                                    {parse(content, options)}
+                                </div>
+                                <div className={styles['blog-card-tags']}>
+                                    {tags.map((tag, i) => (
+                                        <div
+                                            className={
+                                                styles['blog-tag-wrapper']
+                                            }
+                                            key={tag._id}
+                                        >
+                                            <Link
+                                                className={classNames(
+                                                    styles['blog-card-tag'],
+                                                    montserrat.className
+                                                )}
+                                                key={`tag-${i}`}
+                                                href={`/blog/tag/${tag.name}`}
+                                            >
+                                                {tag.name}
+                                            </Link>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={styles['right-column']}>
-                        <div className={styles['toc-wrapper']}>
-                            <TOC toc={toc} />
+                        <div className={styles['right-column']}>
+                            {toc.length > 0 && (
+                                <div className={styles['toc-wrapper']}>
+                                    <TOC toc={toc} />
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
+                <SimpleCTA />
             </div>
-            <SimpleCTA />
         </div>
     );
 };

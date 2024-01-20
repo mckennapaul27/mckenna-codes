@@ -40,3 +40,9 @@
         padding: 10px;
     }
 }
+
+@include media-mobile-800 {
+    .blog-card-wrapper {
+        width: 100%;
+    }
+}

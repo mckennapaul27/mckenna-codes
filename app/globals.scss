@@ -168,6 +168,35 @@ a {
     }
 }
 
+.table-container {
+    overflow-x: auto; // Enables horizontal scrolling
+    max-width: 100%; // Ensures the container doesn't overflow the parent
+    margin-bottom: 20px; // You can adjust this as needed
+    -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS devices
+}
+
+.table {
+    min-width: 600px; // Adjust this value based on your table's content
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+        padding: 8px;
+        border: 1px solid $off-white;
+        background-color: $primary-bg-dark; // for th
+        color: $white; // for th
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    th {
+        background-color: $primary-bg-dark;
+        color: $white;
+    }
+}
+
 @include media-desktop-1215 {
     .container {
         width: 100%;
