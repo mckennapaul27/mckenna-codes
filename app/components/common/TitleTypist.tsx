@@ -39,7 +39,13 @@ export const TitleTypist = ({
     subtitle: string;
 }) => {
     return (
-        <h1 className={classNames(styles['title'], montserrat.className)}>
+        <h1
+            className={classNames(
+                styles['title'],
+                styles['typist-title'],
+                montserrat.className
+            )}
+        >
             <span className={styles['title-span']}>{title}</span>
             <span className={styles['subtitle-span']}>
                 <Typewriter />

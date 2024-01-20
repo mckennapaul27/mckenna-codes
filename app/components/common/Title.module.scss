@@ -14,8 +14,10 @@
     font-size: 48px;
     line-height: 100%;
 }
-.subtitle-span {
-    height: 90px;
+.typist-title {
+    .subtitle-span {
+        height: 90px;
+    }
 }
 
 @include media-desktop-1215 {
@@ -25,8 +27,13 @@
     .title-span {
         font-size: 40px;
     }
-    .subtitle-span {
-        height: 70px;
+    // .subtitle-span {
+    //    height: 70px;
+    // }
+    .typist-title {
+        .subtitle-span {
+            height: 70px;
+        }
     }
 }
 @include media-tablet-1024 {
@@ -36,16 +43,20 @@
     .title-span {
         font-size: 34px;
     }
-    .subtitle-span {
-        height: 60px;
+    .typist-title {
+        .subtitle-span {
+            height: 60px;
+        }
     }
 }
 @media only screen and (max-width: 855px) {
     .title {
         max-width: 350px;
     }
-    .subtitle-span {
-        height: 120px;
+    .typist-title {
+        .subtitle-span {
+            height: 120px;
+        }
     }
 }
 @include media-mobile-800 {
@@ -56,8 +67,10 @@
     .title-span {
         font-size: 28px;
     }
-    .subtitle-span {
-        height: 50px;
+    .typist-title {
+        .subtitle-span {
+            height: 50px;
+        }
     }
 }
 
@@ -69,9 +82,11 @@
     .title-span {
         font-size: 24px;
     }
-    .subtitle-span {
-        margin-top: 6px;
-        height: 40px;
+    .typist-title {
+        .subtitle-span {
+            margin-top: 6px;
+            height: 40px;
+        }
     }
 }
 
@@ -83,8 +98,10 @@
     .title-span {
         font-size: 24px;
     }
-    .subtitle-span {
-        margin-top: 6px;
-        height: 40px;
+    .typist-title {
+        .subtitle-span {
+            margin-top: 6px;
+            height: 40px;
+        }
     }
 }

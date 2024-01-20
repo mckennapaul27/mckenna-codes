@@ -16,8 +16,25 @@
     }
 }
 
+@include media-tablet-1024 {
+    .input-wrapper {
+        width: 400px;
+    }
+}
+@include media-mobile-800 {
+    .input-wrapper {
+        min-width: 400px;
+        width: 100%;
+    }
+}
 @include media-mobile-768 {
     .form-wrapper {
         padding: 40px 15px;
+    }
+}
+@include media-mobile-xs-500 {
+    .input-wrapper {
+        min-width: 100%;
+        width: 100%;
     }
 }
