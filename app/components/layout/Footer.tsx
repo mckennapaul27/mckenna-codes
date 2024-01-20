@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 import { HomeIcon } from 'lucide-react';
+import classNames from 'classnames';
+import { montserrat } from '@/app/utils/fonts';
 export const Footer = () => {
     return (
         <footer className={styles['footer']}>
@@ -9,7 +11,10 @@ export const Footer = () => {
                     <div className={styles['footer-item']}>
                         <Link
                             href={'/contact-me'}
-                            className={styles['footer-link']}
+                            className={classNames(
+                                styles['footer-link'],
+                                montserrat.className
+                            )}
                         >
                             <HomeIcon />
                         </Link>
@@ -17,7 +22,10 @@ export const Footer = () => {
                     <div className={styles['footer-item']}>
                         <Link
                             href={'/about-me'}
-                            className={styles['footer-link']}
+                            className={classNames(
+                                styles['footer-link'],
+                                montserrat.className
+                            )}
                         >
                             {' '}
                             About me
@@ -26,14 +34,23 @@ export const Footer = () => {
                     <div className={styles['footer-item']}>
                         <Link
                             href={'/contact-me'}
-                            className={styles['footer-link']}
+                            className={classNames(
+                                styles['footer-link'],
+                                montserrat.className
+                            )}
                         >
                             {' '}
                             Contact me
                         </Link>
                     </div>
                     <div className={styles['footer-item']}>
-                        <Link href={'/blog'} className={styles['footer-link']}>
+                        <Link
+                            href={'/blog'}
+                            className={classNames(
+                                styles['footer-link'],
+                                montserrat.className
+                            )}
+                        >
                             {' '}
                             Blog
                         </Link>

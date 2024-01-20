@@ -35,6 +35,9 @@
 }
 
 @include media-mobile-800 {
+    .main {
+        min-height: auto;
+    }
     .sections {
         flex-wrap: wrap;
     }
