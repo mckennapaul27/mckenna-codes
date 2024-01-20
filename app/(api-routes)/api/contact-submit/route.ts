@@ -10,12 +10,16 @@ const nodemailer = require('nodemailer');
 const nodeMailerPass = process.env.nodeMailerPass;
 const nodeMailerUser = process.env.nodeMailerUser;
 
+console.log('nodeMailerUser', nodeMailerUser);
+console.log('nodeMailerPass', nodeMailerPass);
+
 // smtppro.zoho.eu
 // imappro.zoho.eu
 
 const transporter = nodemailer.createTransport({
     // host: 'smtp.zoho.eu',
-    host: 'smtppro.zoho.eu',
+    // host: 'smtppro.zoho.eu',
+    host: 'smtppro.zoho.com', // for some reason this works
     port: 465,
     secure: true, //ssl
     auth: {
