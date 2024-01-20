@@ -25,7 +25,7 @@ const details = [
     },
     {
         name: 'email',
-        value: 'paul@mckenna.codes',
+        value: 'hello@mckenna.codes',
     },
     {
         name: 'website',

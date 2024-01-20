@@ -33,12 +33,13 @@
     box-shadow: $light-box-shadow;
 }
 .navbar-item {
-    margin-bottom: 12px;
+    // margin-bottom: 12px;
+    padding: 16px 0;
 }
 
 .navbar-link {
     color: $primary-gray;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
 }
 

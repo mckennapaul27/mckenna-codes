@@ -48,18 +48,20 @@ export const ContactForm = ({ is_dark = false }) => {
                     (t) => (
                         <AlertSuccess
                             title={`Received Message`}
-                            description={`We have received your message and will get back to you shortly.`}
+                            description={`I have received your message and will get back to you shortly.`}
                             id={t.id}
                         />
                     ),
-                    { duration: 10000 }
+                    { duration: 1000000 }
                 );
                 setLoading(false);
+            } else {
+                console.log('error:', res);
             }
         } catch (error) {
             console.log('error:', error);
+            // setLoading(false);
         }
-        setLoading(false);
     };
     const fields = watch();
     const disabled =

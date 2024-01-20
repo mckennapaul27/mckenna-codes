@@ -1,9 +1,9 @@
-import { Poppins, Work_Sans } from 'next/font/google';
+import { Work_Sans } from 'next/font/google';
 import './globals.scss';
 import { Layout } from '@/app/components/layout/Layout';
 
 import { Suspense } from 'react';
-// import Analytics from './google/Analytics';
+import Analytics from './google/Analytics';
 
 const workSans = Work_Sans({
     weight: ['300', '400', '500', '600', '700', '800'],
@@ -20,9 +20,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={workSans.className}>
-                {/* <Suspense>
+                <Suspense>
                     <Analytics />
-                </Suspense> */}
+                </Suspense>
 
                 <Layout>{children}</Layout>
             </body>

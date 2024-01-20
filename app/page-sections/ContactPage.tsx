@@ -1,9 +1,6 @@
 import styles from './ContactPage.module.scss';
-import Link from 'next/link';
-import Image from 'next/image';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
-import { classNames } from '../utils/form-helpers';
-import { montserrat } from '../utils/fonts';
+
 import { Title } from '../components/common/Title';
 import { ContactForm } from '../components/common/ContactForm';
 

@@ -4,7 +4,7 @@ import { montserrat } from '../utils/fonts';
 
 export const Skills = () => {
     return (
-        <section className={styles['main']}>
+        <section className={styles['main']} id="skills">
             <div className="container">
                 <div className={styles['content-section']}>
                     <h2 className={classNames(montserrat.className)}>

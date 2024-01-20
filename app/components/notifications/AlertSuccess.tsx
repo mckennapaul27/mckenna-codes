@@ -39,7 +39,7 @@ export const AlertSuccess = ({
                             click_event={() => toast.dismiss(id)}
                             // outlined={true}
                             // inverted={true}
-                            plain={true}
+                            // plain={true}
                         />
                     </div>
                 </div>

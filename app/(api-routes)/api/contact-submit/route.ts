@@ -25,46 +25,51 @@ const transporter = nodemailer.createTransport({
 });
 
 export const POST = async (request: any) => {
-    const { name, email, phone, message, budget, preferredContactMethod } =
-        await request.json();
-    const date = dayjs().tz('Europe/London').format('MMM D, YYYY h:mm A');
-    if (!name || !email || !phone || !message) {
-        return new NextResponse(
-            JSON.stringify({
-                msg: 'Please fill in all fields',
-            }),
-            { status: 400 }
-        );
-    }
-
-    let mailOptions = {
-        from: {
-            name: 'Paul @BunkerDigital',
-            address: nodeMailerUser,
-        },
-        to: email, // list of receivers (who receives)
-        // cc: nodeMailerUser,
-        subject: `Thanks for getting in touch`, // Subject line
-        replyTo: email,
-        html: `<b>Date: ${date}</b> <p>Hi ${name}</p> <p>Thanks for getting in touch.</p> <p>We have received your enquiry and will be in contact very soon.</p> <p>Email: ${email}</p> <p>Name: ${name}</p> <p>Phone: ${phone}</p><p>Enquiry: ${message}</p><p>Kind Regards,</p><p>Paul McKenna</p>`, // html body
-    };
-
-    let mailOptions2 = {
-        from: {
-            name: 'Paul @BunkerDigital',
-            address: nodeMailerUser,
-        },
-        to: nodeMailerUser,
-        subject: `** Contact Form Submission **`, // Subject line
-        replyTo: email,
-        html: `<b>Date: ${date}</b> <p>Name: ${name}</p><p>Email: ${email}</p><p>Phone: ${phone}</p> <p>Budget: ${
-            budget ? budget : 'Not specified'
-        }</p><p>Preferred contact: ${
-            preferredContactMethod ? preferredContactMethod : 'email'
-        }</p> <p>Enquiry: ${message}</p>`, // html body
-    };
-
     try {
+        // console.log('request', request);
+        const req_body = await request.json();
+        const { name, email, phone, message, budget, preferredContactMethod } =
+            req_body;
+        console.log('req_body', req_body);
+        const date = dayjs().tz('Europe/London').format('MMM D, YYYY h:mm A');
+        if (!name || !email || !message) {
+            return new NextResponse(
+                JSON.stringify({
+                    msg: 'Please fill in all fields',
+                }),
+                { status: 400 }
+            );
+        }
+
+        let mailOptions = {
+            from: {
+                name: 'Paul McKenna',
+                address: nodeMailerUser,
+            },
+            to: email, // list of receivers (who receives)
+            // cc: nodeMailerUser,
+            subject: `Thanks for getting in touch`, // Subject line
+            replyTo: email,
+            html: `<b>Date: ${date}</b> <p>Hi ${name}</p> <p>Thanks for getting in touch.</p> <p>I have received your enquiry and will be in contact very soon.</p> <p>Email: ${email}</p> <p>Name: ${name}</p> ${
+                phone && `<p>Phone: ${phone}</p>`
+            }<p>Enquiry: ${message}</p><p>Kind Regards,</p><p>Paul McKenna</p>`, // html body
+        };
+
+        let mailOptions2 = {
+            from: {
+                name: 'McKenna Codes',
+                address: nodeMailerUser,
+            },
+            to: nodeMailerUser,
+            subject: `** Contact Form Submission **`, // Subject line
+            replyTo: email,
+            html: `<b>Date: ${date}</b> <p>Name: ${name}</p><p>Email: ${email}</p><p>Phone: ${phone}</p> <p>Budget: ${
+                budget ? budget : 'Not specified'
+            }</p><p>Preferred contact: ${
+                preferredContactMethod ? preferredContactMethod : 'email'
+            }</p> <p>Enquiry: ${message}</p>`, // html body
+        };
+
         const send_to_user = await transporter.sendMail(mailOptions);
         if (send_to_user.rejected.length > 0) {
             throw { status: 404, message: 'Rejected' };
