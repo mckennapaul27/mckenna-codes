@@ -55,9 +55,11 @@ export const POST = async (request: any) => {
             subject: `Thanks for getting in touch`, // Subject line
             replyTo: email,
             html: `<b>Date: ${date}</b> <p>Hi ${name}</p> <p>Thanks for getting in touch.</p> <p>I have received your enquiry and will be in contact very soon.</p> <p>Email: ${email}</p> <p>Name: ${name}</p> ${
-                phone && `<p>Phone: ${phone}</p>`
+                phone ? `<p>Phone: ${phone}</p>` : ''
             }<p>Enquiry: ${message}</p><p>Kind Regards,</p><p>Paul McKenna</p>`, // html body
         };
+
+        // console.log('mailOptions', mailOptions);
 
         let mailOptions2 = {
             from: {
