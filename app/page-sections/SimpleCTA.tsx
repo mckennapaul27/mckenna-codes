@@ -46,8 +46,8 @@ export const SimpleCTA = () => {
                                 src={
                                     '/paul-mckenna-web-develop-profile-pic-square.png'
                                 }
-                                width={300}
-                                height={300}
+                                width={330}
+                                height={330}
                                 alt={'Paul McKenna Web Developer Profile Pic'}
                             />
                         </div>

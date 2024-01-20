@@ -63,6 +63,20 @@
 
 @include media-mobile-xs-500 {
     .title {
+        font-size: 36px;
+        max-width: 350px;
+    }
+    .title-span {
+        font-size: 24px;
+    }
+    .subtitle-span {
+        margin-top: 6px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .title {
         font-size: 30px;
         max-width: 350px;
     }

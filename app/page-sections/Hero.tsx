@@ -12,14 +12,14 @@ export const Hero = () => {
             <div className="container">
                 <div className={styles['sections']}>
                     <div className={styles['text-section']}>
-                        <TitleTypist
-                            title={'Paul McKenna'}
-                            subtitle={'Software Engineer'}
-                        />
-                        {/* <Title
+                        {/* <TitleTypist
                             title={'Paul McKenna'}
                             subtitle={'Software Engineer'}
                         /> */}
+                        <Title
+                            title={'Paul McKenna'}
+                            subtitle={'Software Engineer'}
+                        />
                         <div className="primary-line"></div>
                         <p className={styles['intro-text']}>
                             Hello and welcome to my personal website. You can
