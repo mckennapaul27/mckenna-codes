@@ -82,3 +82,22 @@
 
 @include media-mobile-800 {
 }
+@include media-mobile-xs-500 {
+    .img-section-wrapper {
+        img {
+            width: 225px;
+            height: 225px;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .find-me-para {
+        .text {
+            display: none;
+        }
+        .icon-arrow {
+            margin-left: 0;
+        }
+    }
+}

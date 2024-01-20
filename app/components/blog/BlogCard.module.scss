@@ -99,6 +99,7 @@ a.blog-card-title {
     .blog-card-tags {
         width: 100%;
         margin-bottom: 20px;
+        padding-right: 0;
     }
 }
 
@@ -108,5 +109,22 @@ a.blog-card-title {
     }
     .blog-card-image-wrapper {
         height: 325px;
+    }
+}
+
+@include media-mobile-xs-500 {
+    .blog-card-image-wrapper {
+        height: 250px;
+    }
+    a.blog-card-title {
+        font-size: 20px;
+    }
+    .blog-card-date {
+        font-size: 14px;
+    }
+}
+@include media-mobile-xs-390 {
+    .blog-card-image-wrapper {
+        height: 190px;
     }
 }

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
 import { TitleTypist } from '../components/common/TitleTypist';
 import { Title } from '../components/common/Title';
+import { FaArrowRight } from 'react-icons/fa';
 
 export const Hero = () => {
     return (
@@ -11,14 +12,14 @@ export const Hero = () => {
             <div className="container">
                 <div className={styles['sections']}>
                     <div className={styles['text-section']}>
-                        {/* <TitleTypist
-                            title={'Paul McKenna'}
-                            subtitle={'Software Engineer'}
-                        /> */}
-                        <Title
+                        <TitleTypist
                             title={'Paul McKenna'}
                             subtitle={'Software Engineer'}
                         />
+                        {/* <Title
+                            title={'Paul McKenna'}
+                            subtitle={'Software Engineer'}
+                        /> */}
                         <div className="primary-line"></div>
                         <p className={styles['intro-text']}>
                             Hello and welcome to my personal website. You can
@@ -46,7 +47,24 @@ export const Hero = () => {
                                 }}
                             />
                         </div>
-                        <p className={'social-icons'}>
+                        <div className={styles['find-me-para']}>
+                            <span className={styles['text']}>Find me on</span>{' '}
+                            <span className={styles['icon-arrow']}>
+                                <FaArrowRight />
+                            </span>
+                            <p className={'social-icons'}>
+                                <span className={'icon'}>
+                                    <GithubIcon />
+                                </span>{' '}
+                                <span className={'icon'}>
+                                    <TwitterIcon />
+                                </span>
+                                <span className={'icon'}>
+                                    <LinkedinIcon />
+                                </span>
+                            </p>
+                        </div>
+                        {/* <p className={'social-icons'}>
                             <span className={'icon'}>
                                 <GithubIcon />
                             </span>{' '}
@@ -56,7 +74,7 @@ export const Hero = () => {
                             <span className={'icon'}>
                                 <LinkedinIcon />
                             </span>
-                        </p>
+                        </p> */}
                     </div>
                     <div className={styles['img-section-wrapper']}>
                         <Image

@@ -27,6 +27,12 @@ $desktop: 1215px;
 $widescreen: 1407px;
 $fullhd: 1480px;
 
+@mixin media-mobile-xs-390 {
+    @media only screen and (max-width: 390px) {
+        @content;
+    }
+}
+
 @mixin media-mobile-xs-500 {
     @media only screen and (max-width: 500px) {
         @content;

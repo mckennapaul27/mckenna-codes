@@ -40,14 +40,37 @@
         height: 60px;
     }
 }
+@media only screen and (max-width: 855px) {
+    .title {
+        max-width: 350px;
+    }
+    .subtitle-span {
+        height: 120px;
+    }
+}
 @include media-mobile-800 {
     .title {
         font-size: 40px;
+        max-width: 100%;
     }
     .title-span {
         font-size: 28px;
     }
     .subtitle-span {
         height: 50px;
+    }
+}
+
+@include media-mobile-xs-500 {
+    .title {
+        font-size: 30px;
+        max-width: 350px;
+    }
+    .title-span {
+        font-size: 24px;
+    }
+    .subtitle-span {
+        margin-top: 6px;
+        height: 40px;
     }
 }

@@ -203,3 +203,32 @@ a {
         font-size: 24px;
     }
 }
+
+@include media-mobile-800 {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@include media-mobile-xs-500 {
+    h1 {
+        font-size: 32px;
+    }
+    h1.is-like-h2 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .primary-line {
+        width: 100px;
+        margin-top: 16px;
+        margin-bottom: 20px;
+    }
+}

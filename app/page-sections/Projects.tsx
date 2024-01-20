@@ -88,7 +88,13 @@ export const Projects = () => {
                                             >
                                                 {project.name}
                                             </p>
-                                            <p>{project.type}</p>
+                                            <p
+                                                className={
+                                                    styles['project-type']
+                                                }
+                                            >
+                                                {project.type}
+                                            </p>
                                             <a
                                                 href={project.url}
                                                 target="_blank"

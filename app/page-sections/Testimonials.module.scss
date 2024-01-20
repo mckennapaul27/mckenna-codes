@@ -95,3 +95,23 @@
         width: 100%;
     }
 }
+
+@include media-mobile-xs-500 {
+    .testimonial {
+        padding: 16px;
+    }
+    .testimonial-company {
+        font-size: 14px;
+    }
+    .testimonial-name {
+        font-size: 16px;
+    }
+    .testimonial-description {
+        p {
+            font-size: 16px;
+        }
+    }
+    .speech-mark-right-bg {
+        max-width: 24px;
+    }
+}
