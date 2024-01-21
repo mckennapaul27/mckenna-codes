@@ -1,6 +1,7 @@
 // 'use client';
 
 import slugify from 'slugify';
+import { montserrat } from './fonts';
 
 type Mark = {
     type: string;
@@ -135,7 +136,10 @@ export const convertBlocksToHtml = (blocks: {
                                 lower: true,
                                 trim: true,
                             }
-                        )}>${parseContent(block.content)}</h${
+                        )}
+                        
+                        class=${montserrat.className}
+                        >${parseContent(block.content)}</h${
                             block.attrs.level
                         }>`;
                         break;

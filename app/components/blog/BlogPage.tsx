@@ -141,7 +141,7 @@ export const BlogPage = ({
                             </div>
                             <div className={styles['main-content-wrapper']}>
                                 <div className={styles['markdown']}>
-                                    {toc.length > 1000 && (
+                                    {toc.length > 0 && (
                                         <div
                                             className={
                                                 styles['inblog-toc-wrapper']
