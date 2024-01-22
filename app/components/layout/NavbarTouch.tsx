@@ -26,7 +26,7 @@ export const mobile_navbar = [
     {
         id: 2,
         title: 'About',
-        path: '/about-me',
+        path: '/about',
         hasDropdown: false,
         items: [],
     },
@@ -150,7 +150,7 @@ export const NavbarTouch = () => {
                         <div className={styles['button-wrapper']}>
                             <Button
                                 text={'Contact Me'}
-                                href="/contact-me"
+                                href="/contact"
                                 display="block"
                                 plain={true}
                                 // size="small"

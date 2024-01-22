@@ -29,13 +29,13 @@ export const SimpleCTA = () => {
                                 'button primary',
                                 montserrat.className
                             )}
-                            href={`/contact-me`}
+                            href={`/contact`}
                         >
                             contact me
                         </Link> */}
                         <Button
                             text="Contact me"
-                            href={'/contact-me'}
+                            href={'/contact'}
                             display="block"
                             size="large"
                         />

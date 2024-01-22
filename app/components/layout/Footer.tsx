@@ -10,7 +10,7 @@ export const Footer = () => {
                 <div className={styles['footer-items']}>
                     <div className={styles['footer-item']}>
                         <Link
-                            href={'/contact-me'}
+                            href={'/contact'}
                             className={classNames(
                                 styles['footer-link'],
                                 montserrat.className
@@ -21,7 +21,7 @@ export const Footer = () => {
                     </div>
                     <div className={styles['footer-item']}>
                         <Link
-                            href={'/about-me'}
+                            href={'/about'}
                             className={classNames(
                                 styles['footer-link'],
                                 montserrat.className
@@ -33,7 +33,7 @@ export const Footer = () => {
                     </div>
                     <div className={styles['footer-item']}>
                         <Link
-                            href={'/contact-me'}
+                            href={'/contact'}
                             className={classNames(
                                 styles['footer-link'],
                                 montserrat.className

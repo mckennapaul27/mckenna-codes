@@ -23,13 +23,12 @@ export const Hero = () => {
                         <div className="primary-line"></div>
                         <p className={styles['intro-text']}>
                             Hello and welcome to my personal website. You can
-                            find out more{' '}
-                            <Link href={'/about-me'}>about me</Link>, my work
-                            and my technical{' '}
-                            <Link href={'/about-me#skills'}>skills</Link> on
-                            this site. On my <Link href={'/blog'}>blog</Link> I
-                            write about a range of topics related to coding,
-                            software development and my personal projects.
+                            find out more <Link href={'/about'}>about me</Link>,
+                            my work and my technical{' '}
+                            <Link href={'/about#skills'}>skills</Link> on this
+                            site. On my <Link href={'/blog'}>blog</Link> I write
+                            about a range of topics related to coding, software
+                            development and my personal projects.
                         </p>
                         <div className={styles['profile-pic-800px-wrapper']}>
                             <Image

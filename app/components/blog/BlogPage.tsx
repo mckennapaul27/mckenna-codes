@@ -101,7 +101,7 @@ export const BlogPage = ({
                     authorName={[
                         {
                             name: 'Paul McKenna',
-                            url: process.env.NEXT_PUBLIC_SITE_URL + '/about-me',
+                            url: process.env.NEXT_PUBLIC_SITE_URL + '/about',
                         },
                     ]}
                     publisherName="Paul McKenna"

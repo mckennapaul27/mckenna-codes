@@ -26,7 +26,7 @@ export const NavbarDesktop = () => {
                         </li>
                         <li className={styles['navbar-item']}>
                             <Link
-                                href="/about-me"
+                                href="/about"
                                 className={styles['navbar-link']}
                             >
                                 About Me
@@ -42,7 +42,7 @@ export const NavbarDesktop = () => {
                         </li>
                         <li className={styles['navbar-item']}>
                             <Link
-                                href="/contact-me"
+                                href="/contact"
                                 className={styles['navbar-link']}
                             >
                                 Contact Me
