@@ -24,7 +24,11 @@
 }
 
 .markdown {
+    // background-color: $primary-bg-dark;
+    padding: 28px 20px;
     color: $off-white;
+    max-width: 800px;
+    border-radius: 8px;
     h2 {
         font-size: 30px;
         margin: 36px 0 16px;

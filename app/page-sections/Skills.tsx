@@ -40,7 +40,8 @@ export const Skills = () => {
                         on over the last few months I am using TypeScript
                         whereas prior to this, I had not used TypeScript at all.
                         So my pace of learning with TypeScript is currently
-                        faster than anything else.
+                        faster than anything else because I am using it in every
+                        single project.
                     </p>
                     <p>
                         Likewise, if I don&apos;t use something very frequently
@@ -52,6 +53,8 @@ export const Skills = () => {
                     <p>
                         However, I believe I can master most
                         frameworks/platforms etc within a short space of time.
+                    </p>
+                    <p>
                         The aim of this section is to give you a general idea of
                         my current skillset.
                     </p>
