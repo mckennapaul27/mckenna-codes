@@ -31,7 +31,7 @@ export default async function Page() {
             next: { revalidate: 3600 }, // revaildate every 60 minutes
         }).then((res) => res.json());
 
-        console.log('data: ', data);
+        // console.log('data: ', data);
 
         // const blog = {
         //     title: data.data[0].title,
@@ -47,7 +47,7 @@ export default async function Page() {
                 <HeroAlt />
                 <Skills />
                 <SkillsBlock />
-                <ContentBlock body={data[0].body} />
+                {/* <ContentBlock body={data[0].body} /> */}
                 <SimpleCTA />
             </>
         );

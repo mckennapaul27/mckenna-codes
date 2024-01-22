@@ -47,9 +47,9 @@ export const Projects = () => {
                             My main source of income over the last decade has
                             come from ewalletbooster.com which I originally
                             created from an earlier project couponarbitrage.com.
-                            At it's peak, ewalletbooster.com was generating over
-                            $3m monthly affiliate sales volume for the affiliate
-                            networks I was working with.
+                            At it&apos;s peak, ewalletbooster.com was generating
+                            over $3m monthly affiliate sales volume for the
+                            affiliate networks I was working with.
                         </p>
                         <p>
                             I have also developed a number of other projects
