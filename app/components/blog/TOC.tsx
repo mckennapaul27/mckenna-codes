@@ -87,7 +87,7 @@ export const TOC = ({ toc, position }: { toc: TOC[]; position?: string }) => {
                                         : styles['list-link']
                                 }
                             >
-                                {<span>{item.title}</span>}
+                                {item.title}
                             </Link>
                             {item.children &&
                                 item.children.length > 0 &&

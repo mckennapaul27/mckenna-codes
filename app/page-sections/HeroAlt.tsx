@@ -52,13 +52,11 @@ export const HeroAlt = () => {
                         <p className={styles['intro-text']}>
                             I&apos;m Paul. I am a self-employed developer and
                             solopreneur based in Manchester, UK. I am passionate
-                            about creating user-friendly and visually appealing
-                            websites. I&apos;m also passionate about assisting
-                            small and local businesses (with smaller budgets) to
-                            thrive online. I enjoy incorporating UI/UX, SEO
-                            optimisation and paid search elements into my work.
-                            In addition to my work, I am also a proud father of
-                            two beautiful daughters.
+                            about creating user-friendly, visually appealing and
+                            highly perfomant websites and software. I also enjoy
+                            incorporating SEO optimisation and paid search
+                            elements into my work. In addition to my work life,
+                            I am also a proud father of two beautiful daughters.
                         </p>
                         <div className={styles['img-section-wrapper-800px']}>
                             <Image

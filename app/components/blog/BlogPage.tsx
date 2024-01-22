@@ -130,6 +130,7 @@ export const BlogPage = ({
                                     src={image.url}
                                     alt={title}
                                     fill
+                                    sizes="(max-width: 500px) 468px,(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                                     className={styles['blog-image']}
                                     priority
                                     style={{

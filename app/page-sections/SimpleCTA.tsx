@@ -22,7 +22,7 @@ export const SimpleCTA = () => {
                             or employment opportunities. If you have a project
                             that you want to get started, think you need my help
                             with something or just fancy connecting, then please
-                            get in touch.
+                            get in touch!
                         </p>
                         {/* <Link
                             className={classNames(

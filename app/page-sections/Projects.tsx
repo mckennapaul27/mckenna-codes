@@ -15,19 +15,19 @@ const projects = [
         name: 'Fraffles.co.uk',
         type: 'Cashback/prize platform',
         url: 'https://www.fraffles.co.uk',
-        src: 'portfolio-ewb-160.png',
-    },
-    {
-        name: 'ewalletbooster.com',
-        type: 'SAAS/Affiliate website',
-        url: 'https://www.ewalletbooster.com',
-        src: 'portfolio-ewb-160.png',
+        src: 'fraffles-200-100.png',
     },
     {
         name: 'volumekings.com',
         type: 'SAAS/Affiliate website',
         url: 'https://www.volumekings.com',
-        src: 'portfolio-ewb-160.png',
+        src: 'volumekings-200-100.png',
+    },
+    {
+        name: 'ewalletbooster.com',
+        type: 'SAAS/Affiliate website',
+        url: 'https://www.ewalletbooster.com',
+        src: 'ewalletbooster-200-100.png',
     },
 ];
 export const Projects = () => {
@@ -40,23 +40,29 @@ export const Projects = () => {
                             Personal projects
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                            I&apos;ve developed numerous projects over the
+                            years, some of which are shown here.
                         </p>
                         <p>
-                            Etiam sit amet nisl purus in mollis nunc sed id
-                            semper risus. In fermentum et sollicitudin ac orci
-                            phasellus egestas tellus. Orci a scelerisque purus
-                            semper eget duis. Amet nisl purus in mollis nunc sed
-                            id semper risus. In fermentum et sollicitudin ac
-                            orci phasellus egestas tellus.
+                            My main source of income over the last decade has
+                            come from ewalletbooster.com which I originally
+                            created from an earlier project couponarbitrage.com.
+                            At it's peak, ewalletbooster.com was generating over
+                            $3m monthly affiliate sales volume for the affiliate
+                            networks I was working with.
+                        </p>
+                        <p>
+                            I have also developed a number of other projects
+                            including volumekings.com and fraffles.co.uk.
+                        </p>
+                        <p>
+                            And of course there are many projects that I have
+                            created over the years that have not worked out, the
+                            biggest being cashbackmad.co.uk which was hacked in
+                            2015! I lost the entire site and database and it was
+                            was the moment I decided I needed to learn to code
+                            and understand how to build secure and perfomant
+                            websites!
                         </p>
                     </div>
                     <div className={styles['projects-section-wrapper']}>

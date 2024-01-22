@@ -24,7 +24,7 @@ export const NextImage = ({ ...props }) => {
                 name: 'blur',
                 value: 1000,
             },
-            quality: 5,
+            quality: 1,
         },
     });
 
@@ -65,7 +65,12 @@ export const NextImage = ({ ...props }) => {
                             filter: `drop-shadow(2px 2px 12px rgba(0, 0, 0, 0.15))`,
                         }}
                     >
-                        <Image src={url} alt={alt} fill />
+                        <Image
+                            src={url}
+                            alt={alt}
+                            fill
+                            sizes="(max-width: 500px) 468px,(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                        />
                     </div>
                 </div>
             </div>

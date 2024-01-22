@@ -7,27 +7,28 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 const projects = [
     {
         name: 'greenscapes-treeservices.co.uk',
-        type: 'Business website',
+        type: 'Local Business',
         url: 'https://www.greenscapes-treeservices.co.uk',
-        src: 'green-ts-test.png',
+        src: 'cover-greenscapes-tree-services.png',
+    },
+
+    {
+        name: 'nurseryrhymesnursery.co.uk',
+        type: 'Local Business',
+        url: 'https://www.nurseryrhymesnursery.co.uk/',
+        src: 'cover-greenscapes-nursery-rhymes.png',
     },
     {
-        name: 'ewalletbooster.com',
-        type: 'SAAS/Affiliate website',
-        url: 'https://www.ewalletbooster.com',
-        src: 'vk-group-540-270.png',
+        name: 'ka-therapy.co.uk',
+        type: 'Local Business',
+        url: 'https://www.ka-therapy.co.uk',
+        src: 'cover-katherapy.png',
     },
     {
-        name: 'volumekings.com',
-        type: 'SAAS/Affiliate website',
-        url: 'https://www.volumekings.com',
-        src: 'vk-540-270.png',
-    },
-    {
-        name: 'ewalletbooster.com',
-        type: 'SAAS/Affiliate website',
-        url: 'https://www.ewalletbooster.com',
-        src: 'green-ts-test.png',
+        name: 'greenscapes-gardening.co.uk',
+        type: 'Local Business',
+        url: 'https://www.greenscapes-treeservices.co.uk',
+        src: 'cover-greenscapes-gardening.png',
     },
 ];
 
@@ -41,9 +42,9 @@ export const ClientPortfolio = () => {
                             A selection of client projects
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            {
+                                'I have also done the occasional website and marketing for local businesses, some of which are shown here.'
+                            }
                         </p>
                     </div>
                     <div className={styles['projects']}>

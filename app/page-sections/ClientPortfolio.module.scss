@@ -50,8 +50,9 @@
 }
 .img-wrapper {
     position: relative;
-    border: 1px solid $primary-bg-light;
+    // border: 1px solid $primary-bg-light;
     border-top-left-radius: 16px;
+    background-color: $white;
     // width: 540px;
     width: calc(100% - 32px);
     height: 270px;
