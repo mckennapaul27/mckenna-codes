@@ -21,19 +21,35 @@
     z-index: 1;
 }
 
-p.skills-grade {
+.skill-title {
+    margin-bottom: 16px;
+    color: $off-white-lighter;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.skills-grades {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid $off-white-lighter;
+}
+
+.skills-grade {
     display: flex;
     align-items: center;
     // color: $white;
-    font-weight: 600;
+
     margin-bottom: 16px;
+}
+.level-title {
+    font-weight: 600;
 }
 .color-block {
     display: block;
     width: 16px;
     height: 16px;
+    min-width: 16px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 16px;
     &.green {
         background-color: #2fa993;
     }
@@ -72,18 +88,18 @@ p.skills-grade {
     background-color: $primary-bg;
     padding: 20px;
 }
-
 .banner-items {
     display: flex;
     flex-wrap: wrap;
-    margin: -10px;
+    margin: -20px;
 }
 .skill-item-wrapper {
-    padding: 10px;
+    padding: 20px;
+    min-width: 25%;
 }
 .skill-item {
-    p.skills-grade {
-        margin-bottom: 0;
+    li.skills-grade {
+        margin-bottom: 6px;
         font-size: 16px;
         color: $off-white-lighter;
     }
@@ -100,12 +116,12 @@ p.skills-grade {
     .inside-block {
         padding: 20px;
     }
-    .banner-items {
-        margin: -5px;
-    }
-    .skill-item-wrapper {
-        padding: 5px;
-    }
+    // .banner-items {
+    //     margin: -5px;
+    // }
+    // .skill-item-wrapper {
+    //     padding: 5px;
+    // }
 }
 @include media-tablet-1024 {
     .banner {
@@ -115,24 +131,40 @@ p.skills-grade {
         padding: 20px;
     }
 }
+@media only screen and (max-width: 1000px) {
+    .skill-item-wrapper {
+        min-width: 33.33%;
+    }
+}
+
+@include media-mobile-800 {
+    .skill-item-wrapper {
+        min-width: 50%;
+    }
+}
 
 @include media-mobile-xs-500 {
     .banner {
         padding: 10px;
     }
     .inside-block {
-        padding: 10px;
+        padding: 20px;
     }
     .color-block {
         display: block;
         width: 14px;
         height: 14px;
+        min-width: 14px;
+    }
+    .skill-item-wrapper {
+        min-width: 100%;
     }
     .skill-item {
-        p.skills-grade {
+        .skills-grade {
             font-size: 14px;
         }
         .color-block {
+            min-width: 14px;
             width: 14px;
             height: 14px;
         }

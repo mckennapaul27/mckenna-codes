@@ -47,7 +47,7 @@ export default async function Page() {
                 <HeroAlt />
                 <Skills />
                 <SkillsBlock />
-                {/* <ContentBlock body={data[0].body} /> */}
+                <ContentBlock body={data[0].body} />
                 <SimpleCTA />
             </>
         );

@@ -3,94 +3,150 @@ import styles from './Skills.module.scss';
 
 const items = [
     {
-        name: 'Nextjs',
-        level: 4,
+        type: 'languages',
+        skills: [
+            {
+                name: 'Javascript',
+                level: 4,
+            },
+            {
+                name: 'Typescript',
+                level: 2,
+            },
+        ],
+    },
+
+    {
+        type: 'front end frameworks',
+        skills: [
+            {
+                name: 'Nextjs',
+                level: 4,
+            },
+            {
+                name: 'Reactjs',
+                level: 4,
+            },
+        ],
     },
     {
-        name: 'Reactjs',
-        level: 4,
+        type: 'back end frameworks',
+        skills: [
+            {
+                name: 'Expressjs',
+                level: 3,
+            },
+            {
+                name: 'Nodejs',
+                level: 3,
+            },
+        ],
     },
     {
-        name: 'Javascript',
-        level: 4,
+        type: 'databases',
+        skills: [
+            { name: 'MongoDB', level: 4 },
+            { name: 'Mongoose', level: 4 },
+            { name: 'GraphQL', level: 2 },
+            {
+                name: 'PostgreSQL',
+                level: 1,
+            },
+        ],
+    },
+
+    {
+        type: 'cloud platforms',
+        skills: [
+            {
+                name: 'GCP',
+                level: 2,
+            },
+            {
+                name: 'AWS',
+                level: 1,
+            },
+        ],
     },
     {
-        name: 'Typescript',
-        level: 2,
+        type: 'styling',
+        skills: [
+            {
+                name: 'CSS',
+                level: 3,
+            },
+            {
+                name: 'SASS',
+                level: 3,
+            },
+            {
+                name: 'SCSS modules',
+                level: 3,
+            },
+            {
+                name: 'Bulma',
+                level: 3,
+            },
+            {
+                name: 'Tailwind',
+                level: 2,
+            },
+        ],
+    },
+
+    {
+        type: 'design',
+        skills: [
+            {
+                name: 'Figma',
+                level: 3,
+            },
+            {
+                name: 'UX/UI',
+                level: 3,
+            },
+        ],
     },
     {
-        name: 'Nodejs',
-        level: 3,
-    },
-    {
-        name: 'Expressjs',
-        level: 3,
-    },
-    { name: 'MongoDB', level: 4 },
-    {
-        name: 'PostgreSQL',
-        level: 1,
-    },
-    {
-        name: 'Nextjs',
-        level: 4,
-    },
-    {
-        name: 'Reactjs',
-        level: 4,
-    },
-    {
-        name: 'Javascript',
-        level: 4,
-    },
-    {
-        name: 'Typescript',
-        level: 2,
-    },
-    {
-        name: 'Nodejs',
-        level: 3,
-    },
-    {
-        name: 'Expressjs',
-        level: 3,
-    },
-    { name: 'MongoDB', level: 4 },
-    {
-        name: 'PostgreSQL',
-        level: 1,
-    },
-    {
-        name: 'Google Ads',
-        level: 4,
-    },
-    {
-        name: 'Google Analytics',
-        level: 4,
-    },
-    {
-        name: 'Google Tag Manager',
-        level: 4,
-    },
-    {
-        name: 'Google Search Console',
-        level: 4,
-    },
-    {
-        name: 'GA4',
-        level: 1,
-    },
-    {
-        name: 'Google Cloud Platform',
-        level: 4,
+        type: 'marketing',
+        skills: [
+            {
+                name: 'Google Ads',
+                level: 4,
+            },
+            {
+                name: 'SEO',
+                level: 4,
+            },
+            {
+                name: 'Web Performance Optimisation',
+                level: 4,
+            },
+            {
+                name: 'Google Analytics',
+                level: 3,
+            },
+            {
+                name: 'Google Tag Manager',
+                level: 3,
+            },
+            {
+                name: 'Google Search Console',
+                level: 3,
+            },
+            {
+                name: 'GA4',
+                level: 1,
+            },
+        ],
     },
 ];
 
 const colorLookup: { [key: string]: string } = {
-    1: styles['red'],
-    2: styles['yellow'],
-    3: styles['pink'],
-    4: styles['green'],
+    1: styles['green'],
+    2: styles['pink'],
+    3: styles['yellow'],
+    4: styles['red'],
 };
 
 export const SkillsBlock = ({}) => {
@@ -106,17 +162,36 @@ export const SkillsBlock = ({}) => {
                                     key={`skill-item-${i}`}
                                 >
                                     <div className={styles['skill-item']}>
-                                        <p className={styles['skills-grade']}>
-                                            <span
-                                                className={classNames(
-                                                    styles['color-block'],
-                                                    colorLookup[
-                                                        String(item.level)
-                                                    ]
-                                                )}
-                                            ></span>
-                                            {item.name}
+                                        <p className={styles['skill-title']}>
+                                            {item.type}
                                         </p>
+                                        <ul className={styles['skill-list']}>
+                                            {item.skills.map((skill, i) => (
+                                                <li
+                                                    key={`skill-${i}`}
+                                                    className={
+                                                        styles['skills-grade']
+                                                    }
+                                                >
+                                                    <span
+                                                        className={classNames(
+                                                            styles[
+                                                                'color-block'
+                                                            ],
+                                                            colorLookup[
+                                                                String(
+                                                                    skill.level
+                                                                )
+                                                            ]
+                                                        )}
+                                                    ></span>
+                                                    {skill.name}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        {/* <p className={styles['skills-grade']}>
+                                          
+                                        </p> */}
                                     </div>
                                 </div>
                             ))}
