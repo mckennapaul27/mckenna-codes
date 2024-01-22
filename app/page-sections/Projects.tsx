@@ -61,7 +61,7 @@ export const Projects = () => {
                             biggest being cashbackmad.co.uk which was hacked in
                             2015! I lost the entire site and database and it was
                             was the moment I decided I needed to learn to code
-                            and understand how to build secure and perfomant
+                            and understand how to build secure and performant
                             websites!
                         </p>
                     </div>

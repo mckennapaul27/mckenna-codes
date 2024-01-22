@@ -119,19 +119,19 @@ const items = [
                 level: 4,
             },
             {
-                name: 'Web Performance Optimisation',
+                name: 'Core Web Vitals',
                 level: 4,
             },
             {
-                name: 'Google Analytics',
+                name: 'GA Universal',
                 level: 3,
             },
             {
-                name: 'Google Tag Manager',
+                name: 'GTM',
                 level: 3,
             },
             {
-                name: 'Google Search Console',
+                name: 'GSC',
                 level: 3,
             },
             {
