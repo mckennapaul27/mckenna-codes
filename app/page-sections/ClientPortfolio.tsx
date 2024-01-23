@@ -27,7 +27,7 @@ const projects = [
     {
         name: 'greenscapes-gardening.co.uk',
         type: 'Local Business',
-        url: 'https://www.greenscapes-treeservices.co.uk',
+        url: 'https://www.greenscapes-gardening.co.uk',
         src: 'cover-greenscapes-gardening.png',
     },
 ];
