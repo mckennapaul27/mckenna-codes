@@ -32,7 +32,7 @@ const projects = [
 ];
 export const Projects = () => {
     return (
-        <section className={styles['main']}>
+        <section className={styles['main']} id="projects">
             <div className="container">
                 <div className={styles['sections']}>
                     <div className={styles['content-section']}>

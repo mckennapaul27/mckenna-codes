@@ -34,7 +34,7 @@ const projects = [
 
 export const ClientPortfolio = () => {
     return (
-        <section className={styles['main']}>
+        <section className={styles['main']} id="client-portfolio-summary">
             <div className="container">
                 <div className={styles['sections']}>
                     <div className={styles['content-section']}>
