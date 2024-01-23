@@ -22,15 +22,25 @@ export const ContactPage = () => {
                             </p>
                         </div>
                         <p className={'social-icons alt'}>
-                            <span className={'icon'}>
+                            <a
+                                className={'icon'}
+                                href="https://github.com/mckennapaul27"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <GithubIcon />
-                            </span>{' '}
-                            <span className={'icon'}>
+                            </a>{' '}
+                            <a
+                                className={'icon'}
+                                href="https://twitter.com/paulmckenna181"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <TwitterIcon />
-                            </span>
-                            <span className={'icon'}>
+                            </a>
+                            <a className={'icon'}>
                                 <LinkedinIcon />
-                            </span>
+                            </a>
                         </p>
                     </div>
                     <div className={styles['form-wrapper']}>

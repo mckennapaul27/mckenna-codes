@@ -1,6 +1,15 @@
 import { LatestBlogs } from '@/app/page-sections/LatestBlogs';
 import { url } from '@/config';
+import { type Metadata } from 'next';
 import qs from 'qs';
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: "Paul McKenna's Blog | Insights on Web Development and Design",
+        description:
+            'Explore my latest articles where I share insights, tips, and trends in web development and design. Stay ahead with practical advice and stories from my personal experiences in the industry.',
+    };
+}
 
 export default async function Page() {
     const blog_query = qs.stringify(

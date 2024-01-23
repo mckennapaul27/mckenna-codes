@@ -10,7 +10,7 @@ export const Footer = () => {
                 <div className={styles['footer-items']}>
                     <div className={styles['footer-item']}>
                         <Link
-                            href={'/contact'}
+                            href={'/'}
                             className={classNames(
                                 styles['footer-link'],
                                 montserrat.className

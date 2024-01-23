@@ -7,6 +7,14 @@ import { type Metadata } from 'next';
 import qs from 'qs';
 import { url } from '@/config';
 
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'About Me | Manchester-based Developer & Solopreneur',
+        description:
+            'Developer and designer with a robust skill set in web technologies. Explore my technical expertise, journey in coding, and dedication to crafting compelling digital experiences.',
+    };
+}
+
 export default async function Page() {
     const slug = 'about-me';
     const query = qs.stringify(

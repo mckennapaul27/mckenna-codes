@@ -11,8 +11,9 @@ import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: 'Home',
-        description: 'Home page of the website',
+        title: 'Freelance Developer & Solopreneur | Paul McKenna',
+        description:
+            'Paul McKenna, a Manchester-based developer passionate about creating high-performance, SEO-optimised websites and software.',
     };
 }
 
