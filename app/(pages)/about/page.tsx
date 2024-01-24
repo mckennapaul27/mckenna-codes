@@ -7,16 +7,45 @@ import { type Metadata } from 'next';
 import qs from 'qs';
 import { url } from '@/config';
 
+// export async function generateMetadata(): Promise<Metadata> {
+//     return {
+//         title: 'About Me | Manchester-based Developer & Solopreneur',
+//         description:
+//             'Developer and designer with a robust skill set in web technologies. Explore my technical expertise, journey in coding, and dedication to crafting compelling digital experiences.',
+//     };
+// }
+
+
 export async function generateMetadata(): Promise<Metadata> {
+    const query = qs.stringify(
+        {
+            filters: {
+                slug: 'about'
+            },
+            select: 'metaTitle metaDescription',
+        },
+        {
+            encodeValuesOnly: true, // prettify URL
+        }
+    );
+    const { data } = await fetch(url + '/api/api-pages?' + query, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
+        },
+        next: { revalidate: 3600 }, // revaildate every 60 minutes
+        // cache: 'no-store',
+    }).then((res) => res.json());
     return {
-        title: 'About Me | Manchester-based Developer & Solopreneur',
-        description:
-            'Developer and designer with a robust skill set in web technologies. Explore my technical expertise, journey in coding, and dedication to crafting compelling digital experiences.',
+        title: data[0].metaTitle,
+        description: data[0].metaDescription,
     };
 }
 
+
 export default async function Page() {
-    const slug = 'about-me';
+    const slug = 'about';
     const query = qs.stringify(
         {
             filters: {
