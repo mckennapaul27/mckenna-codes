@@ -69,6 +69,10 @@ export const ProjectsNew = ({ projects }: { projects: Project[] }) => {
                         moment I decided I needed to learn to code and
                         understand how to build secure and performant websites!
                     </p>
+                    <p>
+                        Note that most of the projects I have worked on are not
+                        visible in GitHub because they are private repositories.
+                    </p>
                 </div>
                 <div className={styles['slides']}>
                     <Carousel show={1} infiniteLoop={true}>
