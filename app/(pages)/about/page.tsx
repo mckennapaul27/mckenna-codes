@@ -15,12 +15,11 @@ import { url } from '@/config';
 //     };
 // }
 
-
 export async function generateMetadata(): Promise<Metadata> {
     const query = qs.stringify(
         {
             filters: {
-                slug: 'about'
+                slug: 'about',
             },
             select: 'metaTitle metaDescription',
         },
@@ -42,7 +41,6 @@ export async function generateMetadata(): Promise<Metadata> {
         description: data[0].metaDescription,
     };
 }
-
 
 export default async function Page() {
     const slug = 'about';

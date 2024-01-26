@@ -43,7 +43,7 @@ export const ClientPortfolio = () => {
                         </h2>
                         <p>
                             {
-                                'I have also done the occasional website and marketing for local businesses, some of which are shown here.'
+                                'I also do the occasional website and marketing for local businesses, some of which are shown here.'
                             }
                         </p>
                     </div>

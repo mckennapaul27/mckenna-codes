@@ -8,6 +8,7 @@ import { CounterBlock } from './page-sections/CounterBlock';
 import qs from 'qs';
 import { url } from '@/config';
 import { Metadata } from 'next';
+import { ProjectsNew } from './page-sections/ProjectsNew';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -59,11 +60,37 @@ export default async function Home() {
         },
     });
     const { data: tags } = await tag_res.json();
+    const project_query = qs.stringify(
+        {
+            select: 'title slug description url cover_image body skills technologies updatedAt createdAt primary_color secondary_color accent_color primary_font secondary_font accent_font project_type',
+            sort: {
+                createdAt: -1,
+            },
+        },
+        {
+            encodeValuesOnly: true, // prettify URL
+        }
+    );
+    const project_res = await fetch(
+        url + '/api/api-projects?' + project_query,
+        {
+            method: 'GET',
+            // cache: 'no-store',
+            next: { revalidate: 3600 }, // refresh every 60 minutes
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: process.env.NEXT_PUBLIC_CMS_API_KEY || '',
+            },
+        }
+    );
+    const { data: projects } = await project_res.json();
+    console.log('projects: ', projects);
     return (
         <>
             <Hero />
             <CounterBlock />
-            <Projects />
+            {/* <Projects /> */}
+            <ProjectsNew projects={projects} />
             <ClientPortfolio />
             <Testimonials />
             <SimpleCTA />

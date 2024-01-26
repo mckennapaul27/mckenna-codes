@@ -1,0 +1,125 @@
+@import '../../variables';
+@import '../../mixins';
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-content-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-content {
+    display: flex;
+    transition: all 250ms linear;
+    -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
+    scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+
+/* hide scrollbar in webkit browser */
+.carousel-content::-webkit-scrollbar,
+.carousel-content::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-content > * {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+.page_number {
+    color: #ffba1a;
+    font-size: 40px;
+    font-weight: 600;
+}
+.length {
+    color: $off-white;
+    font-size: 0.5em;
+    font-weight: 400;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    max-width: 600px;
+}
+.control_btns {
+    display: flex;
+    justify-content: space-between;
+}
+.prev_btn,
+.next_btn {
+    border: 1px solid #f2c04d;
+    background-color: #ffba1a;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    &:hover {
+        background-color: #f2c04d;
+        @include transition-ease;
+    }
+    &:disabled {
+        background-color: $primary-bg-dark;
+        opacity: 100%;
+        svg {
+            color: #f2c04d;
+        }
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        color: $primary-bg-dark;
+    }
+}
+.next_btn {
+    margin-left: 10px;
+}
+@include media-desktop-1215 {
+    .controls {
+        max-width: 500px;
+    }
+}
+@include media-tablet-1024 {
+    .controls {
+        max-width: 400px;
+    }
+    .prev_btn,
+    .next_btn {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .page_number {
+        font-size: 28px;
+    }
+    .length {
+    }
+}
+@include media-mobile-800 {
+    .controls {
+        max-width: 100%;
+    }
+}
