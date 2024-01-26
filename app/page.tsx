@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
             'Paul McKenna, a Manchester-based developer passionate about creating high-performance, SEO-optimised websites and software.',
     };
 }
-
+//
 export default async function Home() {
     const blog_query = qs.stringify(
         {
