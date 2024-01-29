@@ -84,7 +84,7 @@ export default async function Home() {
         }
     );
     const { data: projects } = await project_res.json();
-    console.log('projects: ', projects);
+    // console.log('projects: ', projects);
     return (
         <>
             <Hero />
