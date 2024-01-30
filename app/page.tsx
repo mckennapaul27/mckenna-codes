@@ -22,8 +22,9 @@ export default async function Home() {
     const blog_query = qs.stringify(
         {
             select: 'slug description title tags image updatedAt createdAt',
-            pageIndex: 0,
-            pageSize: 1,
+            filters: {
+                status: 'published',
+            },
             sort: {
                 createdAt: -1,
             },
@@ -65,6 +66,9 @@ export default async function Home() {
             select: 'title slug description url cover_image body skills technologies updatedAt createdAt primary_color secondary_color accent_color primary_font secondary_font accent_font project_type',
             sort: {
                 createdAt: -1,
+            },
+            filters: {
+                status: 'published',
             },
         },
         {
