@@ -61,7 +61,7 @@ export const Hero = () => {
                                     rel="noopener noreferrer"
                                 >
                                     <GithubIcon />
-                                </a>{' '}
+                                </a>
                                 <a
                                     className={'icon'}
                                     href="https://twitter.com/paulmckenna181"
@@ -70,7 +70,12 @@ export const Hero = () => {
                                 >
                                     <TwitterIcon />
                                 </a>
-                                <a className={'icon'}>
+                                <a
+                                    className={'icon'}
+                                    href="https://www.linkedin.com/in/mckennapaul27"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <LinkedinIcon />
                                 </a>
                             </p>

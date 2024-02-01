@@ -38,7 +38,12 @@ export const ContactPage = () => {
                             >
                                 <TwitterIcon />
                             </a>
-                            <a className={'icon'}>
+                            <a
+                                className={'icon'}
+                                href="https://www.linkedin.com/in/mckennapaul27"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <LinkedinIcon />
                             </a>
                         </p>
