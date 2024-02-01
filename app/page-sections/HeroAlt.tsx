@@ -53,8 +53,8 @@ export const HeroAlt = () => {
                             I&apos;m Paul. I am a self-employed developer and
                             solopreneur based in Manchester, UK. I am passionate
                             about creating user-friendly, visually appealing and
-                            highly perfomant websites and software. I also enjoy
-                            incorporating SEO optimisation and paid search
+                            highly performant websites and software. I also
+                            enjoy incorporating SEO optimisation and paid search
                             elements into my work. In addition to my work life,
                             I am also a proud father of two beautiful daughters.
                         </p>
